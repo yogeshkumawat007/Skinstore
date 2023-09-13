@@ -1,56 +1,72 @@
 [
   {
-    "id": "123",
+    "id": "555",
     "image_urls": [
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11289609-4505043613045506.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11289609-1995037121294344.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11289609-2094892770972332.jpg"
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12588508-9214904684566827.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12588508-1294904684596665.jpg"
     ],
-    "name": "SkinCeuticals C E Ferulic with 15% L-Ascorbic Acid Vitamin C Serum 30ml",
-    "brand": "SkinCeuticals",
-    "skin_type": "Normal",
-    "product_type": "Skin care",
-    "price": "182.00",
-    "description": "SkinCeuticals C E Ferulic with 15% L-Ascorbic Acid Vitamin C Serum 30ml is a highly effective antioxidant serum that offers advanced environmental protection.",
+    "name": "111SKIN Sub-Zero De-Puffing Energy Facial Mask Box",
+    "brand": "111SKIN",
+    "skin_type": "Acne Prone",
+    "product_type": "skinCare",
+    "price": "135.00",
+    "description": "111SKIN Sub-Zero De-Puffing Energy Mask provides a cooling and energizing experience for the skin.",
     "reviews": {
       "average_rating": 4.5,
-      "total_reviews": 27
+      "total_reviews": 60
+    }
+  },
+
+  {
+    "id": "777",
+    "image_urls": [
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/14514328-3975064449442396.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/14514328-1095064448920540.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/14514328-1305064449176521.jpg"
+    ],
+    "name": "Elemis Limited Edition Pro-Collagen Marine Cream SPF 30 100ml (Worth $239)",
+    "brand": "Elemis",
+    "skin_type": "Acne Prone",
+    "product_type": "skinCare",
+    "price": "220.00",
+    "description": "Elemis Pro-Collagen Marine Cream is a luxurious anti-aging cream with SPF 30 for firmer, smoother skin.",
+    "reviews": {
+      "average_rating": 4.9,
+      "total_reviews": 39
     }
   },
   {
-    "id": "456",
+    "id": "111",
     "image_urls": [
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12164501-5264927775131002.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12164501-1504860690841743.jpg",
-      "https://static.thcdn.com/images/small/webp//productimg/130/130/12164501-1604860690771798.jpg"
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11814869-2065062272653937.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11814869-3714864714301856.jpg"
     ],
-    "name": "Olaplex No.4 Bond Maintenance Shampoo 8.5 oz",
-    "brand": "Olaplex",
-    "skin_type": "Coily & Textured",
-    "product_type": "Hair Care",
-    "price": "30.00",
-    "description": "Olaplex No.4 Bond Maintenance Shampoo 8.5 oz is a nourishing shampoo that helps repair damaged hair and maintain hair bonds.",
+    "name": "Colorescience Sunforgettable Total Protection Face Shield SPF50 (PA++++) 55ml",
+    "brand": "Colorescience",
+    "skin_type": "Combination",
+    "product_type": "skinCare",
+    "price": "45.00",
+    "description": "Colorescience Sunforgettable Face Shield offers total protection with SPF50 against harmful UV rays.",
     "reviews": {
       "average_rating": 4.2,
-      "total_reviews": 35
+      "total_reviews": 56
     }
   },
   {
-    "id": "789",
+    "id": "555",
     "image_urls": [
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11370312-8215072385855948.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11370312-1185072638401510.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11370312-5895072638447572.jpg"
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11382032-1305023392875862.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11382032-9424901840301822.jpg"
     ],
-    "name": "EltaMD UV Clear Tinted Broad-Spectrum SPF46",
-    "brand": "EltaMD",
-    "skin_type": "Sensitive",
-    "product_type": "Skin Care",
-    "price": "43.00",
-    "description": "EltaMD UV Clear Tinted Broad-Spectrum SPF46 is a dermatologist-recommended sunscreen that offers broad-spectrum protection.",
+    "name": "The Ordinary Azelaic Acid Suspension 10% 30ml",
+    "brand": "The Ordinary",
+    "skin_type": "Mature",
+    "product_type": "skinCare",
+    "price": "11.10",
+    "description": "The Ordinary Azelaic Acid Suspension 10% is a multifunctional skincare product that targets various skin concerns.",
     "reviews": {
-      "average_rating": 4.7,
-      "total_reviews": 42
+      "average_rating": 4.1,
+      "total_reviews": 24
     }
   },
   {
@@ -61,7 +77,7 @@
     "name": "Dr. Dennis Gross Alpha Beta Universal Daily Peel (60 Pack, Worth $204)",
     "brand": "Dr. Dennis Gross",
     "skin_type": "Oily",
-    "product_type": "Skin Care",
+    "product_type": "skinCare",
     "price": "153.00",
     "description": "Dr. Dennis Gross Alpha Beta Universal Daily Peel is a two-step exfoliation treatment for smoother, radiant skin.",
     "reviews": {
@@ -79,7 +95,7 @@
     "name": "First Aid Beauty Ultra Repair Cream (6 oz.)",
     "brand": "First Aid Beauty",
     "skin_type": "Combination",
-    "product_type": "Skin Care",
+    "product_type": "skinCare",
     "price": "38.00",
     "description": "First Aid Beauty Ultra Repair Cream is a rich, hydrating cream that soothes dry and sensitive skin.",
     "reviews": {
@@ -97,7 +113,7 @@
     "name": "SkinMedica TNS Advanced+ Serum 1oz",
     "brand": "SkinMedica",
     "skin_type": "Dry",
-    "product_type": "Skin Care",
+    "product_type": "skinCare",
     "price": "295.00",
     "description": "SkinMedica TNS Advanced+ Serum is an advanced anti-aging serum that helps improve the appearance of fine lines and wrinkles.",
     "reviews": {
@@ -105,41 +121,7 @@
       "total_reviews": 36
     }
   },
-  {
-    "id": "555",
-    "image_urls": [
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11382032-1305023392875862.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11382032-9424901840301822.jpg"
-    ],
-    "name": "The Ordinary Azelaic Acid Suspension 10% 30ml",
-    "brand": "The Ordinary",
-    "skin_type": "Mature",
-    "product_type": "Skin Care",
-    "price": "11.10",
-    "description": "The Ordinary Azelaic Acid Suspension 10% is a multifunctional skincare product that targets various skin concerns.",
-    "reviews": {
-      "average_rating": 4.1,
-      "total_reviews": 24
-    }
-  },
-  {
-    "id": "777",
-    "image_urls": [
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/14514328-3975064449442396.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/14514328-1095064448920540.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/14514328-1305064449176521.jpg"
-    ],
-    "name": "Elemis Limited Edition Pro-Collagen Marine Cream SPF 30 100ml (Worth $239)",
-    "brand": "Elemis",
-    "skin_type": "Acne Prone",
-    "product_type": "Skin Care",
-    "price": "220.00",
-    "description": "Elemis Pro-Collagen Marine Cream is a luxurious anti-aging cream with SPF 30 for firmer, smoother skin.",
-    "reviews": {
-      "average_rating": 4.9,
-      "total_reviews": 39
-    }
-  },
+
   {
     "id": "888",
     "image_urls": [
@@ -148,7 +130,7 @@
     "name": "PCA SKIN Hyaluronic Acid Boosting Serum",
     "brand": "PCA SKIN",
     "skin_type": "All",
-    "product_type": "Skin Care",
+    "product_type": "skinCare",
     "price": "124.00",
     "description": "PCA SKIN Hyaluronic Acid Boosting Serum is a hydrating serum that replenishes moisture for smooth, plump skin.",
     "reviews": {
@@ -166,7 +148,7 @@
     "name": "BIOEFFECT EGF Eye Serum 6ml",
     "brand": "BIOEFFECT",
     "skin_type": "Normal",
-    "product_type": "Skin Care",
+    "product_type": "skinCare",
     "price": "95.00",
     "description": "BIOEFFECT EGF Eye Serum is a revitalizing serum that targets the delicate eye area for a more youthful look.",
     "reviews": {
@@ -184,7 +166,7 @@
     "name": "Colorescience Sunforgettable Total Protection Face Shield SPF50 (PA++++) 55ml",
     "brand": "Colorescience",
     "skin_type": "Combination",
-    "product_type": "Skin Care",
+    "product_type": "skinCare",
     "price": "45.00",
     "description": "Colorescience Sunforgettable Face Shield offers total protection with SPF50 against harmful UV rays.",
     "reviews": {
@@ -202,7 +184,7 @@
     "name": "Elemis Pro-Collagen Cleansing Balm 100g",
     "brand": "Elemis",
     "skin_type": "Dry",
-    "product_type": "Skin Care",
+    "product_type": "skinCare",
     "price": "68.00",
     "description": "Elemis Pro-Collagen Cleansing Balm is a luxurious balm that dissolves makeup and impurities for radiant skin.",
     "reviews": {
@@ -220,7 +202,7 @@
     "name": "Obagi Medical Hydrate Facial Moisturizer",
     "brand": "Obagi Medical",
     "skin_type": "Oily",
-    "product_type": "Skin Care",
+    "product_type": "skinCare",
     "price": "58.00",
     "description": "Obagi Medical Hydrate Facial Moisturizer provides hydration without clogging pores, suitable for oily skin.",
     "reviews": {
@@ -238,7 +220,7 @@
     "name": "111SKIN Celestial Black Diamond Lifting and Firming Treatment Mask Box 155 ml",
     "brand": "111SKIN",
     "skin_type": "Sensitive",
-    "product_type": "Skin Care",
+    "product_type": "skinCare",
     "price": "140.00",
     "description": "111SKIN Celestial Black Diamond Mask provides a luxurious treatment for lifting and firming the skin.",
     "reviews": {
@@ -246,23 +228,133 @@
       "total_reviews": 48
     }
   },
+
   {
-    "id": "555",
+    "id": "1011",
     "image_urls": [
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12588508-9214904684566827.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12588508-1294904684596665.jpg"
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12447439-1354866381155694.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12447439-8414795815726525.jpg"
     ],
-    "name": "111SKIN Sub-Zero De-Puffing Energy Facial Mask Box",
-    "brand": "111SKIN",
-    "skin_type": "Acne Prone",
-    "product_type": "Skin Care",
-    "price": "135.00",
-    "description": "111SKIN Sub-Zero De-Puffing Energy Mask provides a cooling and energizing experience for the skin.",
+    "name": "Christophe Robin Regenerating Serum with Prickly Pear Oil 50ml",
+    "brand": "Christophe Robin",
+    "hair_type": "Afro & Textured",
+    "product_type": "hairCare",
+    "price": "37.00",
+    "description": "Christophe Robin Regenerating Serum nourishes and repairs hair with prickly pear oil.",
     "reviews": {
-      "average_rating": 4.5,
-      "total_reviews": 60
+      "average_rating": 4.9,
+      "total_reviews": 45
     }
   },
+  {
+    "id": "1012",
+    "image_urls": [
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12526882-6914866384402807.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12526882-1374759321226874.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12526882-6634891232652453.jpg"
+    ],
+    "name": "VIRTUE Recovery Shampoo 240ml",
+    "brand": "VIRTUE",
+    "hair_type": "Braided",
+    "product_type": "hairCare",
+    "price": "29.00",
+    "description": "VIRTUE Recovery Shampoo helps revive and strengthen hair, perfect for braided styles.",
+    "reviews": {
+      "average_rating": 4.7,
+      "total_reviews": 33
+    }
+  },
+  {
+    "id": "1013",
+    "image_urls": [
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/14883059-2025073174137070.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/14883059-4165073174241173.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/14883059-2115073174396501.jpg"
+    ],
+    "name": "VIRTUE Celebrate Hair Repair Full Pro Size Duo (Worth $168.00)",
+    "brand": "VIRTUE",
+    "hair_type": "Curly & Wavy",
+    "product_type": "hairCare",
+    "price": "115.00",
+    "description": "VIRTUE Celebrate Hair Repair Duo is a complete set for celebrating healthy and repaired hair.",
+    "reviews": {
+      "average_rating": 4.9,
+      "total_reviews": 47
+    }
+  },
+  {
+    "id": "1014",
+    "image_urls": [
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12362849-1195072983082406.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12362849-1214945674486459.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12362849-7584945674668493.jpg"
+    ],
+    "name": "Olaplex No.7 Bond Oil 1 oz",
+    "brand": "Olaplex",
+    "hair_type": "Colored",
+    "product_type": "hairCare",
+    "price": "18.00",
+    "description": "Olaplex No.7 Bond Oil is a lightweight hair oil that provides shine and protection.",
+    "reviews": {
+      "average_rating": 4.8,
+      "total_reviews": 30
+    }
+  },
+  {
+    "id": "123",
+    "image_urls": [
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11289609-4505043613045506.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11289609-1995037121294344.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11289609-2094892770972332.jpg"
+    ],
+    "name": "SkinCeuticals C E Ferulic with 15% L-Ascorbic Acid Vitamin C Serum 30ml",
+    "brand": "SkinCeuticals",
+    "skin_type": "Normal",
+    "product_type": "skinCare",
+    "price": "182.00",
+    "description": "SkinCeuticals C E Ferulic with 15% L-Ascorbic Acid Vitamin C Serum 30ml is a highly effective antioxidant serum that offers advanced environmental protection.",
+    "reviews": {
+      "average_rating": 4.5,
+      "total_reviews": 27
+    }
+  },
+  {
+    "id": "456",
+    "image_urls": [
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12164501-5264927775131002.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12164501-1504860690841743.jpg",
+      "https://static.thcdn.com/images/small/webp//productimg/130/130/12164501-1604860690771798.jpg"
+    ],
+    "name": "Olaplex No.4 Bond Maintenance Shampoo 8.5 oz",
+    "brand": "Olaplex",
+    "skin_type": "Coily & Textured",
+    "product_type": "hairCare",
+    "price": "30.00",
+    "description": "Olaplex No.4 Bond Maintenance Shampoo 8.5 oz is a nourishing shampoo that helps repair damaged hair and maintain hair bonds.",
+    "reviews": {
+      "average_rating": 4.2,
+      "total_reviews": 35
+    }
+  },
+  {
+    "id": "789",
+    "image_urls": [
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11370312-8215072385855948.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11370312-1185072638401510.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11370312-5895072638447572.jpg"
+    ],
+    "name": "EltaMD UV Clear Tinted Broad-Spectrum SPF46",
+    "brand": "EltaMD",
+    "skin_type": "Sensitive",
+    "product_type": "skinCare",
+    "price": "43.00",
+    "description": "EltaMD UV Clear Tinted Broad-Spectrum SPF46 is a dermatologist-recommended sunscreen that offers broad-spectrum protection.",
+    "reviews": {
+      "average_rating": 4.7,
+      "total_reviews": 42
+    }
+  },
+
   {
     "id": "666",
     "image_urls": [
@@ -273,7 +365,7 @@
     "name": "111SKIN Repair Day Cream NAC Y2 50ml",
     "brand": "111SKIN",
     "skin_type": "Mature",
-    "product_type": "Skin Care",
+    "product_type": "skinCare",
     "price": "260.00",
     "description": "111SKIN Repair Day Cream is a luxurious cream with NAC Y2 technology for repairing and revitalizing the skin.",
     "reviews": {
@@ -291,7 +383,7 @@
     "name": "111SKIN Celestial Black Diamond Serum 1.01 oz",
     "brand": "111SKIN",
     "skin_type": "Normal",
-    "product_type": "Skin Care",
+    "product_type": "skinCare",
     "price": "600.00",
     "description": "111SKIN Celestial Black Diamond Serum is a high-performance serum for achieving a youthful complexion.",
     "reviews": {
@@ -310,7 +402,7 @@
     "name": "VIRTUE Healing Oil 50ml",
     "brand": "VIRTUE",
     "hair_type": "Afro & Textured",
-    "product_type": "Hair Care",
+    "product_type": "hairCare",
     "price": "35.00",
     "description": "VIRTUE Healing Oil is a nourishing oil that helps restore and strengthen hair.",
     "reviews": {
@@ -328,7 +420,7 @@
     "name": "Bouclème Curl Cream 300ml",
     "brand": "Bouclème",
     "hair_type": "Braided",
-    "product_type": "Hair Care",
+    "product_type": "hairCare",
     "price": "25.00",
     "description": "Bouclème Curl Cream is a hydrating cream that enhances and defines curls.",
     "reviews": {
@@ -344,7 +436,7 @@
     "name": "White Hot Glorious Shampoo 200ml",
     "brand": "White Hot",
     "hair_type": "Colored",
-    "product_type": "Hair Care",
+    "product_type": "hairCare",
     "price": "18.00",
     "description": "White Hot Glorious Shampoo is specially formulated for colored hair.",
     "reviews": {
@@ -362,7 +454,7 @@
     "name": "T3 CurlWrap 1.25\" Automatic Rotating Curling Iron with Long Barrel",
     "brand": "T3",
     "hair_type": "Coily & Textured",
-    "product_type": "Hair Care",
+    "product_type": "hairCare",
     "price": "75.00",
     "description": "T3 CurlWrap Curling Iron creates beautiful curls with its automatic rotating barrel.",
     "reviews": {
@@ -380,7 +472,7 @@
     "name": "VIRTUE Holiday Healthy Hair Revival Kit (Worth $130.00)",
     "brand": "VIRTUE",
     "hair_type": "Curly & Wavy",
-    "product_type": "Hair Care",
+    "product_type": "hairCare",
     "price": "90.00",
     "description": "VIRTUE Holiday Kit is a complete hair revival set for curly and wavy hair.",
     "reviews": {
@@ -398,7 +490,7 @@
     "name": "Grow Gorgeous Density Serum Intense 60ml",
     "brand": "Grow Gorgeous",
     "hair_type": "Afro & Textured",
-    "product_type": "Hair Care",
+    "product_type": "hairCare",
     "price": "42.00",
     "description": "Grow Gorgeous Density Serum is designed for thicker, fuller hair.",
     "reviews": {
@@ -416,7 +508,7 @@
     "name": "Christophe Robin Regenerating Mask with Prickly Pear Oil 250ml",
     "brand": "Christophe Robin",
     "hair_type": "Braided",
-    "product_type": "Hair Care",
+    "product_type": "hairCare",
     "price": "55.00",
     "description": "Christophe Robin Regenerating Mask is a nourishing treatment for hair with prickly pear oil.",
     "reviews": {
@@ -434,7 +526,7 @@
     "name": "T3 AireBrush One-Step Smoothing and Volumizing Hair Dryer Brush",
     "brand": "T3",
     "hair_type": "Coily & Textured",
-    "product_type": "Hair Care",
+    "product_type": "hairCare",
     "price": "80.00",
     "description": "T3 AireBrush is a versatile hair dryer brush for smoothing and volumizing.",
     "reviews": {
@@ -452,7 +544,7 @@
     "name": "Olaplex No.4P Blonde Enhancer Toning Shampoo 250ml",
     "brand": "Olaplex",
     "hair_type": "Curly & Wavy",
-    "product_type": "Hair Care",
+    "product_type": "hairCare",
     "price": "22.00",
     "description": "Olaplex No.4P Toning Shampoo is designed for blonde hair to enhance and tone.",
     "reviews": {
@@ -470,83 +562,12 @@
     "name": "Alterna CAVIAR Anti-Aging Multiplying Volume Shampoo 16.5 oz (Worth $66.00)",
     "brand": "Alterna",
     "hair_type": "Colored",
-    "product_type": "Hair Care",
+    "product_type": "hairCare",
     "price": "48.00",
     "description": "Alterna CAVIAR Volume Shampoo adds volume and fullness to colored hair.",
     "reviews": {
       "average_rating": 4.8,
       "total_reviews": 34
-    }
-  },
-  {
-    "id": "1011",
-    "image_urls": [
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12447439-1354866381155694.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12447439-8414795815726525.jpg"
-    ],
-    "name": "Christophe Robin Regenerating Serum with Prickly Pear Oil 50ml",
-    "brand": "Christophe Robin",
-    "hair_type": "Afro & Textured",
-    "product_type": "Hair Care",
-    "price": "37.00",
-    "description": "Christophe Robin Regenerating Serum nourishes and repairs hair with prickly pear oil.",
-    "reviews": {
-      "average_rating": 4.9,
-      "total_reviews": 45
-    }
-  },
-  {
-    "id": "1012",
-    "image_urls": [
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12526882-6914866384402807.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12526882-1374759321226874.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12526882-6634891232652453.jpg"
-    ],
-    "name": "VIRTUE Recovery Shampoo 240ml",
-    "brand": "VIRTUE",
-    "hair_type": "Braided",
-    "product_type": "Hair Care",
-    "price": "29.00",
-    "description": "VIRTUE Recovery Shampoo helps revive and strengthen hair, perfect for braided styles.",
-    "reviews": {
-      "average_rating": 4.7,
-      "total_reviews": 33
-    }
-  },
-  {
-    "id": "1013",
-    "image_urls": [
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/14883059-2025073174137070.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/14883059-4165073174241173.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/14883059-2115073174396501.jpg"
-    ],
-    "name": "VIRTUE Celebrate Hair Repair Full Pro Size Duo (Worth $168.00)",
-    "brand": "VIRTUE",
-    "hair_type": "Curly & Wavy",
-    "product_type": "Hair Care",
-    "price": "115.00",
-    "description": "VIRTUE Celebrate Hair Repair Duo is a complete set for celebrating healthy and repaired hair.",
-    "reviews": {
-      "average_rating": 4.9,
-      "total_reviews": 47
-    }
-  },
-  {
-    "id": "1014",
-    "image_urls": [
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12362849-1195072983082406.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12362849-1214945674486459.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12362849-7584945674668493.jpg"
-    ],
-    "name": "Olaplex No.7 Bond Oil 1 oz",
-    "brand": "Olaplex",
-    "hair_type": "Colored",
-    "product_type": "Hair Care",
-    "price": "18.00",
-    "description": "Olaplex No.7 Bond Oil is a lightweight hair oil that provides shine and protection.",
-    "reviews": {
-      "average_rating": 4.8,
-      "total_reviews": 30
     }
   }
 ]
