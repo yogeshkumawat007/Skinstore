@@ -240,7 +240,11 @@ aside {
 .accordion-menu h2 {
   font-size: 18px;
   line-height: 34px;
+<<<<<<< HEAD
   font-weight: 600;
+=======
+  font-weight: 500;
+>>>>>>> f48d71fe03f1abfb9edd39dd5ecb8e4239439632
   letter-spacing: 1px;
   display: block;
   margin: 0;
