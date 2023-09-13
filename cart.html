@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        table,tr,td,th
+        {
+            padding:10px;
+        }
+       img
+       {
+            width: 80px;
+            height: 90px;
+
+       }
+       td{
+            text-align: center; 
+            vertical-align: middle;
+       }
+       div{
+        margin-top: 10%;
+        display: flex;
+        height: auto;
+        width: auto;
+       
+       }
+       button{
+       
+        background-color: inherit;
+        padding: 14px 28px;
+        font-size: 15px;
+        text-decoration: underline;
+       }
+       h3{
+        padding-left: 56%;
+       }
+       #cupon-filled{
+            margin-left: 40%;
+       }
+       #home{
+        margin-left: 5%;
+        outline: auto;
+        background-color: azure;
+
+       }
+       #Checkout{
+        margin-left: 60%;
+        outline: auto;
+        background-color: azure;
+
+       }
+        
+    </style>
+</head>
+<body>
+    <h2 align="center">Your Cart</h2>
+    <div class="center">
+        
+
+        <table align="center" width="70%">
+            <thead>
+               
+                    <tr>
+                      <th>Itema</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                      <th>Subtotal</th>
+                      <th></th>
+                    </tr>
+                 
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>
+                        <img src="https://static.thcdn.com/images/large/webp//productimg/1600/1600/14514328-3975064449442396.jpg"> <p>Loreal sunscreen afafaaaaaaa</p>
+                    </td>
+                    <td>
+                        30$
+                    </td>
+                    <td>
+                        
+                        <span>
+                            <input type="button" onclick="decrementValue()" value="-" />
+                            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
+                            <input type="button" onclick="incrementValue()" value="+" />
+                        </span>
+                    </td>
+                    <td>
+                        $37.50
+                    </td>
+                    <td>
+                        <button>Delete</button>
+                    </td>
+                    
+                </tr>
+               
+                
+            </tbody>
+
+        </table>
+        
+       
+    </div>
+        
+      
+    <h3>Cart Subtotal:- <span id="cart-total">0</span></h3>
+    <input type="text" id="cupon-filled" placeholder="Get a Coupon Code ? Enter" />
+    <button id="cupon-active">ADD</button>
+    <br>
+    <button id="home">Continue Shopping</button>
+    <button id="Checkout">Checkout Securely</button>
+    
+    
+
+    
+
+</body>
+
+
+</html>
+<script>
+    
+function incrementValue()
+{
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    if(value<10){
+        value++;
+            document.getElementById('number').value = value;
+    }
+}
+function decrementValue()
+{
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    if(value>1){
+        value--;
+            document.getElementById('number').value = value;
+    }
+
+}
+
+
+
+
+// checking the coupons
+var couponData = document.querySelector("#cupon-filled");
+
+var data;
+couponData.addEventListener("input", function (event) {
+  event.preventDefault();
+  var target = event.target;
+
+  data = target.value;
+});
+
+var appliedAlready = false;
+    var submitBtn = document.querySelector("#cupon-active");
+    submitBtn.addEventListener("click", function () {
+      if (!appliedAlready) {
+        if (data == "masai30") {
+          var discount = (30 / 100) * totalPrice;
+          totalPrice -= discount;
+          appliedAlready = true;
+          updateData();//function for updation data 
+        } else {
+          alert("Please enter a valid coupon");
+          return;
+        }
+      } else {
+        alert("You've already applied discount");
+        return;
+      }
+    });
+
+</script>
