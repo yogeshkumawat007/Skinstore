@@ -1,0 +1,438 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.productListPageN {
+  display: flex;
+}
+
+#productListPage_filterAside {
+  width: 25%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#filter_head_title {
+  font-size: 21px;
+  color: #2e3337;
+  font-weight: 700;
+  text-transform: none;
+  margin: 25px 10px 10px 23px;
+  border-bottom: 1px solid #6c6c6a;
+  padding-bottom: 15px;
+}
+
+#mainContentN {
+  width: 75%;
+  margin: 10px;
+}
+
+#mainContentHeader_headingH2 {
+  font-size: 42px;
+  line-height: 1.4;
+  color: #2e3337;
+  font-weight: 700;
+  margin: 10px;
+}
+
+#totalNoOfProducts {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #2e3337;
+  font-weight: 300;
+  text-transform: none;
+  margin: 10px;
+}
+
+#mainContentHeader_readMoreContent {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #2e3337;
+  font-weight: 300;
+  text-transform: none;
+  margin: 10px;
+}
+#readMore_underlined {
+  text-decoration: underline;
+  margin-top: 10px;
+}
+#productListPageSorting {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#sortingSelectionLable {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #2e3337;
+  font-weight: 300;
+  margin: 10px;
+}
+
+select {
+  padding: 0 100px 0 10px;
+  border: 1px solid #999;
+  line-height: 30px;
+  height: 40px;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("./Media/arrow-down-sign-to-navigate.png") no-repeat right
+    10px center;
+}
+
+select:focus {
+  border: 2px solid #2e3337;
+  border-radius: 5px;
+}
+
+/* fix for ie 10 later */
+select::-ms-expand {
+  display: none;
+}
+
+#productCatelog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
+  padding: 15px;
+}
+
+#imageDiv img {
+  width: 100%;
+}
+
+#productCardDiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#imageAndWishListDiv {
+  width: 100%;
+  display: flex;
+  gap: 3px;
+}
+
+#imageDiv {
+  height: max-content;
+  background-color: white;
+  padding: 5px;
+}
+
+#wishlistDiv {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#textBox {
+  min-width: 100px;
+  width: fit-content;
+  height: 30px;
+  border: 0.3px solid #ba3d49;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 300;
+}
+#ratingContainer {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  gap: 2px;
+}
+#noOfRatings {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #707070;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  display: initial;
+}
+#ratingStars {
+  width: 30%;
+}
+
+#productDetailsDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10% 1% 5% 1%;
+  flex-grow: 1;
+}
+#productDetailsDiv h3 {
+  font-size: 16px;
+  color: #2e3337;
+  font-weight: 400;
+  margin: 8px;
+}
+
+#priceElement {
+  font-size: 21px;
+  line-height: 1.2;
+  color: #2e3337;
+  font-weight: 700;
+  margin: 8px;
+  margin-top: 15px;
+}
+
+#addToCartButton {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #2e3337;
+  font-weight: 300;
+  line-height: 18px;
+  background-color: #333;
+  border-style: none;
+  padding: 12px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+#addToCartButton:hover {
+  background-color: #28bdb7;
+  color: black;
+}
+
+.fa-regular {
+  font-size: 20px;
+}
+
+/* Sideber testing CSS */
+aside {
+  margin: 0;
+  perspective: 900;
+  color: rgba(48, 69, 92, 0.8);
+}
+.accordion-menu {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  /* margin: 150px 0; */
+  transform: translate(-50%, 0);
+  max-width: 300px;
+  padding: 10px 0;
+  border-radius: 2px;
+}
+.accordion-menu h2 {
+  font-size: 18px;
+  line-height: 34px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0;
+  cursor: pointer;
+  color: #2e3337;
+}
+.accordion-menu p {
+  color: rgba(48, 69, 92, 0.8);
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  max-height: 800px;
+  opacity: 1;
+  transform: translate(0, 0);
+  margin-top: 14px;
+  z-index: 2;
+}
+.accordion-menu ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0 20px 10px;
+  margin: 0;
+  background-color: #fff;
+}
+.accordion-menu ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4px;
+  padding-top: 18px;
+  border-top: 1px solid #b7b7b6;
+}
+
+.accordion-menu ul li:nth-child(1) {
+  border: none;
+}
+.accordion-menu ul li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+.accordion-menu ul li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+.accordion-menu ul li:nth-of-type(3) {
+  animation-delay: 1s;
+}
+.accordion-menu ul li:last-of-type {
+  padding-bottom: 0;
+}
+
+.accordion-menu ul li .arrow {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  right: 0;
+}
+
+.accordion-menu ul li .arrow:before,
+.accordion-menu ul li .arrow:after {
+  content: "";
+  position: absolute;
+  background-color: #2e3337;
+  width: 3px;
+  height: 9px;
+}
+.accordion-menu ul li .arrow:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.accordion-menu ul li .arrow:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+.accordion-menu ul li input[type="checkbox"] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+}
+.accordion-menu ul li input[type="checkbox"]:checked ~ p {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+.accordion-menu ul li input[type="checkbox"]:checked ~ .arrow:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.accordion-menu ul li input[type="checkbox"]:checked ~ .arrow:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+/* Test code */
+.accordion-menu input[type="checkbox"]:not(:checked) ~ h2,
+.accordion-menu input[type="checkbox"]:not(:checked) ~ .arrow {
+  border-bottom: 2px solid black;
+}
+
+.accordion-menu .transition,
+.accordion-menu p,
+.accordion-menu ul li .arrow:before,
+.accordion-menu ul li .arrow:after {
+  transition: all 0.25s ease-in-out;
+}
+
+.accordion-menu .flipIn,
+.accordion-menu h1,
+.accordion-menu ul li {
+  animation: flipdown 0.5s ease both;
+}
+.accordion-menu .no-select,
+.accordion-menu h2 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  80% {
+    transform: rotateX(8deg);
+  }
+
+  83% {
+    transform: rotateX(6deg);
+  }
+
+  92% {
+    transform: rotateX(-3deg);
+  }
+
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}
+
+/* Query selector for responsiveness */
+
+@media (max-width: 900px) {
+  #productCatelog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #mainContentN {
+    margin: 0 25px 30px 25px;
+    padding: 10px 0 11% 0;
+    border-bottom: 1px solid black;
+  }
+
+  #totalNoOfProducts {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  #sortingSelectionLable {
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .productListPageN {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  #productCatelog {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  #mainContentN {
+    width: 95%;
+    border-bottom: 1px solid black;
+  }
+
+  #totalNoOfProducts {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  #sortingSelectionLable {
+    padding-right: 10px;
+  }
+
+  #productListPage_filterAside {
+    display: none;
+  }
+}
