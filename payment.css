@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: #f2f2f2; */
+}
+
+.checkoutMainYk{
+    width: 72%;
+    margin: auto;
+    
+}
+/* .left1,.left2{
+    background-color: white;
+} */
+
+.checkoutLeftYk{
+    width: 75%;
+}
+.left1, .left2,.left3,.left4{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 3px;
+    border-top: 6px solid black;
+    border-radius: 5px;
+    margin-bottom: 6%;
+    margin-top: 2%;
+    padding: 5%;
+}
+.left1 > p, .left2 > p, .left3 > p{
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 5%;
+}
+.checkoutLeftYk label{
+    display: block;
+    color: #333333;
+    /* font-weight: 500; */
+    font-size: 18px;
+}
+
+.checkoutLeftYk input,select,label{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    
+}
+
+.checkoutLeftYk input, select{
+    padding: 1.5%;
+    border-radius: 5px;
+    margin: 1% 0 4% 0;
+    /* cursor: pointer; */
+
+}
+.left1 > form > p{
+    /* color: red; */
+    margin-top: -3%;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* left2 */
+
+.left2 > div {
+    /* color: green; */
+    font-weight:500;
+    line-height: 24px;
+}
+
+.left2 > div > p:nth-child(3){
+    color: green;
+    font-weight: bold;
+}
+
+/* left3 */
+.left3Imgs{
+    display: flex;
+    /* margin-left: 50px; */
+    gap: 0 20px;
+    margin-bottom: 5%;
+}
+
+#checkboxAndtext{
+    /* background-color: red;
+    display: flex; */
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;   
+    margin: 0%;
+    
+}
+
+#checkboxAndtext > #checkbox{
+    border: 11px solid red;
+    background-color: aqua;
+
+}
+/* #checkboxAndtext input[checkbox],p{
+    display: inline;
+} */
