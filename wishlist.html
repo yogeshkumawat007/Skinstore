@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Styles/wishlist.css" />
+    <link
+      rel="icon"
+      href="https://s1.thcdn.com/checkout/resources/imgs/skstr/favicon.skstr.ico"
+    />
+    <link
+      rel="icon"
+      href="https://www.skinstore.com/favicon.ico?v=skstrus8.3759.3760"
+    />
+    <script
+      src="https://kit.fontawesome.com/a0feeaba88.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Wishlist | SkinStore</title>
+  </head>
+  <body>
+    <div class="productListPageN">
+      <div id="mainContentN" class="productListPage_mainContentN">
+        <div id="mainContentHeader">
+          <div id="mainContentHeader_toWraper">
+            <h2 id="mainContentHeader_headingH2">My Wishlist</h2>
+            <p id="totalNoOfProducts">1 item(s)</p>
+          </div>
+        </div>
+        <div id="productListPageSortingAndChangePages">
+          <div id="productListPageSorting">
+            <label id="sortingSelectionLable" for="sorting">Sort by </label>
+            <select name="option" id="sortProduct">
+              <option value="default">Default</option>
+              <option value="popularity">Popularity</option>
+              <option value="proceLtH">Price: Low to high</option>
+              <option value="prieHtL">Price: High to low</option>
+              <option value="AtZ">A - Z</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="productCatelog">
+          <!-- Product cards will go here -->
+        </div>
+      </div>
+      <div id="addMoreProductToWishList">
+        <p id="addMoreProductToWishList_text">
+          Add more products to your wishlist
+        </p>
+        <button id="continueShoppingButtonOnWishlistPage">
+          CONTINUE SHOPPING
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="./Scripts/wishlist.js"></script>
+</html>
