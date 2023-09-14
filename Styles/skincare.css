@@ -31,7 +31,7 @@ body {
   font-weight: 700;
   text-transform: none;
   margin: 25px 10px 10px 23px;
-  border-bottom: 1px solid #6c6c6a;
+  border-bottom: 1px solid #d0d5da;
   padding-bottom: 15px;
 }
 
@@ -90,8 +90,8 @@ select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url("./Media/arrow-down-sign-to-navigate.png") no-repeat right
-    10px center;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z'/%3E%3C/svg%3E")
+    no-repeat right 10px center;
 }
 
 select:focus {
@@ -221,172 +221,6 @@ select::-ms-expand {
   font-size: 20px;
 }
 
-/* Sideber testing CSS */
-aside {
-  margin: 0;
-  perspective: 900;
-  color: rgba(48, 69, 92, 0.8);
-}
-.accordion-menu {
-  display: inline-block;
-  position: relative;
-  left: 50%;
-  /* margin: 150px 0; */
-  transform: translate(-50%, 0);
-  max-width: 300px;
-  padding: 10px 0;
-  border-radius: 2px;
-}
-.accordion-menu h2 {
-  font-size: 18px;
-  line-height: 34px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  display: block;
-  margin: 0;
-  cursor: pointer;
-  color: #2e3337;
-}
-.accordion-menu p {
-  color: rgba(48, 69, 92, 0.8);
-  font-size: 15px;
-  line-height: 26px;
-  letter-spacing: 1px;
-  position: relative;
-  overflow: hidden;
-  max-height: 800px;
-  opacity: 1;
-  transform: translate(0, 0);
-  margin-top: 14px;
-  z-index: 2;
-}
-.accordion-menu ul {
-  list-style: none;
-  perspective: 900;
-  padding: 0 20px 10px;
-  margin: 0;
-  background-color: #fff;
-}
-.accordion-menu ul li {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  padding-bottom: 4px;
-  padding-top: 18px;
-  border-top: 1px solid #b7b7b6;
-}
-
-.accordion-menu ul li:nth-child(1) {
-  border: none;
-}
-.accordion-menu ul li:nth-of-type(1) {
-  animation-delay: 0.5s;
-}
-.accordion-menu ul li:nth-of-type(2) {
-  animation-delay: 0.75s;
-}
-.accordion-menu ul li:nth-of-type(3) {
-  animation-delay: 1s;
-}
-.accordion-menu ul li:last-of-type {
-  padding-bottom: 0;
-}
-
-.accordion-menu ul li .arrow {
-  position: absolute;
-  transform: translate(-6px, 0);
-  margin-top: 16px;
-  right: 0;
-}
-
-.accordion-menu ul li .arrow:before,
-.accordion-menu ul li .arrow:after {
-  content: "";
-  position: absolute;
-  background-color: #2e3337;
-  width: 3px;
-  height: 9px;
-}
-.accordion-menu ul li .arrow:before {
-  transform: translate(-2px, 0) rotate(45deg);
-}
-.accordion-menu ul li .arrow:after {
-  transform: translate(2px, 0) rotate(-45deg);
-}
-.accordion-menu ul li input[type="checkbox"] {
-  position: absolute;
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-}
-.accordion-menu ul li input[type="checkbox"]:checked ~ p {
-  margin-top: 0;
-  max-height: 0;
-  opacity: 0;
-  transform: translate(0, 50%);
-}
-.accordion-menu ul li input[type="checkbox"]:checked ~ .arrow:before {
-  transform: translate(2px, 0) rotate(45deg);
-}
-.accordion-menu ul li input[type="checkbox"]:checked ~ .arrow:after {
-  transform: translate(-2px, 0) rotate(-45deg);
-}
-
-/* Test code */
-.accordion-menu input[type="checkbox"]:not(:checked) ~ h2,
-.accordion-menu input[type="checkbox"]:not(:checked) ~ .arrow {
-  border-bottom: 2px solid black;
-}
-
-.accordion-menu .transition,
-.accordion-menu p,
-.accordion-menu ul li .arrow:before,
-.accordion-menu ul li .arrow:after {
-  transition: all 0.25s ease-in-out;
-}
-
-.accordion-menu .flipIn,
-.accordion-menu h1,
-.accordion-menu ul li {
-  animation: flipdown 0.5s ease both;
-}
-.accordion-menu .no-select,
-.accordion-menu h2 {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  user-select: none;
-}
-@keyframes flipdown {
-  0% {
-    opacity: 0;
-    transform-origin: top center;
-    transform: rotateX(-90deg);
-  }
-
-  5% {
-    opacity: 1;
-  }
-
-  80% {
-    transform: rotateX(8deg);
-  }
-
-  83% {
-    transform: rotateX(6deg);
-  }
-
-  92% {
-    transform: rotateX(-3deg);
-  }
-
-  100% {
-    transform-origin: top center;
-    transform: rotateX(0deg);
-  }
-}
-
 /* Query selector for responsiveness */
 
 @media (max-width: 900px) {
@@ -435,4 +269,120 @@ aside {
   #productListPage_filterAside {
     display: none;
   }
+}
+
+/* Sideber testing CSS */
+aside {
+  margin: 0;
+  perspective: 900;
+  color: #2e3337;
+}
+section {
+  min-height: 100vh;
+  width: 90%;
+  margin: 15px 10px 10px 23px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.collapse {
+  width: 100%;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+
+.filterTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d0d5da;
+}
+
+.filterTop h3 {
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+.filterOptions {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.filterOptions div {
+  border-top: 2px solid #1c1d1c;
+  padding: 1rem;
+  line-height: 1.6;
+  font-size: 1.4rem;
+}
+
+.collapse.active .filterOptions {
+  max-height: 300px;
+  animation: fade 0.4s ease-in-out;
+}
+.collapse.active svg {
+  transform: rotate(180deg);
+  transition: transform 0.4s ease-in;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Checkbox styling */
+
+.form-control {
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #2e3337;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+
+.form-control input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.1em solid #d0d5da;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+.form-control input[type="checkbox"]::before {
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: #2e3337;
+}
+
+.form-control + .form-control {
+  margin-top: 1em;
+}
+
+.form-control input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }
