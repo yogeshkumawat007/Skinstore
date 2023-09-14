@@ -117,6 +117,7 @@ function renderProductCards(data) {
         cartData.push(element);
         localStorage.setItem("cartData", JSON.stringify(cartData));
         openPopup();
+        renderPopupData(element);
       } else {
         alert("Produt is alredy in the cart");
       }
@@ -182,6 +183,9 @@ let popup = document.querySelector("#popup");
 let closePopupButton = document.querySelector("#closePopupButton");
 closePopupButton.addEventListener("click", closePopup);
 
+let viewCartBtn = document.querySelector(".fa-x");
+viewCartBtn.addEventListener("click", closePopup);
+
 var backdrop = document.getElementById("backdrop");
 
 function openPopup() {
@@ -195,6 +199,17 @@ function closePopup() {
 }
 
 renderProductCards(skinCareProductsData);
+
+function renderPopupData(element) {
+  let popupProductName = document.querySelector("#popupProductName");
+  let popupProductPrice = document.getElementsByClassName("popupProductPrice");
+
+  popupProductName.innerHTML = element.name;
+
+  Array.from(popupProductPrice).forEach(function (priceElement) {
+    priceElement.innerHTML = `$ ${element.price}`;
+  });
+}
 
 // Render Brand filter
 
