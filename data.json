@@ -158,23 +158,6 @@
   },
 
   {
-    "id": "111",
-    "image_urls": [
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11814869-2065062272653937.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11814869-3714864714301856.jpg"
-    ],
-    "name": "Colorescience Sunforgettable Total Protection Face Shield SPF50 (PA++++) 55ml",
-    "brand": "Colorescience",
-    "skin_type": "Combination",
-    "product_type": "skinCare",
-    "price": "45.00",
-    "description": "Colorescience Sunforgettable Face Shield offers total protection with SPF50 against harmful UV rays.",
-    "reviews": {
-      "average_rating": 4.2,
-      "total_reviews": 56
-    }
-  },
-  {
     "id": "222",
     "image_urls": [
       "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11523630-4395018245078593.jpg",
