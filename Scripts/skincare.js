@@ -15,6 +15,8 @@ var cartData = JSON.parse(localStorage.getItem("cartData")) || [];
 let wishlistData = JSON.parse(localStorage.getItem("wishlistData")) || [];
 
 function renderProductCards(data) {
+  var parentDiv = document.querySelector("#productCatelog");
+  parentDiv.innerHTML = "";
   data.forEach(function (element, index) {
     var image_url = element.image_urls[0];
     var name = element.name;
@@ -164,14 +166,16 @@ sortingElement.addEventListener("change", function () {
   renderProductCards(sortedData);
 });
 
-const faqs = document.querySelectorAll(".collapse");
+const collapse = document.querySelectorAll(".collapse");
 
-faqs.forEach((faq) => {
-  const filterTop = faq.querySelector(".filterTop");
+collapse.forEach((collapse) => {
+  const filterTop = collapse.querySelector(".filterTop");
   filterTop.addEventListener("click", () => {
-    faq.classList.toggle("active");
+    collapse.classList.toggle("active");
   });
 });
+
+// Popup
 
 let popup = document.querySelector("#popup");
 
@@ -191,3 +195,145 @@ function closePopup() {
 }
 
 renderProductCards(skinCareProductsData);
+
+// Render Brand filter
+
+let sortedBrandCounts = skinCareProductsData.reduce((acc, curr) => {
+  let brand = curr.brand;
+  if (!acc[brand]) {
+    acc[brand] = 1;
+  } else {
+    acc[brand]++;
+  }
+  return acc;
+}, {});
+
+sortedBrandCounts = Object.entries(sortedBrandCounts)
+  .sort((a, b) => b[1] - a[1])
+  .reduce((obj, [key, value]) => {
+    obj[key] = value;
+    return obj;
+  }, {});
+
+let checkedBrands = [];
+
+function renderBrandFilters() {
+  let parent = document.querySelector("#brandCheckboxDiv");
+
+  for (let key in sortedBrandCounts) {
+    // Create new elements
+    let label = document.createElement("label");
+    label.className = "form-control";
+
+    let input = document.createElement("input");
+    input.type = "checkbox";
+    input.name = "checkbox";
+    input.id = key;
+
+    let textNode = document.createTextNode(
+      `${key} (${sortedBrandCounts[key]})`
+    );
+
+    // Append the elements
+    label.append(input);
+    label.append(textNode);
+
+    parent.append(label);
+
+    // Add event listener to the checkbox
+    input.addEventListener("click", function () {
+      if (this.checked) {
+        // Add the brand to the list of checked brands
+        checkedBrands.push(key);
+      } else {
+        // Remove the brand from the list of checked brands
+        let index = checkedBrands.indexOf(key);
+        if (index > -1) {
+          checkedBrands.splice(index, 1);
+        }
+      }
+
+      // Filter the data and call renderProductCards
+      let filteredData = skinCareProductsData.filter((product) =>
+        checkedBrands.includes(product.brand)
+      );
+      renderProductCards(filteredData);
+    });
+  }
+}
+
+renderBrandFilters();
+
+// Render Skintype filter
+
+let sortedSkinTypeCounts = skinCareProductsData.reduce((acc, curr) => {
+  let skinType = curr.skin_type;
+  if (!acc[skinType]) {
+    acc[skinType] = 1;
+  } else {
+    acc[skinType]++;
+  }
+  return acc;
+}, {});
+
+sortedSkinTypeCounts = Object.entries(sortedSkinTypeCounts)
+  .sort((a, b) => b[1] - a[1])
+  .reduce((obj, [key, value]) => {
+    obj[key] = value;
+    return obj;
+  }, {});
+
+let checkedSkinTypes = [];
+
+function renderSkinTypeFilters() {
+  let parent = document.querySelector("#skinTypeCheckboxDiv");
+
+  for (let key in sortedSkinTypeCounts) {
+    // Create new elements
+    let label = document.createElement("label");
+    label.className = "form-control";
+
+    let input = document.createElement("input");
+    input.type = "checkbox";
+    input.name = "checkbox";
+    input.id = key;
+
+    let textNode = document.createTextNode(
+      `${key} (${sortedSkinTypeCounts[key]})`
+    );
+
+    // Append the elements
+    label.append(input);
+    label.append(textNode);
+
+    parent.append(label);
+
+    // Add event listener to the checkbox
+    input.addEventListener("click", function () {
+      if (this.checked) {
+        // Add the skin type to the list of checked skin types
+        checkedSkinTypes.push(key);
+      } else {
+        // Remove the skin type from the list of checked skin types
+        let index = checkedSkinTypes.indexOf(key);
+        if (index > -1) {
+          checkedSkinTypes.splice(index, 1);
+        }
+      }
+
+      // Filter the data and call renderProductCards
+      let filteredData;
+      if (checkedSkinTypes.length > 0) {
+        filteredData = skinCareProductsData.filter((product) =>
+          checkedSkinTypes.includes(product.skin_type)
+        );
+      } else {
+        // If no checkboxes are checked, use the original data
+        filteredData = skinCareProductsData;
+      }
+      renderProductCards(filteredData);
+    });
+  }
+}
+
+renderSkinTypeFilters();
