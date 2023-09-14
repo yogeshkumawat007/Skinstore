@@ -2,31 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
 
     <style>
-        table,tr,td,th
-        {
-            padding:10px;
-        }
+         
+      table,tr,td,th
+      {
+        padding:10px;
+      }
        img
        {
-            width: 80px;
-            height: 90px;
-
+          width: 80px;
+          height: 110px;
+          right: 20%;
        }
-       td{
-            text-align: center; 
-            vertical-align: middle;
+       td
+       {
+          text-align: center; 
+          vertical-align: middle;
        }
        div{
         margin-top: 10%;
+        margin-right: 30%;
         display: flex;
         height: auto;
         width: auto;
-       
+        border: 10px solid saddlebrown;
+        
        }
        button{
        
@@ -53,19 +61,30 @@
         background-color: azure;
 
        }
+       *{
+        font-family: "Lato", sans-serif;
+       }
+       #name{
+        padding-left: 20px;
+        
+
+       }
         
     </style>
 </head>
 <body>
+    <div class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./cart.html">Cart</a>
+        <a href="./payment.html">Payment</a>
+      </div>
     <h2 align="center">Your Cart</h2>
-    <div class="center">
-        
-
+    <div class="center" id="cart-container">
         <table align="center" width="70%">
             <thead>
                
                     <tr>
-                      <th>Itema</th>
+                      <th>Items</th>
                       <th>Price</th>
                       <th>Quantity</th>
                       <th>Subtotal</th>
@@ -74,34 +93,7 @@
                  
             </thead>
 
-            <tbody>
-
-                <tr>
-
-                    <td>
-                        <img src="https://static.thcdn.com/images/large/webp//productimg/1600/1600/14514328-3975064449442396.jpg"> <p>Loreal sunscreen afafaaaaaaa</p>
-                    </td>
-                    <td>
-                        30$
-                    </td>
-                    <td>
-                        
-                        <span>
-                            <input type="button" onclick="decrementValue()" value="-" />
-                            <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
-                            <input type="button" onclick="incrementValue()" value="+" />
-                        </span>
-                    </td>
-                    <td>
-                        $37.50
-                    </td>
-                    <td>
-                        <button>Delete</button>
-                    </td>
-                    
-                </tr>
-               
-                
+            <tbody id="tbody"></tbody>  
             </tbody>
 
         </table>
@@ -126,58 +118,166 @@
 
 </html>
 <script>
+
+var cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
+var totalPrice = 0;
+
+var discountedPrice = null;
+
+
+function renderCards() 
+{
+  var cartData = JSON.parse(localStorage.getItem("cart")) || [];
+  cartData.forEach(function (element,index) 
+  {
+  
+    var parentDiv = document.querySelector("#cart-container");//Parent div
+
+
+    var tbody = document.getElementById("tbody");//tbody
+
+
+    var row = document.createElement("tr");
+
+
+
+    var image = document.createElement("td"); //1 st col for image and description of the product
+
+    var img = document.createElement("img");
+    img.src="https://th.bing.com/th/id/OIP.7p0F5MyfqKTxDAijzSQPjAHaD4?w=309&h=180&c=7&r=0&o=5&pid=1.7"
+    var desc = document.createElement("span");
+               //for description of product
+    desc.setAttribute("id","name")
+
+    desc.innerText =  element.name
+       
+
+    image.append(img, desc);
+
+    ////////////////////////////////////////////////////////////////////////
+
+    var price = document.createElement("td");//column for price
+    price.innerText = element.price
+
     
-function incrementValue()
-{
-    var value = parseInt(document.getElementById('number').value, 10);
-    value = isNaN(value) ? 0 : value;
-    if(value<10){
-        value++;
-            document.getElementById('number').value = value;
-    }
+    var quantity = 1;
+
+    var upd = document.createElement("td");//for increaing and decreasing the items in cart
+
+    
+
+    var incrementBtn = document.createElement("button");
+    var quantitySpan = document.createElement("span");
+    var decrementBtn = document.createElement("button");
+
+    incrementBtn.innerHTML = "+"
+    quantitySpan.innerHTML = quantity
+    decrementBtn.innerHTML = "-";
+    totalPrice += Number(element.price);
+
+    upd.append(incrementBtn, quantitySpan, decrementBtn);
+
+    
+
+    var total = document.createElement("td");
+
+    total.innerText = quantity * Number(price); // Cslculate the total based on quantity and price
+
+    
+    var del = document.createElement("td")
+    var btn = document.createElement("button")
+    del.append(btn)
+    btn.innerHTML = "Delete"
+
+    row.append(image, price, upd, total,del);
+    tbody.append(row);
+
+    btn.addEventListener("click" , function ()
+    {
+        deleteFunc(index)
+    })
+    
+    updateData();
+
+    incrementBtn.addEventListener("click", function () 
+    {
+      quantity++;
+      var increment = Number(element.price);
+      totalPrice += increment;
+      quantitySpan.innerHTML = quantity;
+      total.innerText = quantity * increment; // Update the total when the quantity changes
+      updateData();
+    });
+
+    decrementBtn.addEventListener("click", function () 
+    {
+      if (quantity > 1) {
+        quantity--;
+        var decrement = Number(element.price);
+        totalPrice -= decrement;
+        quantitySpan.innerHTML = quantity;
+        total.innerText = quantity * decrement; // Update the total when the quantity changes
+        updateData();
+      }
+    });
+  });
 }
-function decrementValue()
-{
-    var value = parseInt(document.getElementById('number').value, 10);
-    value = isNaN(value) ? 0 : value;
-    if(value>1){
-        value--;
-            document.getElementById('number').value = value;
-    }
 
+function updateData() { 
+  var cartTotalSpan = document.querySelector("#cart-total");//update the total price of items
+  cartTotalSpan.innerHTML = Math.round(totalPrice);
 }
 
-
-
-
-// checking the coupons
+// Coupon
 var couponData = document.querySelector("#cupon-filled");
-
 var data;
 couponData.addEventListener("input", function (event) {
   event.preventDefault();
   var target = event.target;
-
   data = target.value;
 });
 
 var appliedAlready = false;
-    var submitBtn = document.querySelector("#cupon-active");
-    submitBtn.addEventListener("click", function () {
-      if (!appliedAlready) {
-        if (data == "masai30") {
-          var discount = (30 / 100) * totalPrice;
-          totalPrice -= discount;
-          appliedAlready = true;
-          updateData();//function for updation data 
-        } else {
-          alert("Please enter a valid coupon");
-          return;
-        }
-      } else {
-        alert("You've already applied discount");
-        return;
+var submitBtn = document.querySelector("#cupon-active");
+submitBtn.addEventListener("click", function () {
+  if (!appliedAlready) {
+    if (data == "masai30") {
+      var discount = (30 / 100) * totalPrice;
+      totalPrice -= discount;
+      appliedAlready = true;
+      updateData();
+    } else {
+      alert("Please enter a valid coupon");
+      return;
+    }
+  } else {
+    alert("You've already applied discount");
+    return;
+  }
+});
+function deleteFunc(index){
+        var a = cartData.splice(index , 1)
+        console.log(a)
+        localStorage.setItem("cart",JSON.stringify(cartData))
+      
+        window.location.reload()
+        renderCards()
       }
-    });
+
+updateData();
+renderCards();
+var home = document.getElementById("home").addEventListener("click",function(){
+  window.location="index.html"
+
+})
+var checkout = document.getElementById("Checkout").addEventListener("click",function(){
+  window.location="checkout.html"
+  
+})
+//var totalamt = cartData.reduce(function (acc ,ele){
+  //  return  parseFloat(ele[0].price) + acc
+    
+//} , 0)
 
 </script>
