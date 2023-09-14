@@ -390,15 +390,16 @@ section {
 /* Popup for button submissions */
 
 .popup {
-  width: 400px;
+  width: 65%;
   background: #fff;
   border-radius: 6px;
   position: fixed;
   top: 0;
+  /* top: 50%; */
   left: 50%;
+  /* transform: translate(-50%, -50%); */
   transform: translate(-50%, -50%) scale(0.1);
   text-align: center;
-  padding: 0 30px 30px;
   color: #333;
   visibility: hidden;
   transition: transform 0.4s, top 0.4s;
@@ -412,29 +413,106 @@ section {
 }
 
 .popup img {
-  width: 100px;
-  margin-top: -50px;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 200px;
 }
 
-.popup h2 {
-  font-size: 38px;
+.popupAddToCartTextDiv {
+  display: flex;
+  padding: 20px;
+  background-color: #d3d3d3;
+  border-bottom: 1px solid #8d8d8d;
+  justify-content: space-between;
+  font-size: 25px;
+}
+.productNameAndPriceContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.subTotalWrapper {
+  display: flex;
+  margin: 0 5%;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.subTotalWrapper div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.fa-solid .fa-x {
+  color: #000000;
+}
+
+.popupProductCard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 2% 3% 4%;
+}
+
+.popup h3 {
+  font-size: 30px;
   font-weight: 500;
   margin: 30px 0 10px;
 }
 
-.popup button {
-  width: 100%;
-  margin-top: 50px;
+.popupButtonDiv {
+  display: flex;
+  gap: 2rem;
   padding: 10px;
-  background: #6fd649;
-  color: #fff;
-  border: 0;
-  outline: none;
-  border-radius: 4px;
+  margin: 5px 0;
+}
+
+#closePopupButton {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #2e3337;
+  font-weight: 300;
+  line-height: 18px;
+  background-color: white;
+  border-style: none;
+  padding: 12px;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+  width: 50%;
+  border: 1px solid black;
+}
+
+#closePopupButton:hover {
+  background-color: #28bdb83e;
+}
+#viewCartBtn {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #2e3337;
+  font-weight: 300;
+  line-height: 18px;
+  background-color: #333;
+  border-style: none;
+  padding: 12px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+  width: 50%;
+}
+
+#viewCartBtn:hover {
+  background-color: #28bdb7;
+  color: black;
 }
 
 .backdrop {
