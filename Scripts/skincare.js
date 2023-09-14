@@ -114,6 +114,7 @@ function renderProductCards(data) {
         clickedCart = true;
         cartData.push(element);
         localStorage.setItem("cartData", JSON.stringify(cartData));
+        openPopup();
       } else {
         alert("Produt is alredy in the cart");
       }
@@ -171,5 +172,22 @@ faqs.forEach((faq) => {
     faq.classList.toggle("active");
   });
 });
+
+let popup = document.querySelector("#popup");
+
+let closePopupButton = document.querySelector("#closePopupButton");
+closePopupButton.addEventListener("click", closePopup);
+
+var backdrop = document.getElementById("backdrop");
+
+function openPopup() {
+  popup.classList.add("open-popup");
+  backdrop.classList.add("open-backdrop"); // Show backdrop when popup is open
+}
+
+function closePopup() {
+  popup.classList.remove("open-popup");
+  backdrop.classList.remove("open-backdrop"); // Hide backdrop when popup is closed
+}
 
 renderProductCards(skinCareProductsData);
