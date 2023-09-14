@@ -1,0 +1,454 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.productListPageN {
+  display: flex;
+}
+
+#productListPage_filterAside {
+  width: 25%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#filter_head_title {
+  font-size: 21px;
+  color: #2e3337;
+  font-weight: 700;
+  text-transform: none;
+  margin: 25px 10px 10px 23px;
+  border-bottom: 1px solid #d0d5da;
+  padding-bottom: 15px;
+}
+
+#mainContentN {
+  width: 75%;
+  margin: 10px;
+}
+
+#mainContentHeader_headingH2 {
+  font-size: 42px;
+  line-height: 1.4;
+  color: #2e3337;
+  font-weight: 700;
+  margin: 10px;
+}
+
+#totalNoOfProducts {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #2e3337;
+  font-weight: 300;
+  text-transform: none;
+  margin: 10px;
+}
+
+#mainContentHeader_readMoreContent {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #2e3337;
+  font-weight: 300;
+  text-transform: none;
+  margin: 10px;
+}
+#readMore_underlined {
+  text-decoration: underline;
+  margin-top: 10px;
+}
+#productListPageSorting {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#sortingSelectionLable {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #2e3337;
+  font-weight: 300;
+  margin: 10px;
+}
+
+select {
+  padding: 0 100px 0 10px;
+  border: 1px solid #999;
+  line-height: 30px;
+  height: 40px;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M12 17.414 3.293 8.707l1.414-1.414L12 14.586l7.293-7.293 1.414 1.414L12 17.414z'/%3E%3C/svg%3E")
+    no-repeat right 10px center;
+}
+
+select:focus {
+  border: 2px solid #2e3337;
+  border-radius: 5px;
+}
+
+/* fix for ie 10 later */
+select::-ms-expand {
+  display: none;
+}
+
+#productCatelog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
+  padding: 15px;
+}
+
+#imageDiv img {
+  width: 100%;
+}
+
+#productCardDiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#imageAndWishListDiv {
+  width: 100%;
+  display: flex;
+  gap: 3px;
+}
+
+#imageDiv {
+  height: max-content;
+  background-color: white;
+  padding: 5px;
+}
+
+#wishlistDiv {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#textBox {
+  min-width: 100px;
+  width: fit-content;
+  height: 30px;
+  border: 0.3px solid #ba3d49;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 300;
+}
+#ratingContainer {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  gap: 2px;
+}
+#noOfRatings {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #707070;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  display: initial;
+}
+#ratingStars {
+  width: 30%;
+}
+
+#productDetailsDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10% 1% 5% 1%;
+  flex-grow: 1;
+}
+#productDetailsDiv h3 {
+  font-size: 16px;
+  color: #2e3337;
+  font-weight: 400;
+  margin: 8px;
+}
+
+#priceElement {
+  font-size: 21px;
+  line-height: 1.2;
+  color: #2e3337;
+  font-weight: 700;
+  margin: 8px;
+  margin-top: 15px;
+}
+
+#addToCartButton {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #2e3337;
+  font-weight: 300;
+  line-height: 18px;
+  background-color: #333;
+  border-style: none;
+  padding: 12px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+#addToCartButton:hover {
+  background-color: #28bdb7;
+  color: black;
+}
+
+.fa-regular {
+  font-size: 20px;
+}
+
+/* Query selector for responsiveness */
+
+@media (max-width: 900px) {
+  #productCatelog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #mainContentN {
+    margin: 0 25px 30px 25px;
+    padding: 10px 0 11% 0;
+    border-bottom: 1px solid black;
+  }
+
+  #totalNoOfProducts {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  #sortingSelectionLable {
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .productListPageN {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  #productCatelog {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  #mainContentN {
+    width: 95%;
+    border-bottom: 1px solid black;
+  }
+
+  #totalNoOfProducts {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  #sortingSelectionLable {
+    padding-right: 10px;
+  }
+
+  #productListPage_filterAside {
+    display: none;
+  }
+}
+
+/* Sideber testing CSS */
+aside {
+  margin: 0;
+  perspective: 900;
+  color: #2e3337;
+}
+section {
+  min-height: 100vh;
+  width: 90%;
+  margin: 20px 10px 10px 23px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.collapse {
+  width: 100%;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+
+.filterTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d0d5da;
+}
+
+.filterTop h3 {
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+.filterOptions {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.filterOptions div {
+  border-top: 2px solid #1c1d1c;
+  padding: 1rem;
+  line-height: 1.6;
+  font-size: 1.4rem;
+}
+
+.collapse.active .filterOptions {
+  max-height: 300px;
+  animation: fade 0.4s ease-in-out;
+}
+.collapse.active svg {
+  transform: rotate(180deg);
+  transition: transform 0.4s ease-in;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Checkbox styling */
+
+.form-control {
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #2e3337;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+
+.form-control input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.1em solid #d0d5da;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+.form-control input[type="checkbox"]::before {
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: #2e3337;
+}
+
+.form-control + .form-control {
+  margin-top: 1em;
+}
+
+.form-control input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+/* Popup for button submissions */
+
+.popup {
+  width: 400px;
+  background: #fff;
+  border-radius: 6px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+  z-index: 2;
+}
+
+.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup img {
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+
+.popup button {
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px;
+  background: #6fd649;
+  color: #fff;
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.open-backdrop {
+  visibility: visible;
+}
