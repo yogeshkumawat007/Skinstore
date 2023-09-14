@@ -163,4 +163,13 @@ sortingElement.addEventListener("change", function () {
   renderProductCards(sortedData);
 });
 
+const faqs = document.querySelectorAll(".collapse");
+
+faqs.forEach((faq) => {
+  const filterTop = faq.querySelector(".filterTop");
+  filterTop.addEventListener("click", () => {
+    faq.classList.toggle("active");
+  });
+});
+
 renderProductCards(skinCareProductsData);
