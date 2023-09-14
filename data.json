@@ -376,6 +376,61 @@
   },
 
   {
+    "id": "667",
+    "image_urls": [
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11751838-7504901837696619.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11751838-7134901068663866.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11751838-1604901837737785.jpg"
+    ],
+    "name": "The Ordinary 100% L-Ascorbic Acid Powder 20g",
+    "brand": "The Ordinary",
+    "skin_type": "Dry",
+    "product_type": "skinCare",
+    "price": "260.00",
+    "description": "The Ordinary L-Ascorbic Acid Powder is a versatile product that can be mixed with your favorite serum or cream to create a skin treatment that suits your skin's needs.",
+    "reviews": {
+      "average_rating": 4.8,
+      "total_reviews": 55
+    }
+  },
+  {
+    "id": "668",
+    "image_urls": [
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13623195-1714940020240599.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13623195-1284938942873084.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/13623195-5414938942977502.jpg"
+    ],
+    "name": "The Ordinary Behentrimonium Chloride 2% Conditioner 240ml",
+    "brand": "The Ordinary",
+    "skin_type": "Sensitive",
+    "product_type": "skinCare",
+    "price": "260.00",
+    "description": "The Ordinary Behentrimonium Chloride 2% Conditioner is a hair care product designed to nourish and hydrate your hair, leaving it soft and manageable.",
+    "reviews": {
+      "average_rating": 4.8,
+      "total_reviews": 55
+    }
+  },
+  {
+    "id": "669",
+    "image_urls": [
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11363400-4725023392693171.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11363400-1735023392742257.jpg",
+      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11363400-1874901839846947.jpg"
+    ],
+    "name": "The Ordinary Lactic Acid 10% + HA 2% Superficial Peeling Formulation 30ml",
+    "brand": "The Ordinary",
+    "skin_type": "Sensitive",
+    "product_type": "skinCare",
+    "price": "260.00",
+    "description": "The Ordinary Lactic Acid 10% + HA 2% is a high-strength lactic acid superficial peeling formulation that targets uneven tone, textural irregularities, and fine lines.",
+    "reviews": {
+      "average_rating": 4.8,
+      "total_reviews": 55
+    }
+  },
+
+  {
     "id": "1001",
     "image_urls": [
       "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12526872-4524872074957712.jpg",
