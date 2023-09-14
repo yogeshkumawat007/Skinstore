@@ -254,9 +254,15 @@ function renderBrandFilters() {
       }
 
       // Filter the data and call renderProductCards
-      let filteredData = skinCareProductsData.filter((product) =>
-        checkedBrands.includes(product.brand)
-      );
+      let filteredData;
+      if (checkedBrands.length > 0) {
+        filteredData = skinCareProductsData.filter((product) =>
+          checkedBrands.includes(product.brand)
+        );
+      } else {
+        // If no checkboxes are checked, use the original data
+        filteredData = skinCareProductsData;
+      }
       renderProductCards(filteredData);
     });
   }
