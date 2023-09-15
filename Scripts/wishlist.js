@@ -172,7 +172,7 @@ function renderPopupData(element) {
   popupProductImageDiv.append(proImage);
 
   popupProductName.innerHTML = element.name;
-  popupProductPrice.innerHTML = element.price;
+  popupProductPrice.innerHTML = `$${element.price}`;
   noOfItemsInCart.innerHTML = `(${cartData.length} Items in your cart)`;
 
   let subtotal = cartData.reduce(
