@@ -210,6 +210,7 @@ function renderPopupData(element) {
   proImage.src = element.image_urls[0];
 
   let popupProductImageDiv = document.querySelector("#popupProductImageDiv");
+  // Clear image
   popupProductImageDiv.innerHTML = "";
   popupProductImageDiv.append(proImage);
 
