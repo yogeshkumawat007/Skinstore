@@ -124,14 +124,19 @@ var cartData = JSON.parse(localStorage.getItem("cart")) || [];
 var totalPrice = 0;
 
 var discountedPrice = null;
+console.log("carttdata:",cartData)
 
-
+//console.log(cartData)
 function renderCards() 
 {
-  var cartData = JSON.parse(localStorage.getItem("cart")) || [];
+  
+ // var cartData = JSON.parse(localStorage.getItem("cart")) || [];
+  //console.log(cartData)
   cartData.forEach(function (element,index) 
   {
-  
+    //console.log("element",element)
+    let ele = element[0]
+   // console.log("individual",ele)
     var parentDiv = document.querySelector("#cart-container");//Parent div
 
 
@@ -145,20 +150,20 @@ function renderCards()
     var image = document.createElement("td"); //1 st col for image and description of the product
 
     var img = document.createElement("img");
-    img.src="https://th.bing.com/th/id/OIP.7p0F5MyfqKTxDAijzSQPjAHaD4?w=309&h=180&c=7&r=0&o=5&pid=1.7"
+    img.src=ele.image_urls[0]
     var desc = document.createElement("span");
                //for description of product
     desc.setAttribute("id","name")
 
-    desc.innerText =  element.name
+    desc.innerText =  ele.name
        
 
     image.append(img, desc);
 
-    ////////////////////////////////////////////////////////////////////////
+    
 
     var price = document.createElement("td");//column for price
-    price.innerText = element.price
+    price.innerText = ele.price
 
     
     var quantity = 1;
@@ -166,7 +171,7 @@ function renderCards()
     var upd = document.createElement("td");//for increaing and decreasing the items in cart
 
     
-
+    var span = document.createElement("span")
     var incrementBtn = document.createElement("button");
     var quantitySpan = document.createElement("span");
     var decrementBtn = document.createElement("button");
@@ -174,15 +179,16 @@ function renderCards()
     incrementBtn.innerHTML = "+"
     quantitySpan.innerHTML = quantity
     decrementBtn.innerHTML = "-";
-    totalPrice += Number(element.price);
+    totalPrice += Number(ele.price);
 
-    upd.append(incrementBtn, quantitySpan, decrementBtn);
+    span.append(incrementBtn, quantitySpan, decrementBtn);
+    upd.append(span)
 
     
 
     var total = document.createElement("td");
 
-    total.innerText = quantity * Number(price); // Cslculate the total based on quantity and price
+    total.innerText = quantity * Number(ele.price); // Cslculate the total based on quantity and price
 
     
     var del = document.createElement("td")
@@ -191,6 +197,7 @@ function renderCards()
     btn.innerHTML = "Delete"
 
     row.append(image, price, upd, total,del);
+
     tbody.append(row);
 
     btn.addEventListener("click" , function ()
@@ -203,7 +210,7 @@ function renderCards()
     incrementBtn.addEventListener("click", function () 
     {
       quantity++;
-      var increment = Number(element.price);
+      var increment = Number(ele.price);
       totalPrice += increment;
       quantitySpan.innerHTML = quantity;
       total.innerText = quantity * increment; // Update the total when the quantity changes
@@ -214,12 +221,13 @@ function renderCards()
     {
       if (quantity > 1) {
         quantity--;
-        var decrement = Number(element.price);
+        var decrement = Number(ele.price);
         totalPrice -= decrement;
         quantitySpan.innerHTML = quantity;
         total.innerText = quantity * decrement; // Update the total when the quantity changes
         updateData();
       }
+      
     });
   });
 }
@@ -266,6 +274,7 @@ function deleteFunc(index){
       }
 
 updateData();
+//localStorage.setItem("cartdata",JSON.stringify())
 renderCards();
 var home = document.getElementById("home").addEventListener("click",function(){
   window.location="index.html"
