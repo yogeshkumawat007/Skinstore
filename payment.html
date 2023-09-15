@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="/payment.css" />
+  </head>
+
+  <style>
+    * {
+      font-family: "Gothic A1", sans-serif;
+      font-family: "Lato", sans-serif;
+      font-family: "Quicksand", sans-serif;
+    }
+  </style>
+
+  <body>
+    <div class="checkoutMainYk">
+      <!-- checkout Left div -->
+      <div class="checkoutLeftYk">
+        <!-- left1 -->
+        <div class="left1">
+          <p>1. Shipping Address</p>
+
+          <form action="">
+            <label for="">*Country/Region</label>
+            <select name="" id="country">
+              <option value="usa">USA</option>
+              <option value="india">India</option>
+              <option value="china">China</option>
+              <option value="France">France</option>
+              <option value="uk">UK</option>
+              <option value="nepal">Nepal</option>
+            </select>
+
+            <label for="name">*Full Name</label>
+            <input type="text" name="name" id="name" />
+
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" />
+
+            <label for="mobile">Contact Number</label>
+            <input type="number" name="mobile" id="mobile" />
+            <p>Why do we need your number</p>
+          </form>
+        </div>
+
+        <!-- left2 -->
+        <div class="left2">
+          <p>2.Select Delivery Option</p>
+
+          <div>
+            <p>Standard Delivery</p>
+            <p>Delivered within 2-5 working days</p>
+            <p>FREE</p>
+          </div>
+
+          <div>
+            <p>Express - 2 Day</p>
+            <p>Delivered within 2 working days</p>
+            <p>$10.00</p>
+            <p>Applies to orders placed prior to 9pm local time.</p>
+          </div>
+
+          <div>
+            <p>Overnight - Next Day</p>
+            <p>Usually delivered within 1 working day.</p>
+            <p>$20.00</p>
+            <p>Applies to orders placed prior to 2pm ET.</p>
+          </div>
+        </div>
+
+        <!-- left3 -->
+        <div class="left3">
+          <p>3.Select Payment Method</p>
+          <div>
+            <p>Credit/Debit Card</p>
+
+            <div class="left3Imgs">
+              <div>
+                <img
+                  src="https://s1.thcdn.com/checkout/resources/images/3c2e42cbf9d0b0df0d3b3bb81aa41d6a.svg"
+                  alt=""
+                />
+              </div>
+
+              <div>
+                <img
+                  src="https://s1.thcdn.com/checkout/resources/images/57987be4eb98b4c77644d93d92df80fa.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src="https://s1.thcdn.com/checkout/resources/images/932e82ef072c7df18e91e66b96dfdf5d.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src="https://s1.thcdn.com/checkout/resources/images/6732c0137a7dab50b23daf1337fe2f30.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src="https://s1.thcdn.com/checkout/resources/images/0528692e7541ff3755880b3408793969.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src="https://s1.thcdn.com/checkout/resources/images/8ba3dc816042268141a2205e3bfc3971.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src="https://s1.thcdn.com/checkout/resources/images/248074ffdeeeaeffed9c5db35f35fe45.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <label for="cardNumber">*Card Number</label>
+          <input type="number" name="cardNumber" id="cardNumber" required />
+
+          <label for="nameOnCard">*Name on card</label>
+          <input type="text" name="nameOnCard" id="nameOnCard" required />
+
+          <label for="expiryDate">*Expiry Date</label>
+          <div id="expiryDateDiv">
+            <input
+              type="number"
+              name=""
+              id="month"
+              placeholder="Month"
+              required
+            />
+            <input
+              type="number"
+              name=""
+              id="year"
+              placeholder="Year"
+              required
+            />
+          </div>
+
+          <label for="SecurityCode">*Security Code(CV2)</label>
+          <input type="number" name="" id="SecurityCode" />
+
+          <div id="checkboxAndtext">
+            <div>
+              <input type="checkbox" name="" id="checkbox" checked />
+            </div>
+            <div>
+              <p>Use my shipping address as my cardholder address</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- left4 -->
+        <div class="left4">
+          <p>Use a different payment method</p>
+
+          <div>
+            <div>
+              <input type="checkbox" name="" id="payPal" />
+            </div>
+            <div>
+              <img
+                src="https://s1.thcdn.com/checkout/resources/images/6528547f8322e9cf64458725f0a72827.svg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <input type="checkbox" name="" id="payPal" />
+            </div>
+            <div>
+              <img
+                src="https://s1.thcdn.com/checkout/resources/images/3c5574b5e1fe1470a49f46bc08828ef4.svg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <input type="checkbox" name="" id="payPal" />
+            </div>
+            <div>
+              <img
+                src="https://s1.thcdn.com/checkout/resources/images/5ba5f9cd0c43d9f966774630aa65d7c6.svg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <input type="checkbox" name="" id="payPal" />
+            </div>
+            <div>
+              <img
+                src="https://s1.thcdn.com/checkout/resources/images/61199182e45613b7932d163ec9ad823c.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="left5">
+          <div id="submitOrder">
+            <div><span class="material-symbols-outlined"> lock </span></div>
+            <div></div>
+            <div>SUBMIT MY ORDER</div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <!-- privacy policy -->
+        <div class="left6">
+          <p>By placing this order, you are confirming that you agree to our <span>Terms and Conditions</span> and <span>Privacy Policy</span>.</p>
+        </div>
+      </div>
+
+      <!-- checkout right div -->
+      <div class="checkoutRightYk">
+        <div>
+          div 1 for img and description
+        </div>
+
+        <div>
+          <p>Standard Delivery</p>
+          <span>Free</span>
+        </div>
+
+        <div>
+          <p>Total to pay</p>
+          <span id="totalToPay">$198.45</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
