@@ -1,12 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Single Product Page</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./singleProduct.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="singlePro">
+      <!-- side div for imgs -->
+      <div class="singleImgDiv">
+        <img id="singleProImg1" src="" alt="" />
+        <img id="singleProImg2" src="" alt="" />
+        <img id="singleProImg3" src="" alt="" />
+      </div>
+
+      <div class="singleMainDiv">
+        <img id="singleMainDivImg" src="" alt="" />
+      </div>
+
+      <div class="singleDescriptionDiv">
+        <div class="sdleft1">
+          <p id="sppDes">Lorem ipsum dolor sit amet.</p>
+          <p id="sppRating">5star</p>
+          <p>$ <span id="sppPrice"></span></p>
+        </div>
+
+        <div class="sppSize">
+          <p>Size:</p>
+          <div>
+            <button>30ml</button>
+            <button>75ml</button>
+          </div>
+        </div>
+
+        <div class="sppQuantity">
+          <p>Quantity:</p>
+          <div>
+            <button id="sppDecBtn">-</button>
+            <span id="sppQuantitySpan">1</span>
+            <button id="sppIncBtn">+</button>
+          </div>
+
+          <div>
+            <button id="sppAddToCard">ADD TO CART</button>
+          </div>
+
+          <div id="sppAddWishlist">
+            <span class="material-symbols-outlined"> favorite </span>
+            <p>Save to Wishlist</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- other customer bougth -->
+    <div class="otherCustomer">
+      <h1>Other customers bought:</h1>
+      <div class="otherCustomerMainDiv">
+
+        <div>
+          <img src="https://static.thcdn.com/images/small/webp//productimg/original/12526882-6914866384402807.jpg" alt="">
+          <p>VIRTUE Recovery Shampoo 240ml</p>
+          <p>Up to 25% off with code: BEST</p>
+          <p>$42.00</p>
+          <button>QUICK BUY</button>
+        </div>
+
+        <div>
+          <img src="https://static.thcdn.com/images/small/webp//productimg/original/11416763-8864901837096244.jpg" alt="">
+          <p>VIRTUE Recovery Shampoo 240ml</p>
+          <p>Up to 25% off with code: BEST</p>
+          <p>$42.00</p>
+          <button>QUICK BUY</button>
+        </div>
+
+        <div>
+          <img src="https://static.thcdn.com/images/small/webp//productimg/original/12692104-1005028908815431.jpg" alt="">
+          <p>VIRTUE Recovery Shampoo 240ml</p>
+          <p>Up to 25% off with code: BEST</p>
+          <p>$42.00</p>
+          <button>QUICK BUY</button>
+        </div>
+
+        <div>
+          <img src="https://static.thcdn.com/images/small/webp//productimg/original/12220277-1004905486686769.jpg" alt="">
+          <p>VIRTUE Recovery Shampoo 240ml</p>
+          <p>Up to 25% off with code: BEST</p>
+          <p>$42.00</p>
+          <button>QUICK BUY</button>
+        </div>
+
+
+      </div>
+    </div>
+  </body>
 </html>
+<script>
+  let singleProArr = [
+    {
+      id: "777",
+      image_urls: [
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11118731-1274905484791816.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11118731-1924905484857501.jpg",
+        "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11118731-8254902133386459.jpg",
+      ],
+      name: "Elemis Limited Edition Pro-Collagen Marine Cream SPF 30 100ml (Worth $239)",
+      brand: "Elemis",
+      skin_type: "Acne Prone",
+      product_type: "skinCare",
+      price: "220.00",
+      description:
+        "Elemis Pro-Collagen Marine Cream is a luxurious anti-aging cream with SPF 30 for firmer, smoother skin.",
+      reviews: {
+        average_rating: 4.9,
+        total_reviews: 39,
+      },
+    },
+  ];
+
+  let img1 = document.getElementById("singleProImg1");
+  let img2 = document.getElementById("singleProImg2");
+  let img3 = document.getElementById("singleProImg3");
+
+  img1.src = singleProArr[0].image_urls[0];
+  img2.src = singleProArr[0].image_urls[1];
+  img3.src = singleProArr[0].image_urls[2];
+
+  img1.addEventListener("click", funImg1);
+  img2.addEventListener("click", funImg2);
+  img3.addEventListener("click", funImg3);
+
+  //   fetching singleMainDivImg
+  let singleMainDivImg = document.getElementById("singleMainDivImg");
+  singleMainDivImg.src = img1.src;
+
+  function funImg1() {
+    console.log("cliecked 1");
+    singleMainDivImg.src = img1.src;
+  }
+
+  function funImg2() {
+    console.log("cliecked 2");
+    singleMainDivImg.src = img2.src;
+  }
+
+  function funImg3() {
+    console.log("cliecked 3");
+    singleMainDivImg.src = img3.src;
+  }
+
+  //   adding description into des. div
+
+  document.getElementById("sppDes").innerHTML = singleProArr[0].name;
+
+  document.getElementById(
+    "sppRating"
+  ).innerHTML = `Rating ${singleProArr[0].reviews.average_rating}`;
+
+  document.getElementById("sppPrice").innerHTML = singleProArr[0].price;
+
+  // adding event to Inc and Dec btn
+  document.querySelector("#sppIncBtn").addEventListener("click", sppIncFun);
+
+  document.querySelector("#sppDecBtn").addEventListener("click", sppDecFun);
+
+  let sppQuantitySpan = document.getElementById("sppQuantitySpan");
+
+  let quantity = 1;
+
+  function sppDecFun() {
+    quantity--;
+    sppQuantitySpan.innerText = `${quantity}`;
+  }
+
+  function sppIncFun() {
+    quantity++;
+    sppQuantitySpan.innerText = `${quantity}`;
+  }
+
+  // add to cart funcationality
+  let addToCartBtn = document.querySelector("#sppAddToCard");
+  addToCartBtn.addEventListener("click", funAddToCartYk);
+
+  let sppDataArr = [];
+
+  function funAddToCartYk() {
+    // console.log(singleProArr[0])
+    sppDataArr.push(singleProArr[0]);
+
+    localStorage.setItem("sppDataYk", JSON.stringify(sppDataArr));
+  }
+
+  // adding event on Wishlist
+  document
+    .querySelector("#sppAddWishlist")
+    .addEventListener("click", wishListsppYk);
+
+  function wishListsppYk() {
+    console.log("clicked on wishListsppYk");
+  }
+</script>

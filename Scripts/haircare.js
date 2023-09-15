@@ -1,15 +1,15 @@
 fetch("data.json")
   .then((response) => response.json())
   .then((data) => {
-    let skinCareProducts = data.filter(
-      (item) => item.product_type === "skinCare"
+    let hairCareProducts = data.filter(
+      (item) => item.product_type === "hairCare"
     );
-    localStorage.setItem("skinCareProducts", JSON.stringify(skinCareProducts));
+    localStorage.setItem("hairCareProducts", JSON.stringify(hairCareProducts));
   })
   .catch((error) => console.error("Error:", error));
 
-let skinCareProductsData =
-  JSON.parse(localStorage.getItem("skinCareProducts")) || [];
+let hairCareProductsData =
+  JSON.parse(localStorage.getItem("hairCareProducts")) || [];
 
 var cartData = JSON.parse(localStorage.getItem("cartData")) || [];
 let wishlistData = JSON.parse(localStorage.getItem("wishlistData")) || [];
@@ -117,7 +117,6 @@ function renderProductCards(data) {
         cartData.push(element);
         localStorage.setItem("cartData", JSON.stringify(cartData));
         openPopup();
-        renderPopupData(element);
       } else {
         alert("Produt is alredy in the cart");
       }
@@ -132,7 +131,7 @@ function renderProductCards(data) {
 
 var sortingElement = document.querySelector("#sortProduct");
 
-var originalData = [...skinCareProductsData];
+var originalData = [...hairCareProductsData];
 
 sortingElement.addEventListener("change", function () {
   var value = this.value;
@@ -140,20 +139,20 @@ sortingElement.addEventListener("change", function () {
 
   switch (value) {
     case "popularity":
-      sortedData = [...skinCareProductsData].sort((a, b) => b.id - a.id);
+      sortedData = [...hairCareProductsData].sort((a, b) => b.id - a.id);
       break;
     case "proceLtH":
-      sortedData = [...skinCareProductsData].sort(
+      sortedData = [...hairCareProductsData].sort(
         (a, b) => parseInt(a.price) - parseInt(b.price)
       );
       break;
     case "prieHtL":
-      sortedData = [...skinCareProductsData].sort(
+      sortedData = [...hairCareProductsData].sort(
         (a, b) => parseInt(b.price) - parseInt(a.price)
       );
       break;
     case "AtZ":
-      sortedData = [...skinCareProductsData].sort((a, b) =>
+      sortedData = [...hairCareProductsData].sort((a, b) =>
         a.name.localeCompare(b.name)
       );
       break;
@@ -183,50 +182,23 @@ let popup = document.querySelector("#popup");
 let closePopupButton = document.querySelector("#closePopupButton");
 closePopupButton.addEventListener("click", closePopup);
 
-let viewCartBtn = document.querySelector(".fa-x");
-viewCartBtn.addEventListener("click", closePopup);
-
 var backdrop = document.getElementById("backdrop");
 
 function openPopup() {
   popup.classList.add("open-popup");
-  backdrop.classList.add("open-backdrop");
+  backdrop.classList.add("open-backdrop"); // Show backdrop when popup is open
 }
 
 function closePopup() {
   popup.classList.remove("open-popup");
-  backdrop.classList.remove("open-backdrop");
+  backdrop.classList.remove("open-backdrop"); // Hide backdrop when popup is closed
 }
 
-renderProductCards(skinCareProductsData);
-
-function renderPopupData(element) {
-  let popupProductName = document.querySelector("#popupProductName");
-  let popupProductPrice = document.querySelector("#popupProductPrice");
-  let popupProductSubtotal = document.querySelector("#popupProductSubtotal");
-  let noOfItemsInCart = document.querySelector("#noOfItemsInCart");
-
-  let proImage = document.createElement("img");
-  proImage.src = element.image_urls[0];
-
-  let popupProductImageDiv = document.querySelector("#popupProductImageDiv");
-  popupProductImageDiv.innerHTML = "";
-  popupProductImageDiv.append(proImage);
-
-  popupProductName.innerHTML = element.name;
-  popupProductPrice.innerHTML = `$${element.price}`;
-  noOfItemsInCart.innerHTML = `(${cartData.length} Items in your cart)`;
-
-  let subtotal = cartData.reduce(
-    (total, item) => total + Number(item.price),
-    0
-  );
-  popupProductSubtotal.innerHTML = `$ ${subtotal.toFixed(2)}`;
-}
+renderProductCards(hairCareProductsData);
 
 // Render Brand filter
 
-let sortedBrandCounts = skinCareProductsData.reduce((acc, curr) => {
+let sortedBrandCounts = hairCareProductsData.reduce((acc, curr) => {
   let brand = curr.brand;
   if (!acc[brand]) {
     acc[brand] = 1;
@@ -249,6 +221,7 @@ function renderBrandFilters() {
   let parent = document.querySelector("#brandCheckboxDiv");
 
   for (let key in sortedBrandCounts) {
+    // Create new elements
     let label = document.createElement("label");
     label.className = "form-control";
 
@@ -261,28 +234,34 @@ function renderBrandFilters() {
       `${key} (${sortedBrandCounts[key]})`
     );
 
+    // Append the elements
     label.append(input);
     label.append(textNode);
 
     parent.append(label);
 
+    // Add event listener to the checkbox
     input.addEventListener("click", function () {
       if (this.checked) {
+        // Add the brand to the list of checked brands
         checkedBrands.push(key);
       } else {
+        // Remove the brand from the list of checked brands
         let index = checkedBrands.indexOf(key);
         if (index > -1) {
           checkedBrands.splice(index, 1);
         }
       }
 
+      // Filter the data and call renderProductCards
       let filteredData;
       if (checkedBrands.length > 0) {
-        filteredData = skinCareProductsData.filter((product) =>
+        filteredData = hairCareProductsData.filter((product) =>
           checkedBrands.includes(product.brand)
         );
       } else {
-        filteredData = skinCareProductsData;
+        // If no checkboxes are checked, use the original data
+        filteredData = hairCareProductsData;
       }
       renderProductCards(filteredData);
     });
@@ -293,7 +272,7 @@ renderBrandFilters();
 
 // Render Skintype filter
 
-let sortedSkinTypeCounts = skinCareProductsData.reduce((acc, curr) => {
+let sortedSkinTypeCounts = hairCareProductsData.reduce((acc, curr) => {
   let skinType = curr.skin_type;
   if (!acc[skinType]) {
     acc[skinType] = 1;
@@ -351,12 +330,12 @@ function renderSkinTypeFilters() {
       // Filter the data and call renderProductCards
       let filteredData;
       if (checkedSkinTypes.length > 0) {
-        filteredData = skinCareProductsData.filter((product) =>
+        filteredData = hairCareProductsData.filter((product) =>
           checkedSkinTypes.includes(product.skin_type)
         );
       } else {
         // If no checkboxes are checked, use the original data
-        filteredData = skinCareProductsData;
+        filteredData = hairCareProductsData;
       }
       renderProductCards(filteredData);
     });
