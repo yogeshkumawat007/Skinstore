@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         //get the values
         const savedEmail = localStorage.getItem('email');
+        
         const savedPassword =localStorage.getItem('password');
 
         if (email != savedEmail) {
