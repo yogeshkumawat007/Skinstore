@@ -203,8 +203,16 @@ renderProductCards(skinCareProductsData);
 function renderPopupData(element) {
   let popupProductName = document.querySelector("#popupProductName");
   let popupProductPrice = document.querySelector("#popupProductPrice");
-  let popupProductSubtoal = document.querySelector("#popupProductSubtoal");
+  let popupProductSubtotal = document.querySelector("#popupProductSubtotal");
   let noOfItemsInCart = document.querySelector("#noOfItemsInCart");
+
+  let proImage = document.createElement("img");
+  proImage.src = element.image_urls[0];
+
+  let popupProductImageDiv = document.querySelector("#popupProductImageDiv");
+  // Clear image
+  popupProductImageDiv.innerHTML = "";
+  popupProductImageDiv.append(proImage);
 
   popupProductName.innerHTML = element.name;
   popupProductPrice.innerHTML = element.price;
@@ -214,7 +222,7 @@ function renderPopupData(element) {
     (total, item) => total + Number(item.price),
     0
   );
-  popupProductSubtoal.innerHTML = `$ ${subtotal}`;
+  popupProductSubtotal.innerHTML = `$ ${subtotal.toFixed(2)}`;
 }
 
 // Render Brand filter
