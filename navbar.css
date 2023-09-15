@@ -1,0 +1,171 @@
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: flex;
+}
+nav {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  /* text-align: left; */
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 0.75em 0.75em;
+}
+nav li:hover {
+  background-color: white;
+}
+nav a:hover {
+  background-color: black;
+  color: white;
+}
+.menu_sub {
+  position: absolute;
+  left: 50px;
+  width: 90%;
+  background-color: lightgrey;
+  display: none;
+  padding: 2em;
+  border: 0.5px solid grey;
+}
+.menu_sub li {
+  display: block;
+}
+nav li:hover .menu_sub {
+  display: block;
+}
+nav li:hover #brands-s {
+  display: block;
+}
+.menu_sub a {
+  padding: 0.2em;
+  margin-bottom: 0.2em;
+}
+.menu_sub a:hover {
+  background-color: white;
+  color: black;
+}
+.menu_cat {
+  margin: 0.5em 0 0.5em 0;
+}
+.menu_cat:first-of-type {
+  margin-top: 0;
+}
+.menu_col {
+  /* width: 50%; */
+  display: flex;
+  gap: 50px;
+  justify-content: space-evenly;
+}
+h4 {
+  padding-top: 10px;
+  border-top: 0.8px solid grey;
+}
+
+/* navbar ends */
+
+#parent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1.8px solid black;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #ffffff;
+}
+.Navigation{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#logo {
+  width: 220px;
+  height: 84px;
+}
+#search_bar > input {
+  width: 380px;
+  height: 40px;
+  padding: 0px 10px;
+  border: 1px solid grey;
+  border-right: 0px;
+  font-size: 14px;
+  color: rgb(46, 51, 55);
+  font-family: "Lato", sans-serif;
+}
+#search_bar {
+  display: flex;
+  align-items: center; 
+  gap: 0px;
+}
+#search_bar > button {
+  height: 42px;
+  width: 45px;
+  border: 1px solid grey;
+  /* margin-left: -10px; */
+  border-color: lightgrey;
+}
+#search_bar > button:hover {
+  border: none;
+}
+
+#acc_Cart > a button {
+  padding: 10px;
+  font-size: 17px;
+  width: 125px;
+  border: none;
+  background-color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  color: #000000;
+  cursor: pointer;
+  /* margin-right: 20px; */
+}
+
+#acc_Cart > a button:hover {
+  background-color: rgb(229, 229, 229);
+}
+#acc_Cart >  button{
+  padding: 10px;
+  font-size: 17px;
+  width: 125px;
+  border: none;
+  background-color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  color: #000000;
+  cursor: pointer;
+  /* margin-right: 20px; */
+}
+#acc_Cart > button:hover {
+  background-color: rgb(229, 229, 229);
+}
+#menu {
+  display: flex;
+  margin: 0 150px 10px 150px;
+}
+#menu > p {
+  padding: 10px;
+  font-family: "Lato", sans-serif;
+}
+#menu > p:hover {
+  /* padding: 1px; */
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  height: 25px;
+}
