@@ -111,3 +111,66 @@ margin-top: 4%;
     align-items: center;
     /* border: 1px solid red; */
 }
+
+/* otherCustomer */
+
+.otherCustomer{
+    /* border: 1px solid blue; */
+    width: 95%;
+    margin: auto;
+    margin-top: 4%;
+    /* text-align: center; */
+}
+.otherCustomer > h1{
+    text-align: center;
+    margin-bottom: 4%;
+
+}
+
+.otherCustomer > div{
+    display: flex;
+    gap: 0 3%;
+    margin-top: 2%;
+    margin-bottom: 20%;
+}
+
+.otherCustomerMainDiv > div{
+    /* border: 1px solid black; */
+    line-height: 40px;
+}
+
+.otherCustomerMainDiv img{
+    width: 100%;
+}
+
+.otherCustomer button{
+    width: 100%;
+    padding: 15px 0 ;
+    font-size: 18px;
+    background-color: #333333;
+    color: white;
+    border-color: 0px solid #333333;
+    cursor: pointer;
+    border: none;
+}
+
+.otherCustomer button:hover{
+    background-color: rgb(158, 228, 228);
+    border-color: rgb(158, 228, 228);
+    color: black;
+    border: none;
+}
+
+.otherCustomerMainDiv > div > p:nth-child(2){
+    /* color: red; */
+    font-size: 20px;
+}
+
+.otherCustomerMainDiv > div > p:nth-child(3){
+    /* color: blue; */
+    /* font-size: 20px; */
+    display: inline;
+    padding: 10px 5px;
+    border: 1px solid red;
+    /* margin: 100% 0; */
+}
