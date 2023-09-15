@@ -7,6 +7,8 @@
 .checkoutMainYk{
     width: 72%;
     margin: auto;
+    display: flex;
+    gap: 0 2%;
     
 }
 /* .left1,.left2{
@@ -16,6 +18,8 @@
 .checkoutLeftYk{
     width: 75%;
 }
+
+
 .left1, .left2,.left3,.left4{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 3px;
     border-top: 6px solid black;
@@ -23,7 +27,10 @@
     margin-bottom: 6%;
     margin-top: 2%;
     padding: 5%;
+    /* background-color: red; */
+    /* background-color: ; */
 }
+
 .left1 > p, .left2 > p, .left3 > p{
     font-weight: bold;
     font-size: 23px;
@@ -63,6 +70,13 @@
     /* color: green; */
     font-weight:500;
     line-height: 24px;
+    border: 1px solid #4c4c4c;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(51, 51, 51) 0px 0px 0px 1px;
+    border-radius: 5px;
+    padding: 1%;
+    margin-bottom: 4%;
+    line-height: 30px;
+    cursor: pointer;
 }
 
 .left2 > div > p:nth-child(3){
@@ -78,23 +92,100 @@
     margin-bottom: 5%;
 }
 
-#checkboxAndtext{
-    /* background-color: red;
-    display: flex; */
-    border: 1px solid red;
+.left3 > div > p , .left4 > p{
+    color:  #4c4c4c;
+    margin-bottom: 3%;
+    font-weight: 700;
+}
+
+#expiryDateDiv{
+    /* background-color: red; */
     display: flex;
-    align-items: center;
+    gap: 0% 5%;
+
+}
+
+
+#checkboxAndtext {
+    display: flex;
+    /* border: 1px solid red; */
+    gap: 0 1%;
+  }
+
+  #checkbox {
+    margin-right: 10px;
+  }
+
+  /*------------------ left4 ------------------*/
+  .left4 > div{
+    border-bottom: 1px solid #4c4c4c;
+    margin-bottom: 4%;
+    display: flex;
+    gap: 10% 1%;
+  }
+
+  .left4 > div > div:nth-child(2){
+    /* background-color: azure; */
+    width: 20%;
+  }
+
+  .left4 > div > div:nth-child(2) >  img{
+    width: 90%;
+    /* width: auto; */
+  }
+
+  /* left5 */
+  .left5{
+    margin-bottom: 3%;
+    font-size: 20px;
+    padding:2%;
+    /* background-color: antiquewhite; */
+}
+#submitOrder{
+    display: flex;
     justify-content: space-between;
-    padding: 0;   
-    margin: 0%;
-    
+    padding: 1%;
+    background-color:#333333;
+    color: white;
+    padding: 2%;
+  }
+
+#submitOrder:hover{
+    background-color: rgb(125, 221, 221);
+    color: black;
+    cursor: pointer;
 }
 
-#checkboxAndtext > #checkbox{
-    border: 11px solid red;
-    background-color: aqua;
-
+/* left6 */
+.left6{
+    width: 82%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10%;
 }
-/* #checkboxAndtext input[checkbox],p{
-    display: inline;
-} */
+
+.left6 span{
+    text-decoration: underline;
+    font-weight: 600;
+    cursor: pointer;
+}
+/* ---------- checkoutRightYk  ----------- */
+
+
+.checkoutRightYk{
+    width: 25%;
+    margin-top: 1%;
+    padding: 2%;
+}
+
+.checkoutRightYk div {
+    display: flex;
+    justify-content: space-between;
+    margin: 1% 0;
+    margin-bottom: 10%;
+    border-bottom: 1px solid #333333;
+}
+
+.checkoutRightYk > div:nth-child(3){
+    font-size: 23px;
+}
