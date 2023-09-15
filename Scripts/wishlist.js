@@ -80,7 +80,8 @@ function renderProductCards(data) {
 
       renderProductCards(wishlistData);
       updateData();
-      alert("Added product to the cart");
+      openPopup();
+      renderPopupData(element);
     });
 
     var parentDiv = document.querySelector("#productCatelog");
@@ -131,5 +132,55 @@ function updateData() {
 
   updateItems.innerHTML = `${wishlistData.length} item(s)`;
 }
+
+// Popup
+
+let popup = document.querySelector("#popup");
+
+let closePopupButton = document.querySelector("#closePopupButton");
+closePopupButton.addEventListener("click", closePopup);
+
+let viewCartBtn = document.querySelector(".fa-x");
+viewCartBtn.addEventListener("click", closePopup);
+
+var backdrop = document.getElementById("backdrop");
+
+function openPopup() {
+  popup.classList.add("open-popup");
+  backdrop.classList.add("open-backdrop");
+}
+
+function closePopup() {
+  popup.classList.remove("open-popup");
+  backdrop.classList.remove("open-backdrop");
+}
+
+renderProductCards(cartData);
+
+function renderPopupData(element) {
+  let popupProductName = document.querySelector("#popupProductName");
+  let popupProductPrice = document.querySelector("#popupProductPrice");
+  let popupProductSubtotal = document.querySelector("#popupProductSubtotal");
+  let noOfItemsInCart = document.querySelector("#noOfItemsInCart");
+
+  let proImage = document.createElement("img");
+  proImage.src = element.image_urls[0];
+
+  let popupProductImageDiv = document.querySelector("#popupProductImageDiv");
+  // Clear image
+  popupProductImageDiv.innerHTML = "";
+  popupProductImageDiv.append(proImage);
+
+  popupProductName.innerHTML = element.name;
+  popupProductPrice.innerHTML = element.price;
+  noOfItemsInCart.innerHTML = `(${cartData.length} Items in your cart)`;
+
+  let subtotal = cartData.reduce(
+    (total, item) => total + Number(item.price),
+    0
+  );
+  popupProductSubtotal.innerHTML = `$ ${subtotal.toFixed(2)}`;
+}
+
 updateData();
 renderProductCards(wishlistData);
