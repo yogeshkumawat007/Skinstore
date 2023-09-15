@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <link rel="stylesheet" href="/payment.css" />
   </head>
 
@@ -56,60 +60,78 @@
         <!-- left2 -->
         <div class="left2">
           <p>2.Select Delivery Option</p>
+
           <div>
-            <p>Tracked Delivery</p>
-            <p>Delivered within 3-5 working days</p>
+            <p>Standard Delivery</p>
+            <p>Delivered within 2-5 working days</p>
             <p>FREE</p>
-            <p>Receive updates to monitor the progress of your delivery</p>
+          </div>
+
+          <div>
+            <p>Express - 2 Day</p>
+            <p>Delivered within 2 working days</p>
+            <p>$10.00</p>
+            <p>Applies to orders placed prior to 9pm local time.</p>
+          </div>
+
+          <div>
+            <p>Overnight - Next Day</p>
+            <p>Usually delivered within 1 working day.</p>
+            <p>$20.00</p>
+            <p>Applies to orders placed prior to 2pm ET.</p>
           </div>
         </div>
 
         <!-- left3 -->
         <div class="left3">
-          <p>Credit/Debit Card</p>
-          <div class="left3Imgs">
-            <div>
-              <img
-                src="https://s1.thcdn.com/checkout/resources/images/3c2e42cbf9d0b0df0d3b3bb81aa41d6a.svg"
-                alt=""
-              />
-            </div>
+          <p>3.Select Payment Method</p>
+          <div>
+            <p>Credit/Debit Card</p>
 
-            <div>
-              <img
-                src="https://s1.thcdn.com/checkout/resources/images/57987be4eb98b4c77644d93d92df80fa.svg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://s1.thcdn.com/checkout/resources/images/932e82ef072c7df18e91e66b96dfdf5d.svg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://s1.thcdn.com/checkout/resources/images/6732c0137a7dab50b23daf1337fe2f30.svg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://s1.thcdn.com/checkout/resources/images/0528692e7541ff3755880b3408793969.svg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://s1.thcdn.com/checkout/resources/images/8ba3dc816042268141a2205e3bfc3971.svg"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://s1.thcdn.com/checkout/resources/images/248074ffdeeeaeffed9c5db35f35fe45.svg"
-                alt=""
-              />
+            <div class="left3Imgs">
+              <div>
+                <img
+                  src="https://s1.thcdn.com/checkout/resources/images/3c2e42cbf9d0b0df0d3b3bb81aa41d6a.svg"
+                  alt=""
+                />
+              </div>
+
+              <div>
+                <img
+                  src="https://s1.thcdn.com/checkout/resources/images/57987be4eb98b4c77644d93d92df80fa.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src="https://s1.thcdn.com/checkout/resources/images/932e82ef072c7df18e91e66b96dfdf5d.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src="https://s1.thcdn.com/checkout/resources/images/6732c0137a7dab50b23daf1337fe2f30.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src="https://s1.thcdn.com/checkout/resources/images/0528692e7541ff3755880b3408793969.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src="https://s1.thcdn.com/checkout/resources/images/8ba3dc816042268141a2205e3bfc3971.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src="https://s1.thcdn.com/checkout/resources/images/248074ffdeeeaeffed9c5db35f35fe45.svg"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
 
@@ -120,7 +142,7 @@
           <input type="text" name="nameOnCard" id="nameOnCard" required />
 
           <label for="expiryDate">*Expiry Date</label>
-          <div>
+          <div id="expiryDateDiv">
             <input
               type="number"
               name=""
@@ -141,46 +163,100 @@
           <input type="number" name="" id="SecurityCode" />
 
           <div id="checkboxAndtext">
-            <input type="checkbox" name="" id="checkbox" checked />
-            <p>Use my shipping address as my cardholder address</p>
+            <div>
+              <input type="checkbox" name="" id="checkbox" checked />
+            </div>
+            <div>
+              <p>Use my shipping address as my cardholder address</p>
+            </div>
           </div>
         </div>
 
         <!-- left4 -->
         <div class="left4">
           <p>Use a different payment method</p>
+
           <div>
-            <input type="checkbox" name="" id="payPal" />
-            <img
-              src="https://s1.thcdn.com/checkout/resources/images/6528547f8322e9cf64458725f0a72827.svg"
-              alt=""
-            />
+            <div>
+              <input type="checkbox" name="" id="payPal" />
+            </div>
+            <div>
+              <img
+                src="https://s1.thcdn.com/checkout/resources/images/6528547f8322e9cf64458725f0a72827.svg"
+                alt=""
+              />
+            </div>
           </div>
 
           <div>
-            <input type="checkbox" name="" id="gPay" />
-            <img
-              src="https://s1.thcdn.com/checkout/resources/images/3c5574b5e1fe1470a49f46bc08828ef4.svg"
-              alt=""
-            />
-            <input type="checkbox" name="" id="zipPay" />
-            <img
-              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA0My4xIDE2IiB3aWR0aD0iNDMiIGhlaWdodD0iMTYiPgogICAgPHRpdGxlPlppcFBheTwvdGl0bGU+CiAgICA8cGF0aCBmaWxsPSIjQUE4RkZGIiBkPSJNMTQuNjcgNC45MjdsMS4zNDUgMTEuMDMyaDEzLjE1NkwyNy44MjUgNC45MjdIMTQuNjdoMHoiLz4KICAgIDxwYXRoIGZpbGw9IiMxQTA4MjYiIGQ9Ik0xOC40MjMuNzE4Yy44NC43OTQuOTU0IDIuMDQ1LjI1NyAyLjc5Mi0uNjk3Ljc0Ny0xLjk0Mi43MDktMi43ODEtLjA4NS0uODQtLjc5Ny0uOTU1LTIuMDQ2LS4yNTctMi43OTQuNjk3LS43NDYgMS45NDEtLjcwOSAyLjc4MS4wODdoMHoiLz4KICAgIDxwYXRoIGZpbGw9IiMxQTA4MjYiIGQ9Ik00Mi45NTkgOC44OTljLS4zMDMtMi40ODEtMi4yMzctMy45OC00Ljg2My0zLjk3MmgtOC43NDdsMS4zNDQgMTEuMDMxaDMuOTM3bC0uMjY4LTIuMjA1aDQuMTY3YzMuMjc1IDAgNC43NzYtMi4wNiA0LjQzLTQuODUzaDB2LS4wMDF6TTM4LjEgMTAuNjZsLTQuMTIuMDA0LS4zMjMtMi42NDYgNC4xNC4wMDRjLjk3My4wMTMgMS40Ny41NjIgMS41NTIgMS4zMi4wNTMuNDg0LS4xNjggMS4zMTgtMS4yNSAxLjMxOHoiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbC1ydWxlPSJldmVub2RkIi8+CiAgICA8cGF0aCBmaWxsPSIjMUEwODI2IiBkPSJNLjk2OSAxMi44NzZsLjM3NiAzLjA4M2gxMy4xNDNsLS40MzMtMy41MjhINy45M2wtLjA1Ny0uNDQgNS42NDctMy45NzItLjM3Ny0zLjA5MkgwbC40MjggMy41MzJoNi4xNGwuMDU1LjQ0LTUuNjU0IDMuOTc3aDB6Ii8+Cjwvc3ZnPgo="
-              alt=""
-            />
+            <div>
+              <input type="checkbox" name="" id="payPal" />
+            </div>
+            <div>
+              <img
+                src="https://s1.thcdn.com/checkout/resources/images/3c5574b5e1fe1470a49f46bc08828ef4.svg"
+                alt=""
+              />
+            </div>
           </div>
 
           <div>
-            <input type="checkbox" name="" id="afterPay" />
-            <img
-              src="https://s1.thcdn.com/checkout/resources/images/959a8e732266683b799128acf46e03fd.svg"
-              alt=""
-            />
+            <div>
+              <input type="checkbox" name="" id="payPal" />
+            </div>
+            <div>
+              <img
+                src="https://s1.thcdn.com/checkout/resources/images/5ba5f9cd0c43d9f966774630aa65d7c6.svg"
+                alt=""
+              />
+            </div>
           </div>
+
+          <div>
+            <div>
+              <input type="checkbox" name="" id="payPal" />
+            </div>
+            <div>
+              <img
+                src="https://s1.thcdn.com/checkout/resources/images/61199182e45613b7932d163ec9ad823c.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="left5">
+          <div id="submitOrder">
+            <div><span class="material-symbols-outlined"> lock </span></div>
+            <div></div>
+            <div>SUBMIT MY ORDER</div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <!-- privacy policy -->
+        <div class="left6">
+          <p>By placing this order, you are confirming that you agree to our <span>Terms and Conditions</span> and <span>Privacy Policy</span>.</p>
         </div>
       </div>
 
-      <div class="checkoutRightYk"></div>
+      <!-- checkout right div -->
+      <div class="checkoutRightYk">
+        <div>
+          div 1 for img and description
+        </div>
+
+        <div>
+          <p>Standard Delivery</p>
+          <span>Free</span>
+        </div>
+
+        <div>
+          <p>Total to pay</p>
+          <span id="totalToPay">$198.45</span>
+        </div>
+      </div>
     </div>
   </body>
 </html>
