@@ -190,25 +190,31 @@ var backdrop = document.getElementById("backdrop");
 
 function openPopup() {
   popup.classList.add("open-popup");
-  backdrop.classList.add("open-backdrop"); // Show backdrop when popup is open
+  backdrop.classList.add("open-backdrop");
 }
 
 function closePopup() {
   popup.classList.remove("open-popup");
-  backdrop.classList.remove("open-backdrop"); // Hide backdrop when popup is closed
+  backdrop.classList.remove("open-backdrop");
 }
 
 renderProductCards(skinCareProductsData);
 
 function renderPopupData(element) {
   let popupProductName = document.querySelector("#popupProductName");
-  let popupProductPrice = document.getElementsByClassName("popupProductPrice");
+  let popupProductPrice = document.querySelector("#popupProductPrice");
+  let popupProductSubtoal = document.querySelector("#popupProductSubtoal");
+  let noOfItemsInCart = document.querySelector("#noOfItemsInCart");
 
   popupProductName.innerHTML = element.name;
+  popupProductPrice.innerHTML = element.price;
+  noOfItemsInCart.innerHTML = `(${cartData.length} Items in your cart)`;
 
-  Array.from(popupProductPrice).forEach(function (priceElement) {
-    priceElement.innerHTML = `$ ${element.price}`;
-  });
+  let subtotal = cartData.reduce(
+    (total, item) => total + Number(item.price),
+    0
+  );
+  popupProductSubtoal.innerHTML = `$ ${subtotal}`;
 }
 
 // Render Brand filter
@@ -236,7 +242,6 @@ function renderBrandFilters() {
   let parent = document.querySelector("#brandCheckboxDiv");
 
   for (let key in sortedBrandCounts) {
-    // Create new elements
     let label = document.createElement("label");
     label.className = "form-control";
 
@@ -249,33 +254,27 @@ function renderBrandFilters() {
       `${key} (${sortedBrandCounts[key]})`
     );
 
-    // Append the elements
     label.append(input);
     label.append(textNode);
 
     parent.append(label);
 
-    // Add event listener to the checkbox
     input.addEventListener("click", function () {
       if (this.checked) {
-        // Add the brand to the list of checked brands
         checkedBrands.push(key);
       } else {
-        // Remove the brand from the list of checked brands
         let index = checkedBrands.indexOf(key);
         if (index > -1) {
           checkedBrands.splice(index, 1);
         }
       }
 
-      // Filter the data and call renderProductCards
       let filteredData;
       if (checkedBrands.length > 0) {
         filteredData = skinCareProductsData.filter((product) =>
           checkedBrands.includes(product.brand)
         );
       } else {
-        // If no checkboxes are checked, use the original data
         filteredData = skinCareProductsData;
       }
       renderProductCards(filteredData);
