@@ -12,6 +12,101 @@ body {
   height: 100%;
 }
 
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 32px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 8px;
+  box-sizing: border-box;
+}
+.cartPageHeader {
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-basis: 100%;
+  margin-bottom: 16px;
+}
+.cartPageHeader > h1 {
+  font-size: 28px;
+  line-height: 1.2;
+  color: #2e3337;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.cartPageHeader > button {
+  font-size: 14px;
+  font-weight: 300;
+  background-color: #333;
+  border-style: none;
+  padding: 12px;
+  color: #fff;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.cartPageHeader > button > span i {
+  font-size: 14px;
+}
+
+.cartTopAlertWrapper {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.cartTopAlert {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  color: #267b9b;
+  background-color: #f2f9ff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cce5ff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.cartTopAlert i {
+  margin-top: 1px;
+  margin-right: 10px;
+}
+.cartTopAlertGreens {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 13px;
+  color: #007d1e;
+  background-color: #e6f2e6;
+  border-color: #c8dec8;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cce5ff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.cartTopAlertGreens i {
+  margin-top: 1px;
+  margin-right: 10px;
+}
 .itemsAndGiftsDiv {
   display: flex;
   gap: 7px;
@@ -51,6 +146,9 @@ body {
   justify-content: flex-start;
   flex-grow: 3;
   margin: 0 10px;
+}
+#quantityDiv {
+  padding-left: 1em;
 }
 #subtotalDiv {
   padding-right: 4em;
@@ -178,7 +276,6 @@ body {
   gap: 15px;
   align-items: center;
   text-align: left;
-  box-shadow: none;
   color: #2e3337;
 }
 .cartWishListInnerDiv > button i {
@@ -191,7 +288,7 @@ body {
 .cartWishListInnerDiv > button:focus-within {
   background: #eaebeb;
   box-shadow: 0 0 0 2px #2e3337;
-  outline: 1px solid #2e3337;
+  outline: 1px #2e3337;
   border-radius: 2px;
   border: 3px solid #28bdb7;
 }
