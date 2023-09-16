@@ -210,12 +210,11 @@ function renderPopupData(element) {
   proImage.src = element.image_urls[0];
 
   let popupProductImageDiv = document.querySelector("#popupProductImageDiv");
-  // Clear image
   popupProductImageDiv.innerHTML = "";
   popupProductImageDiv.append(proImage);
 
   popupProductName.innerHTML = element.name;
-  popupProductPrice.innerHTML = element.price;
+  popupProductPrice.innerHTML = `$${element.price}`;
   noOfItemsInCart.innerHTML = `(${cartData.length} Items in your cart)`;
 
   let subtotal = cartData.reduce(
