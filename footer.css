@@ -1,0 +1,127 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#NASbottom {
+    margin: 2% 6%;
+}
+
+/* This is bottom css design of Index Page */
+#NASupper-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    /* padding: 5%; */
+    margin: auto;
+}
+
+.NASbold {
+    font-weight: bold;
+}
+
+#NASupper-bottom>div>a>button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    margin: 15px 0px;
+    cursor: pointer;
+}
+
+#NASsocial-media {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+#NASsocial-media>img {
+    width: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#NASmiddle-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    /* padding: 2%; */
+    margin: auto;
+}
+
+#NASmiddle-bottom>div {
+    width: 50%;
+    padding-right: 10px;
+
+}
+
+#NASmiddle-bottom p {
+    padding: 10px 0px;
+}
+
+#NASmiddle-bottom>div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#NASmiddle-bottom>div:nth-child(2)>div {
+    min-width: 150px;
+    width: 30%;
+}
+
+.NASbottom-help {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+   
+}
+
+.NASbottom-help>img {
+    width: 20px;
+    background-color: transparent;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.flex>button{
+      border: none;
+      font-style: normal;
+      background-color: transparent;
+      font-size: 20px;
+      font-weight: bold;
+
+}
+
+
+#NASlower-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+#NASpayment-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: stretch;
+    width: 400px;
+    margin-top: 20px;
+}
+
+#NASpayment-media>img {
+    width: 50px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(143, 141, 141);
+}
