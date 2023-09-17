@@ -49,5 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("usersArray", JSON.stringify(usersArray));
 
     registrationForm.reset();
+    window.location.href = "login.html";
   });
 });

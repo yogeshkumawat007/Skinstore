@@ -1,27 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const registrationForm = document.getElementById("loginForm");
+  const loginForm = document.getElementById("loginForm");
 
-    registrationForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-        //get the values
-        const savedEmail = localStorage.getItem('email');
-        const savedPassword =localStorage.getItem('password');
+    // Get the array of users
+    let usersArray = JSON.parse(localStorage.getItem("usersArray")) || [];
 
-        if (email != savedEmail) {
-            alert("Email not registered!");
-            return;
-        }
+    // Find the user with the matching email
+    let user = usersArray.find((user) => user.email === email);
 
-        if (password !== savedPassword) {
-            alert("Wrong Password!");
-            return;
-        }
+    if (!user) {
+      alert("Email not registered!");
+      return;
+    }
 
-        // Reset the form
-        registrationForm.reset();
-    });
+    // Check if the password is correct
+    if (user.password !== password) {
+      alert("Wrong password!");
+      return;
+    }
+
+    // Store the logged in user's details
+    localStorage.setItem("loggedInUser", JSON.stringify(user));
+
+    // Redirect to index.html
+    window.location.href = "index.html";
+  });
 });
