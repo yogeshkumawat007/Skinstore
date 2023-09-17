@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.itemsAndGiftsDiv {
+  display: flex;
+  gap: 7px;
+}
+.cartPageContentWrapper {
+  width: 100%;
+  height: 100%;
+}
+.itemsAndGiftsDiv {
+  width: 100%;
+  height: 100%;
+}
+.cartItemShowCaseWrapper {
+  width: 70%;
+}
+
+.giftSelectionWrapper {
+  width: 30%;
+  background-color: green;
+}
+
+.cartItemHeader {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #2e3337;
+  font-weight: 700;
+  padding: 10px 10px;
+  text-align: center;
+  border-top: 1px solid #d3d1d1;
+  border-bottom: 1px solid #d3d1d1;
+}
+
+#itemDiv {
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 3;
+  margin: 0 10px;
+}
+#subtotalDiv {
+  padding-right: 4em;
+}
+
+#priceDiv,
+#quantityDiv,
+#subtotalDiv {
+  width: 20%;
+}
+
+.cartProductSingleCard {
+  padding: 10px 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.productImageAndTitle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 10px;
+  width: 40%;
+}
+#product-title {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #2e3337;
+  font-weight: 300;
+  width: 80%;
+}
+.productImageAndTitle img {
+  width: 70px;
+}
+
+#quantitySelector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#subtotalWrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+#subtotalWrapper p {
+  font-weight: 600;
+  color: #2e3337;
+  padding-left: 1px;
+}
+
+#subtotalWrapper > div i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#itemPriceWrapper,
+#quantitySelector,
+#subtotalWrapper,
+#removeIconWrapper {
+  width: 20%;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+#quantitySelector button {
+  box-sizing: border-box;
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #c0bebe;
+  border: none;
+  padding: 12px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+#quantitySelector button:hover {
+  background-color: #d8d8d8;
+}
+
+#quantitySelector button {
+  opacity: 0.7;
+}
+
+#quantitySelector span {
+  margin: 0 5px;
+}
+
+.cartWishlistDiv {
+  border-bottom: 1px solid #d3d1d1;
+}
+
+.cartWishListInnerDiv {
+  font-weight: 300;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 0;
+  padding: 3px;
+  margin-left: 0;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 11%;
+}
+.cartWishListInnerDiv > button {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  text-align: left;
+  box-shadow: none;
+  color: #2e3337;
+}
+.cartWishListInnerDiv > button i {
+  font-size: 20px;
+}
+
+.cartWishListInnerDiv > button:hover {
+  background-color: #eaebeb;
+}
+.cartWishListInnerDiv > button:focus-within {
+  background: #eaebeb;
+  box-shadow: 0 0 0 2px #2e3337;
+  outline: 1px solid #2e3337;
+  border-radius: 2px;
+  border: 3px solid #28bdb7;
+}

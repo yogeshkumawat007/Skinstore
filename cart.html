@@ -1,292 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-
-    <style>
-         
-      table,tr,td,th
-      {
-        padding:10px;
-      }
-       img
-       {
-          width: 80px;
-          height: 110px;
-          right: 20%;
-       }
-       td
-       {
-          text-align: center; 
-          vertical-align: middle;
-       }
-       div{
-        margin-top: 10%;
-        margin-right: 30%;
-        display: flex;
-        height: auto;
-        width: auto;
-        border: 10px solid saddlebrown;
-        
-       }
-       button{
-       
-        background-color: inherit;
-        padding: 14px 28px;
-        font-size: 15px;
-        text-decoration: underline;
-       }
-       h3{
-        padding-left: 56%;
-       }
-       #cupon-filled{
-            margin-left: 40%;
-       }
-       #home{
-        margin-left: 5%;
-        outline: auto;
-        background-color: azure;
-
-       }
-       #Checkout{
-        margin-left: 60%;
-        outline: auto;
-        background-color: azure;
-
-       }
-       *{
-        font-family: "Lato", sans-serif;
-       }
-       #name{
-        padding-left: 20px;
-        
-
-       }
-        
-    </style>
-</head>
-<body>
-    <div class="nav">
-        <a href="./index.html">Home</a>
-        <a href="./cart.html">Cart</a>
-        <a href="./payment.html">Payment</a>
+    <link rel="stylesheet" href="./Styles/cart.css" />
+    <link
+      rel="icon"
+      href="https://s1.thcdn.com/checkout/resources/imgs/skstr/favicon.skstr.ico"
+    />
+    <script
+      src="https://kit.fontawesome.com/a0feeaba88.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Your Cart | SkinStore</title>
+  </head>
+  <body>
+    <div class="cartPageContentWrapper">
+      <div class="itemsAndGiftsDiv">
+        <div class="cartItemShowCaseWrapper" id="cartItemShowCaseWrapper">
+          <div class="cartItemHeader">
+            <div id="itemDiv">
+              <p>Items</p>
+            </div>
+            <div id="priceDiv">Price</div>
+            <div id="quantityDiv">Quantity</div>
+            <div id="subtotalDiv">Subtotal</div>
+          </div>
+        </div>
+        <div class="giftSelectionWrapper"></div>
       </div>
-    <h2 align="center">Your Cart</h2>
-    <div class="center" id="cart-container">
-        <table align="center" width="70%">
-            <thead>
-               
-                    <tr>
-                      <th>Items</th>
-                      <th>Price</th>
-                      <th>Quantity</th>
-                      <th>Subtotal</th>
-                      <th></th>
-                    </tr>
-                 
-            </thead>
-
-            <tbody id="tbody"></tbody>  
-            </tbody>
-
-        </table>
-        
-       
     </div>
-        
-      
-    <h3>Cart Subtotal:- <span id="cart-total">0</span></h3>
-    <input type="text" id="cupon-filled" placeholder="Get a Coupon Code ? Enter" />
-    <button id="cupon-active">ADD</button>
-    <br>
-    <button id="home">Continue Shopping</button>
-    <button id="Checkout">Checkout Securely</button>
-    
-    
-
-    
-
-</body>
-
-
+  </body>
+  <script src="./Scripts/cart.js"></script>
 </html>
-<script>
-
-var cartData = JSON.parse(localStorage.getItem("cart")) || [];
-
-var totalPrice = 0;
-
-var discountedPrice = null;
-console.log("carttdata:",cartData)
-
-//console.log(cartData)
-function renderCards() 
-{
-  
- // var cartData = JSON.parse(localStorage.getItem("cart")) || [];
-  //console.log(cartData)
-  cartData.forEach(function (element,index) 
-  {
-    //console.log("element",element)
-    let ele = element[0]
-   // console.log("individual",ele)
-    var parentDiv = document.querySelector("#cart-container");//Parent div
-
-
-    var tbody = document.getElementById("tbody");//tbody
-
-
-    var row = document.createElement("tr");
-
-
-
-    var image = document.createElement("td"); //1 st col for image and description of the product
-
-    var img = document.createElement("img");
-    img.src=ele.image_urls[0]
-    var desc = document.createElement("span");
-               //for description of product
-    desc.setAttribute("id","name")
-
-    desc.innerText =  ele.name
-       
-
-    image.append(img, desc);
-
-    
-
-    var price = document.createElement("td");//column for price
-    price.innerText = ele.price
-
-    
-    var quantity = 1;
-
-    var upd = document.createElement("td");//for increaing and decreasing the items in cart
-
-    
-    var span = document.createElement("span")
-    var incrementBtn = document.createElement("button");
-    var quantitySpan = document.createElement("span");
-    var decrementBtn = document.createElement("button");
-
-    incrementBtn.innerHTML = "+"
-    quantitySpan.innerHTML = quantity
-    decrementBtn.innerHTML = "-";
-    totalPrice += Number(ele.price);
-
-    span.append(incrementBtn, quantitySpan, decrementBtn);
-    upd.append(span)
-
-    
-
-    var total = document.createElement("td");
-
-    total.innerText = quantity * Number(ele.price); // Cslculate the total based on quantity and price
-
-    
-    var del = document.createElement("td")
-    var btn = document.createElement("button")
-    del.append(btn)
-    btn.innerHTML = "Delete"
-
-    row.append(image, price, upd, total,del);
-
-    tbody.append(row);
-
-    btn.addEventListener("click" , function ()
-    {
-        deleteFunc(index)
-    })
-    
-    updateData();
-
-    incrementBtn.addEventListener("click", function () 
-    {
-      quantity++;
-      var increment = Number(ele.price);
-      totalPrice += increment;
-      quantitySpan.innerHTML = quantity;
-      total.innerText = quantity * increment; // Update the total when the quantity changes
-      updateData();
-    });
-
-    decrementBtn.addEventListener("click", function () 
-    {
-      if (quantity > 1) {
-        quantity--;
-        var decrement = Number(ele.price);
-        totalPrice -= decrement;
-        quantitySpan.innerHTML = quantity;
-        total.innerText = quantity * decrement; // Update the total when the quantity changes
-        updateData();
-      }
-      
-    });
-  });
-}
-
-function updateData() { 
-  var cartTotalSpan = document.querySelector("#cart-total");//update the total price of items
-  cartTotalSpan.innerHTML = Math.round(totalPrice);
-}
-
-// Coupon
-var couponData = document.querySelector("#cupon-filled");
-var data;
-couponData.addEventListener("input", function (event) {
-  event.preventDefault();
-  var target = event.target;
-  data = target.value;
-});
-
-var appliedAlready = false;
-var submitBtn = document.querySelector("#cupon-active");
-submitBtn.addEventListener("click", function () {
-  if (!appliedAlready) {
-    if (data == "masai30") {
-      var discount = (30 / 100) * totalPrice;
-      totalPrice -= discount;
-      appliedAlready = true;
-      updateData();
-    } else {
-      alert("Please enter a valid coupon");
-      return;
-    }
-  } else {
-    alert("You've already applied discount");
-    return;
-  }
-});
-function deleteFunc(index){
-        var a = cartData.splice(index , 1)
-        console.log(a)
-        localStorage.setItem("cart",JSON.stringify(cartData))
-      
-        window.location.reload()
-        renderCards()
-      }
-
-updateData();
-//localStorage.setItem("cartdata",JSON.stringify())
-renderCards();
-var home = document.getElementById("home").addEventListener("click",function(){
-  window.location="index.html"
-
-})
-var checkout = document.getElementById("Checkout").addEventListener("click",function(){
-  window.location="checkout.html"
-  
-})
-//var totalamt = cartData.reduce(function (acc ,ele){
-  //  return  parseFloat(ele[0].price) + acc
-    
-//} , 0)
-
-</script>
