@@ -496,6 +496,35 @@ h3 {
   padding-bottom: 5px;
   margin-bottom: 5px;
 }
+
+#showCoupon {
+  display: flex;
+  padding: 3.5px;
+  background-color: #2e3337;
+  align-items: center;
+  justify-content: space-around;
+  width: 35%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+#showCoupon p {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+#showCoupon i {
+  cursor: pointer;
+}
+
+.couponAlerts {
+  margin-bottom: 5px;
+}
+.couponAlerts p {
+  color: red;
+  font-weight: 400;
+  font-size: 14px;
+}
 .cartTotalFinalWrapper {
   display: flex;
   justify-content: space-between;

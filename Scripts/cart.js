@@ -66,6 +66,12 @@ function renderProducts(data) {
         allProductSubtotal -= Number(element.price);
         quantitySpan.textContent = quantity;
         subtotalPrice.textContent = `$${productSubtotal.toFixed(2)}`;
+
+        // recalculate the discount
+        if (hasDiscountBeenApplied) {
+          discount = allProductSubtotal * 0.3; // apply a 30% discount
+        }
+
         updateSummery();
       }
     });
@@ -85,6 +91,12 @@ function renderProducts(data) {
       allProductSubtotal += Number(element.price);
       quantitySpan.textContent = quantity;
       subtotalPrice.textContent = `$${productSubtotal.toFixed(2)}`;
+
+      // recalculate the discount
+      if (hasDiscountBeenApplied) {
+        discount = allProductSubtotal * 0.3; // apply a 30% discount
+      }
+
       updateSummery();
     });
 
@@ -266,6 +278,11 @@ function removeProduct(event) {
 
   allProductSubtotal -= price * quantity;
 
+  // update the discount
+  if (hasDiscountBeenApplied) {
+    discount = allProductSubtotal * 0.3; // apply a 30% discount
+  }
+
   productElement.remove();
 
   let wishlistSection = document.querySelector(".cartWishlistDiv");
@@ -289,6 +306,65 @@ function updateSummery() {
   let totalCartPrice = document.querySelector("#totalCartPrice");
   totalCartPrice.innerHTML = `$${(allProductSubtotal - discount).toFixed(2)}`;
 }
+
+// Coupon management
+let hasDiscountBeenApplied = false;
+let appliedPromoCode = "";
+
+let appliedCouponManagement = document.querySelector(
+  ".appliedCouponManagement"
+);
+let couponAlerts = document.querySelector(".couponAlerts");
+let couponAlertText = document.querySelector("#couponAlertText");
+let applyDiscountWrapperButton = document.querySelector(
+  ".applyDiscountWrapper button"
+);
+let applyDiscountWrapperInput = document.querySelector(
+  ".applyDiscountWrapper input"
+);
+let showCouponIcon = document.querySelector("#showCoupon i");
+
+appliedCouponManagement.style.display = "none";
+couponAlerts.style.display = "none";
+
+applyDiscountWrapperButton.addEventListener("click", function () {
+  let promoCode = applyDiscountWrapperInput.value.toUpperCase();
+
+  if (promoCode === "HIGH30" || promoCode === "MESSI30") {
+    if (!hasDiscountBeenApplied) {
+      discount = allProductSubtotal * 0.3;
+      hasDiscountBeenApplied = true;
+      appliedPromoCode = promoCode;
+      updateSummery();
+
+      appliedCouponManagement.style.display = "block";
+      document.querySelector("#showCoupon p").textContent = promoCode;
+
+      couponAlerts.style.display = "none";
+    } else {
+      couponAlertText.textContent = "Discount has already been applied.";
+      couponAlerts.style.display = "block";
+    }
+  } else {
+    // show an alert in the couponAlerts div
+    couponAlertText.textContent = "Invalid promo code.";
+    couponAlerts.style.display = "block";
+  }
+});
+
+showCouponIcon.addEventListener("click", function () {
+  // remove the discount
+  allProductSubtotal += discount;
+  discount = 0;
+  hasDiscountBeenApplied = false;
+  appliedPromoCode = ""; // clear the applied promo code
+  updateSummery();
+
+  // hide the appliedCouponManagement and couponAlerts divs
+  appliedCouponManagement.style.display = "none";
+  couponAlerts.style.display = "none";
+});
+
 updateSummery();
 renderProductCards(randomData);
 renderProducts(cartData);
