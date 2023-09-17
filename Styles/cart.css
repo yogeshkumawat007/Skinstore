@@ -554,3 +554,63 @@ h3 {
   text-align: center;
   box-sizing: border-box;
 }
+
+/* Query selector for responsiveness */
+
+@media (max-width: 900px) {
+  .upsellProductShowcase {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+    padding: 15px;
+  }
+  .itemsAndGiftsDiv {
+    flex-direction: column;
+  }
+  .cartItemShowCaseWrapper {
+    width: 100%;
+  }
+  .cartSummery {
+    margin-top: 3em;
+    width: 100%;
+  }
+  #upsellProductShowcase {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .upsellProductShowcase {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2%;
+    padding: 15px;
+  }
+  .cartItemHeader {
+    display: none;
+  }
+  #itemPriceWrapper {
+    display: none;
+  }
+  .cartProductSingleCard {
+    justify-content: space-between;
+  }
+  #product-title {
+    width: 100%;
+  }
+
+  .productImageAndTitle {
+    width: 100%;
+    margin: 0;
+  }
+  #subtotalWrapper {
+    flex-direction: column;
+    gap: 1em;
+  }
+  #quantitySelector {
+    flex-direction: column;
+  }
+  .cartPageHeader > button {
+    height: fit-content;
+  }
+}

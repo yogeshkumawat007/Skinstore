@@ -278,9 +278,8 @@ function removeProduct(event) {
 
   allProductSubtotal -= price * quantity;
 
-  // update the discount
   if (hasDiscountBeenApplied) {
-    discount = allProductSubtotal * 0.3; // apply a 30% discount
+    discount = allProductSubtotal * 0.3;
   }
 
   productElement.remove();
@@ -346,21 +345,18 @@ applyDiscountWrapperButton.addEventListener("click", function () {
       couponAlerts.style.display = "block";
     }
   } else {
-    // show an alert in the couponAlerts div
     couponAlertText.textContent = "Invalid promo code.";
     couponAlerts.style.display = "block";
   }
 });
 
 showCouponIcon.addEventListener("click", function () {
-  // remove the discount
   allProductSubtotal += discount;
   discount = 0;
   hasDiscountBeenApplied = false;
-  appliedPromoCode = ""; // clear the applied promo code
+  appliedPromoCode = "";
   updateSummery();
 
-  // hide the appliedCouponManagement and couponAlerts divs
   appliedCouponManagement.style.display = "none";
   couponAlerts.style.display = "none";
 });
