@@ -19,7 +19,17 @@
 }
 
 .NASbold {
+    margin-bottom: 20px;
     font-weight: bold;
+}
+#firstTab>p{
+    font-weight: 300;
+}
+#secondTab>p{
+    font-weight: 300;
+}
+#thirdTab>p{
+    font-weight: 300;
 }
 
 #NASupper-bottom>div>a>button {
@@ -79,12 +89,14 @@
     justify-content: start;
     align-items: center;
     padding: 10px;
-   
 }
 
 .NASbottom-help>img {
     width: 20px;
     background-color: transparent;
+}
+.NASbottom-help>p{
+    font-weight: 300;
 }
 
 .flex{

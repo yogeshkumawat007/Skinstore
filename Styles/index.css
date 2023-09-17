@@ -6,7 +6,7 @@
 .class1 {
   height: 80%;
   width: 100%;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 /* navbar only */
@@ -14,7 +14,8 @@
 .container {
   max-width: 1600px;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  position: relative;
 
 }
 
@@ -367,8 +368,8 @@ button {
 }
 
 .product_head {
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 80px;
+  margin-bottom: 0%;
 }
 
 .product_head>h1 {
@@ -384,14 +385,14 @@ button {
 }
 
 .product_head>h1 {
-  font-family: "Lato-Regular",Helvetica,Arial,sans-serif;
-    font-size: 30px;
-    line-height: 1.2;
-    color: #2e3337;
-    font-weight: 400;
-    align-content: center;
-    margin-left: -100px;
-    display: block;
+  font-family: "Lato-Regular", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #2e3337;
+  font-weight: 400;
+  align-content: center;
+  margin-left: -100px;
+  display: block;
 }
 
 
@@ -411,11 +412,10 @@ button {
 
 .bodyFirstTitle {
   height: 70px;
-  margin-top: 30px;
   text-align: center;
   font-weight: 400;
   font-size: 32px;
-  font-family: "Lato-Regular",Helvetica,Arial,sans-serif;
+  font-family: "Lato-Regular", Helvetica, Arial, sans-serif;
 }
 
 .bodyFirstDetails {
@@ -460,13 +460,13 @@ button {
   margin: auto;
   background-color: #333;
   color: white;
-  margin-top: 15px;
+  margin-top: 5px;
   margin-bottom: 35px;
   /* border: 1px solid black; */
 }
 
 .shopNow:hover {
-  background-color: #28bdb7;
+  background-color: #29d6d0;
   cursor: pointer;
 }
 
@@ -533,11 +533,11 @@ button {
 }
 
 .vitc {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .belowicon {
-  margin-top: 3em;
+  margin-top: 3px;
   padding: 1em 1em;
   display: flex;
   gap: 1.9em;
@@ -546,16 +546,16 @@ button {
 }
 
 .belowicon img {
-  height: 8vh;
+  height: 12vh;
 }
 
 .belowicon img:nth-child(1),
 .belowicon img:nth-child(3) {
-  height: 20vh;
+  height: 28vh;
 }
 
 .belowicon img:nth-child(6) {
-  height: 4vh;
+  height: 7vh;
 }
 
 .randombar>img {
@@ -605,7 +605,7 @@ button:hover {
 
 
 
-@media only screen and (max-width: 820px) {
+@media only screen and (max-width: 900px) {
   #someOtherOffer {
     display: flex;
     flex-direction: column;
@@ -626,6 +626,9 @@ button:hover {
     width: 1000px;
     padding-left: 25px;
     height: 30px;
+  }
+  #shop :hover{
+    background-color: #f0f0f0;
   }
 
   .bottom-left {
@@ -717,7 +720,7 @@ button:hover {
   }
 
   .trendingOffer img {
-    width: 32%;
+    width: 25%;
   }
 
   .trendingOffer>div {
@@ -775,7 +778,7 @@ button:hover {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 300px) {
   #someOtherOffer {
     display: flex;
     flex-direction: column;
