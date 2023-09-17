@@ -82,7 +82,7 @@ function renderProducts(data) {
     quantityIncrement.addEventListener("click", function () {
       quantity++;
       productSubtotal = quantity * element.price;
-      allProductSubtotal += Number(element.price); // add price of one product
+      allProductSubtotal += Number(element.price);
       quantitySpan.textContent = quantity;
       subtotalPrice.textContent = `$${productSubtotal.toFixed(2)}`;
       updateSummery();
@@ -104,6 +104,8 @@ function renderProducts(data) {
     removeIconWrapper.appendChild(removeIcon);
     subtotalWrapper.appendChild(removeIconWrapper);
 
+    removeIcon.addEventListener("click", removeProduct);
+
     cartProductSingleCard.appendChild(productImageAndTitle);
     cartProductSingleCard.appendChild(itemPriceWrapper);
     cartProductSingleCard.appendChild(quantitySelector);
@@ -114,10 +116,9 @@ function renderProducts(data) {
     renderWishlistSection();
     allProductSubtotal += productSubtotal;
   });
-  console.log(allProductSubtotal);
   updateSummery();
 }
-
+// Render wishlist
 function renderWishlistSection() {
   let parent = document.querySelector("#cartItemShowCaseWrapper");
   let cartWishlistDiv = document.createElement("div");
@@ -151,7 +152,6 @@ function renderWishlistSection() {
 }
 
 // Bottom product showcase
-
 function renderProductCards(data) {
   var parentDiv = document.querySelector("#upsellProductShowcase");
   parentDiv.innerHTML = "";
@@ -238,6 +238,42 @@ function renderProductCards(data) {
     var parentDiv = document.querySelector("#upsellProductShowcase");
     parentDiv.append(cardDiv);
   });
+}
+// Remove feature
+function removeProduct(event) {
+  let productElement = event.target.closest(".cartProductSingleCard");
+
+  let title = productElement.querySelector("#product-title").textContent;
+
+  let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+
+  let index = cartData.findIndex(function (product) {
+    return product.name === title;
+  });
+
+  if (index !== -1) {
+    cartData.splice(index, 1);
+  }
+
+  localStorage.setItem("cartData", JSON.stringify(cartData));
+
+  let price = Number(
+    productElement.querySelector("#itemPriceWrapper p").textContent.slice(1)
+  );
+  let quantity = Number(
+    productElement.querySelector("#quantitySelector span").textContent
+  );
+
+  allProductSubtotal -= price * quantity;
+
+  productElement.remove();
+
+  let wishlistSection = document.querySelector(".cartWishlistDiv");
+  if (wishlistSection) {
+    wishlistSection.remove();
+  }
+
+  updateSummery();
 }
 
 function updateSummery() {
