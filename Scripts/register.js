@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Passwords do not match!");
             return;
         }
-        const savedEmail=localStorage.getItem('email');
-        if(email==savedEmail){
-            alert("Emails already registered!")
+
+        const savedEmail = localStorage.getItem('email');
+        if (email == savedEmail) {
+            alert("Email already registered!");
             return;
         }
-
 
         //save the values
         localStorage.setItem('email', email);
