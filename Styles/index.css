@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Lato", sans-serif;
 }
 
 .class1 {
@@ -134,7 +135,6 @@ h4 {
   border-right: 0px;
   font-size: 14px;
   color: rgb(46, 51, 55);
-  font-family: "Lato", sans-serif;
 }
 
 #search_bar {
@@ -161,7 +161,6 @@ h4 {
   width: 125px;
   border: none;
   background-color: #ffffff;
-  font-family: "Lato", sans-serif;
   font-weight: 600;
   color: #000000;
   cursor: pointer;
@@ -178,7 +177,6 @@ h4 {
   width: 125px;
   border: none;
   background-color: #ffffff;
-  font-family: "Lato", sans-serif;
   font-weight: 600;
   color: #000000;
   cursor: pointer;
@@ -196,7 +194,6 @@ h4 {
 
 #menu > p {
   padding: 10px;
-  font-family: "Lato", sans-serif;
 }
 
 #menu > p:hover {
@@ -208,7 +205,6 @@ h4 {
 }
 
 body {
-  font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
   align-items: center;
@@ -257,7 +253,6 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   margin-top: 20px;
   padding: 0;
-  font-family: Arial, sans-serif;
   background-color: #f0f0f0;
 }
 
@@ -376,7 +371,6 @@ button {
 }
 
 .product_head > h1 {
-  font-family: "Lato-Regular", Helvetica, Arial, sans-serif;
   font-size: 30px;
   line-height: 1.2;
   color: #2e3337;
@@ -403,7 +397,6 @@ button {
   text-align: center;
   font-weight: 400;
   font-size: 32px;
-  font-family: "Lato-Regular", Helvetica, Arial, sans-serif;
 }
 
 .bodyFirstDetails {

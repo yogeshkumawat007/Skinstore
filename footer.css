@@ -23,12 +23,8 @@
   margin-bottom: 20px;
   font-weight: bold;
 }
-#firstTab > p {
-  font-weight: 300;
-}
-#secondTab > p {
-  font-weight: 300;
-}
+#firstTab > p,
+#secondTab > p,
 #thirdTab > p {
   font-weight: 300;
 }
@@ -88,6 +84,9 @@
   padding: 10px 0px;
 }
 
+p:hover {
+  background-color: #f2f2f2;
+}
 #NASmiddle-bottom > div:nth-child(2) {
   display: flex;
   justify-content: space-between;
@@ -112,7 +111,6 @@
 }
 .NASbottom-help > p {
   font-weight: 300;
-  text-align: justify;
 }
 
 .flex {
@@ -161,4 +159,50 @@
   margin: 5px;
   border-radius: 5px;
   border: 1px solid rgb(143, 141, 141);
+}
+
+@media (max-width: 900px) {
+  .socialMediaIconsTitle {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  #NASmiddle-bottom {
+    flex-direction: column;
+  }
+  #NASmiddle-bottom > div {
+    width: 100%;
+  }
+  #NASmiddle-bottom > div > div {
+    width: 100%;
+    border-top: 1px solid #2e3337;
+    border-bottom: 1px solid #2e3337;
+  }
+  #NASmiddle-bottom > div:nth-child(2) {
+    flex-direction: column;
+  }
+  .socialMediaIconsTitle {
+    padding: 0;
+  }
+  #NASpayment-media {
+    width: 100%;
+    gap: 5px;
+  }
+  #NASmiddle-right div {
+    width: 100%;
+  }
+  hr {
+    display: none;
+  }
+  #NASmiddle-bottom > div:nth-child(2) > div {
+    border-top: 1px solid #2e3337;
+    width: 100%;
+  }
+}
+@media (max-width: 704px) {
+  #NASmiddle-bottom > div:nth-child(2) {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
