@@ -111,17 +111,30 @@ function renderProductCards(data) {
     });
 
     let clickedCart = false;
+
     addToCartButton.addEventListener("click", function () {
-      if (!clickedCart) {
-        clickedCart = true;
-        cartData.push(element);
+      cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+      const productInCart = cartData.find(
+        (cartItem) => cartItem.id === element.id
+      );
+
+      if (productInCart) {
+        productInCart.quantity += 1;
         localStorage.setItem("cartData", JSON.stringify(cartData));
         openPopup();
-        renderPopupData(element);
+        renderPopupData(productInCart);
       } else {
-        alert("Produt is alredy in the cart");
+        if (!clickedCart) {
+          clickedCart = true;
+          element.quantity = 1;
+          cartData.push(element);
+          localStorage.setItem("cartData", JSON.stringify(cartData));
+          openPopup();
+          renderPopupData(element);
+        }
       }
     });
+
     var noOfProducts = document.querySelector("#totalNoOfProducts");
     noOfProducts.innerHTML = `${data.length} results`;
 
@@ -214,11 +227,11 @@ function renderPopupData(element) {
   popupProductImageDiv.append(proImage);
 
   popupProductName.innerHTML = element.name;
-  popupProductPrice.innerHTML = `$${element.price}`;
+  popupProductPrice.innerHTML = `$${element.price} x ${element.quantity}`;
   noOfItemsInCart.innerHTML = `(${cartData.length} Items in your cart)`;
 
   let subtotal = cartData.reduce(
-    (total, item) => total + Number(item.price),
+    (total, item) => total + Number(item.price) * item.quantity,
     0
   );
   popupProductSubtotal.innerHTML = `$ ${subtotal.toFixed(2)}`;

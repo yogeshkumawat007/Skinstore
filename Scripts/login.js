@@ -1,28 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const registrationForm = document.getElementById("loginForm");
+  const loginForm = document.getElementById("loginForm");
+  const alertElement = document.getElementById("alert");
 
-    registrationForm.addEventListener("submit", function (e) {
-        e.preventDefault();
+  loginForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
+    alertElement.textContent = "";
+    alertElement.style.display = "none";
 
-        //get the values
-        const savedEmail = localStorage.getItem('email');
-        
-        const savedPassword =localStorage.getItem('password');
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-        if (email != savedEmail) {
-            alert("Email not registered!");
-            return;
-        }
+    let usersArray = JSON.parse(localStorage.getItem("usersArray")) || [];
 
-        if (password !== savedPassword) {
-            alert("Wrong Password!");
-            return;
-        }
+    let user = usersArray.find((user) => user.email === email);
 
-        // Reset the form
-        registrationForm.reset();
-    });
+    if (!user) {
+      alertElement.textContent = "Email not registered!";
+      alertElement.style.display = "block";
+      return;
+    }
+
+    if (user.password !== password) {
+      alertElement.textContent = "Wrong password!";
+      alertElement.style.display = "block";
+      return;
+    }
+
+    localStorage.setItem("loggedInUser", JSON.stringify(user));
+
+    window.location.href = "index.html";
+  });
 });

@@ -41,6 +41,9 @@ function renderProductCards(data) {
     var proName = document.createElement("h3");
     proName.innerHTML = name;
 
+    proName.addEventListener("click", function () {
+      openProductPage(element);
+    });
     var textBox = document.createElement("p");
     textBox.setAttribute("id", "textBox");
     textBox.innerHTML = "New Arrival";
@@ -71,6 +74,7 @@ function renderProductCards(data) {
 
     image.src = image_url;
     imageDiv.append(image);
+
     wishlistDiv.append(wishlistIcon);
     imageAndWishListDiv.append(imageDiv, wishlistDiv);
     var addToCartButton = document.createElement("button");
@@ -80,6 +84,9 @@ function renderProductCards(data) {
 
     cardDiv.append(imageAndWishListDiv, productDetailsDiv, addToCartButton);
 
+    image.addEventListener("click", function () {
+      openProductPage(element);
+    });
     image.addEventListener("mouseover", function () {
       if (element.image_urls.length > 1) {
         image.style.transition = "all 0.5s ease";
@@ -111,16 +118,30 @@ function renderProductCards(data) {
     });
 
     let clickedCart = false;
+
     addToCartButton.addEventListener("click", function () {
-      if (!clickedCart) {
-        clickedCart = true;
-        cartData.push(element);
+      cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+      const productInCart = cartData.find(
+        (cartItem) => cartItem.id === element.id
+      );
+
+      if (productInCart) {
+        productInCart.quantity += 1;
         localStorage.setItem("cartData", JSON.stringify(cartData));
         openPopup();
+        renderPopupData(productInCart);
       } else {
-        alert("Produt is alredy in the cart");
+        if (!clickedCart) {
+          clickedCart = true;
+          element.quantity = 1;
+          cartData.push(element);
+          localStorage.setItem("cartData", JSON.stringify(cartData));
+          openPopup();
+          renderPopupData(element);
+        }
       }
     });
+
     var noOfProducts = document.querySelector("#totalNoOfProducts");
     noOfProducts.innerHTML = `${data.length} results`;
 
@@ -182,19 +203,46 @@ let popup = document.querySelector("#popup");
 let closePopupButton = document.querySelector("#closePopupButton");
 closePopupButton.addEventListener("click", closePopup);
 
+let viewCartBtn = document.querySelector(".fa-x");
+viewCartBtn.addEventListener("click", closePopup);
+
 var backdrop = document.getElementById("backdrop");
 
 function openPopup() {
   popup.classList.add("open-popup");
-  backdrop.classList.add("open-backdrop"); // Show backdrop when popup is open
+  backdrop.classList.add("open-backdrop");
 }
 
 function closePopup() {
   popup.classList.remove("open-popup");
-  backdrop.classList.remove("open-backdrop"); // Hide backdrop when popup is closed
+  backdrop.classList.remove("open-backdrop");
 }
 
 renderProductCards(hairCareProductsData);
+
+function renderPopupData(element) {
+  let popupProductName = document.querySelector("#popupProductName");
+  let popupProductPrice = document.querySelector("#popupProductPrice");
+  let popupProductSubtotal = document.querySelector("#popupProductSubtotal");
+  let noOfItemsInCart = document.querySelector("#noOfItemsInCart");
+
+  let proImage = document.createElement("img");
+  proImage.src = element.image_urls[0];
+
+  let popupProductImageDiv = document.querySelector("#popupProductImageDiv");
+  popupProductImageDiv.innerHTML = "";
+  popupProductImageDiv.append(proImage);
+
+  popupProductName.innerHTML = element.name;
+  popupProductPrice.innerHTML = `$${element.price} x ${element.quantity}`;
+  noOfItemsInCart.innerHTML = `(${cartData.length} Items in your cart)`;
+
+  let subtotal = cartData.reduce(
+    (total, item) => total + Number(item.price) * item.quantity,
+    0
+  );
+  popupProductSubtotal.innerHTML = `$ ${subtotal.toFixed(2)}`;
+}
 
 // Render Brand filter
 
@@ -221,7 +269,6 @@ function renderBrandFilters() {
   let parent = document.querySelector("#brandCheckboxDiv");
 
   for (let key in sortedBrandCounts) {
-    // Create new elements
     let label = document.createElement("label");
     label.className = "form-control";
 
@@ -234,33 +281,27 @@ function renderBrandFilters() {
       `${key} (${sortedBrandCounts[key]})`
     );
 
-    // Append the elements
     label.append(input);
     label.append(textNode);
 
     parent.append(label);
 
-    // Add event listener to the checkbox
     input.addEventListener("click", function () {
       if (this.checked) {
-        // Add the brand to the list of checked brands
         checkedBrands.push(key);
       } else {
-        // Remove the brand from the list of checked brands
         let index = checkedBrands.indexOf(key);
         if (index > -1) {
           checkedBrands.splice(index, 1);
         }
       }
 
-      // Filter the data and call renderProductCards
       let filteredData;
       if (checkedBrands.length > 0) {
         filteredData = hairCareProductsData.filter((product) =>
           checkedBrands.includes(product.brand)
         );
       } else {
-        // If no checkboxes are checked, use the original data
         filteredData = hairCareProductsData;
       }
       renderProductCards(filteredData);
@@ -295,7 +336,6 @@ function renderSkinTypeFilters() {
   let parent = document.querySelector("#skinTypeCheckboxDiv");
 
   for (let key in sortedSkinTypeCounts) {
-    // Create new elements
     let label = document.createElement("label");
     label.className = "form-control";
 
@@ -308,33 +348,27 @@ function renderSkinTypeFilters() {
       `${key} (${sortedSkinTypeCounts[key]})`
     );
 
-    // Append the elements
     label.append(input);
     label.append(textNode);
 
     parent.append(label);
 
-    // Add event listener to the checkbox
     input.addEventListener("click", function () {
       if (this.checked) {
-        // Add the skin type to the list of checked skin types
         checkedSkinTypes.push(key);
       } else {
-        // Remove the skin type from the list of checked skin types
         let index = checkedSkinTypes.indexOf(key);
         if (index > -1) {
           checkedSkinTypes.splice(index, 1);
         }
       }
 
-      // Filter the data and call renderProductCards
       let filteredData;
       if (checkedSkinTypes.length > 0) {
         filteredData = hairCareProductsData.filter((product) =>
           checkedSkinTypes.includes(product.skin_type)
         );
       } else {
-        // If no checkboxes are checked, use the original data
         filteredData = hairCareProductsData;
       }
       renderProductCards(filteredData);
@@ -342,4 +376,13 @@ function renderSkinTypeFilters() {
   }
 }
 
+function openProductPage(element) {
+  var productString = JSON.stringify(element);
+  var encodedProduct = encodeURIComponent(productString);
+  window.location.href = "singleProduct.html?product=" + encodedProduct;
+}
+
 renderSkinTypeFilters();
+$(function () {
+  $("#footer").load("footer.html");
+});

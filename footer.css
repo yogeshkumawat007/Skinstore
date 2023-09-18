@@ -1,127 +1,208 @@
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Lato", sans-serif;
 }
 
 #NASbottom {
-    margin: 2% 6%;
+  margin: 2% 6%;
 }
 
 /* This is bottom css design of Index Page */
 #NASupper-bottom {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
-    width: 100%;
-    /* padding: 5%; */
-    margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  /* padding: 5%; */
+  margin: auto;
 }
 
 .NASbold {
-    font-weight: bold;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+#firstTab > p,
+#secondTab > p,
+#thirdTab > p {
+  font-weight: 300;
 }
 
-#NASupper-bottom>div>a>button {
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    margin: 15px 0px;
-    cursor: pointer;
+#NASupper-bottom > div > a > button {
+  font-size: 14px;
+  color: #2e3337;
+  font-weight: 300;
+  text-transform: none;
+  line-height: 18px;
+  background-color: #333;
+  border-style: none;
+  padding: 12px;
+  color: #fff;
+  border-radius: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+.socialMediaIconsTitle {
+  padding-right: 19em;
 }
 
 #NASsocial-media {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 20px 0px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 20px 0px;
 }
 
-#NASsocial-media>img {
-    width: 50px;
-    background-color: transparent;
-    border-radius: 50%;
-    margin-right: 10px;
+#NASsocial-media > img {
+  width: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 #NASmiddle-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    width: 100%;
-    /* padding: 2%; */
-    margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  /* padding: 2%; */
+  margin: auto;
 }
 
-#NASmiddle-bottom>div {
-    width: 50%;
-    padding-right: 10px;
-
+#NASmiddle-bottom > div {
+  width: 50%;
+  padding-right: 10px;
 }
 
 #NASmiddle-bottom p {
-    padding: 10px 0px;
+  padding: 10px 0px;
 }
 
-#NASmiddle-bottom>div:nth-child(2) {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.foot p:hover {
+  background-color: #f2f2f2;
+}
+#NASmiddle-bottom > div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-#NASmiddle-bottom>div:nth-child(2)>div {
-    min-width: 150px;
-    width: 30%;
+#NASmiddle-bottom > div:nth-child(2) > div {
+  min-width: 150px;
+  width: 30%;
 }
 
 .NASbottom-help {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 10px;
-   
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
 }
 
-.NASbottom-help>img {
-    width: 20px;
-    background-color: transparent;
+.NASbottom-help i {
+  font-size: 20px;
+}
+.NASbottom-help > p {
+  font-weight: 300;
 }
 
-.flex{
-    display: flex;
-    justify-content: space-between;
+.flex {
+  display: flex;
+  justify-content: space-between;
 }
-.flex>button{
-      border: none;
-      font-style: normal;
-      background-color: transparent;
-      font-size: 20px;
-      font-weight: bold;
-
+.flex > button {
+  border: none;
+  font-style: normal;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: bold;
 }
-
 
 #NASlower-bottom {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
-    padding: 20px;
-    margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+#NASlower-bottom > div > h3 {
+  letter-spacing: 3px;
+  font-size: 35px;
+  font-weight: 900;
+  color: #333333;
+  margin-bottom: 5px;
+}
+#NASlower-bottom > div > p {
+  color: #757575;
 }
 
 #NASpayment-media {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-items: stretch;
-    width: 400px;
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: stretch;
+  width: 400px;
+  margin-top: 20px;
 }
 
-#NASpayment-media>img {
-    width: 50px;
-    margin: 5px;
-    border-radius: 5px;
-    border: 1px solid rgb(143, 141, 141);
+#NASpayment-media > img {
+  width: 50px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(143, 141, 141);
+}
+
+@media (max-width: 900px) {
+  .socialMediaIconsTitle {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  #NASmiddle-bottom {
+    flex-direction: column;
+  }
+  #NASmiddle-bottom > div {
+    width: 100%;
+  }
+  #NASmiddle-bottom > div > div {
+    width: 100%;
+    border-top: 1px solid #2e3337;
+    border-bottom: 1px solid #2e3337;
+  }
+  #NASmiddle-bottom > div:nth-child(2) {
+    flex-direction: column;
+  }
+  .socialMediaIconsTitle {
+    padding: 0;
+  }
+  #NASpayment-media {
+    width: 100%;
+    gap: 5px;
+  }
+  #NASmiddle-right div {
+    width: 100%;
+  }
+  hr {
+    display: none;
+  }
+  #NASmiddle-bottom > div:nth-child(2) > div {
+    border-top: 1px solid #2e3337;
+    width: 100%;
+  }
+}
+@media (max-width: 704px) {
+  #NASmiddle-bottom > div:nth-child(2) {
+    width: 100%;
+    justify-content: space-between;
+  }
 }

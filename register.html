@@ -1,78 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Styles/sign.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://s1.thcdn.com/checkout/resources/imgs/skstr/favicon.skstr.ico"
+    />
+    <link
+      rel="icon"
+      href="https://www.skinstore.com/favicon.ico?v=skstrus8.3759.3760"
+    />
+    <link rel="stylesheet" href="./Styles/sign.css" />
     <title>Registration Form</title>
-</head>
+  </head>
 
-<body class="background">
+  <body class="background">
     <div class="header1">
-        <img class="header_image" src="https://s1.thcdn.com/enterprise/assets/skstr-global-113e023e-ecc9-45df-abad-eb92ce1956c9-logo-default.svg">
+      <img
+        class="header_image"
+        src="https://s1.thcdn.com/enterprise/assets/skstr-global-113e023e-ecc9-45df-abad-eb92ce1956c9-logo-default.svg"
+      />
     </div>
-
 
     <div class="container2">
-        <div class="form_container3">
-            <h2>About You</h2>
+      <div class="form_container3">
+        <h2>About You</h2>
 
-            <h3>Sign up with</h3>
-            
-            <div class="external_signup_container">
-                <div class="external_login_button" style="margin-right: 10px;">
-                    <img class="external_login_image" src="./Media/ic_fb.png">
-                    <p style="margin-left: 10px;">Facebook</p>
-                </div>
-                <div class="external_login_button" style="margin-left: 10px;">
-                    <img class="external_login_image" src="./Media/ic_google.png">
-                    <p style="margin-left: 10px;">Google</p>
-                </div>
-            </div>
+        <h3>Sign up with</h3>
 
-            <div class="divider"></div>
-
-            <form id="registrationForm">
-                <div class="form">
-                    <h4>Or create an email account</h4>
-                    <label class="label" for="fullname">* Full Name</label>
-                    <input class="input" type="text" id="fullname" name="fullname" required>
-                </div>
-                <div class="form">
-                    <label class="label" for="email">* Email</label>
-                    <input class="input" type="email" id="email" name="email" required>
-                </div>
-                <div class="form">
-                    <label class="label" for="confirmEmail">* Confirm Email</label>
-                    <input class="input" type="email"email" id="confirmEmail" name="confirmEmail" required>
-                </div>
-                <div class="form">
-                    <label class="label" for="password">* Password</label>
-                    <input class="input" type="password" id="password" name="password" required>
-                    <!-- <p>Include a minimum of 6 characters, and contain at least 1 number</p> -->
-                </div>
-                <div class="form">
-                    <label class="label" for="confirmPassword">* Confirm Password</label>
-                    <input class="input" type="password" id="confirmPassword" name="confirmPassword" required>
-                </div>
-                <div class="form">
-                    <label class="label" for="confirmPassword">Cell Phone Number (Optional)</label>
-                    <input class="input" type="text">
-                </div>
-                <div class="form">
-                    <label class="label">Referral Code (Optional)</label>
-                    <input class="input" tye="text">
-                    <p>* Your referrals discount is automatically applied at cart</p>
-                </div>
-                
-                <div class="form-group">
-                    <button class="button2" type="submit">Continue</button>
-                    <p>By proceeding, you are confirming that you agree to our Terms and Conditions and Privacy Policy</p>
-                </div>
-            </form>
+        <div class="external_signup_container">
+          <div class="external_login_button" style="margin-right: 10px">
+            <img class="external_login_image" src="./Media/ic_fb.png" />
+            <p style="margin-left: 10px">Facebook</p>
+          </div>
+          <div class="external_login_button" style="margin-left: 10px">
+            <img class="external_login_image" src="./Media/ic_google.png" />
+            <p style="margin-left: 10px">Google</p>
+          </div>
         </div>
-    </div>
 
+        <form id="registrationForm">
+          <div class="form">
+            <h3>Or create an email account</h3>
+            <label class="label" for="fullname">* Full Name</label>
+            <input
+              class="input"
+              type="text"
+              id="fullname"
+              name="fullname"
+              required
+            />
+          </div>
+          <div class="form">
+            <label class="label" for="email">* Email</label>
+            <input
+              class="input"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form">
+            <label class="label" for="confirmEmail">* Confirm Email</label>
+            <input
+              class="input"
+              type="email"
+              id="confirmEmail"
+              name="confirmEmail"
+              required
+            />
+          </div>
+          <div id="passwordField" class="form">
+            <label class="label" for="password">* Password</label>
+            <input
+              class="input"
+              type="password"
+              id="password"
+              name="password"
+              required
+            />
+            <p>
+              Include a minimum of 6 characters, and contain at least 1 number
+            </p>
+          </div>
+          <div class="form">
+            <label class="label" for="confirmPassword"
+              >* Confirm Password</label
+            >
+            <input
+              class="input"
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              required
+            />
+          </div>
+          <div id="cellPhoneField" class="form">
+            <label class="label" for="confirmPassword"
+              >Cell Phone Number (Optional)</label
+            >
+            <input class="input" type="text" />
+            <p>
+              We will use this number to send occasional promotional messages.
+            </p>
+          </div>
+          <div id="referralDiv" class="form">
+            <label class="label">Referral Code (Optional)</label>
+            <input class="input" tye="text" />
+            <p>* Your referrals discount is automatically applied at cart</p>
+          </div>
+
+          <div class="form-group">
+            <button class="button2" type="submit">Continue</button>
+            <div class="alertWrapper">
+              <i
+                class="fa-solid fa-circle-exclamation"
+                style="color: #991515"
+              ></i>
+              <p id="alertSignupPage">Alert</p>
+            </div>
+            <p>
+              By proceeding, you are confirming that you agree to our
+              <b><u>Terms and Conditions</u></b> and
+              <b><u>Privacy Policy</u></b>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="./Scripts/register.js"></script>
-</body>
+  </body>
 </html>
