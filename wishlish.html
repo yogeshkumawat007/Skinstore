@@ -58,6 +58,39 @@
           CONTINUE SHOPPING
         </button>
       </div>
+
+      <div class="popup" id="popup">
+        <div class="popupAddToCartTextDiv">
+          <p>Added to Your Cart</p>
+          <i class="fa-solid fa-x"></i>
+        </div>
+        <div class="popupProductCard">
+          <div id="popupProductImageDiv">
+            <!-- add image here -->
+          </div>
+          <div class="productNameAndPriceContainer">
+            <p id="popupProductName">
+              Sunday Riley Good Genes All-In-One Lactic Acid Treatment 1oz
+            </p>
+            <p><strong>Quantity</strong>: 1</p>
+            <h3 id="popupProductPrice">$200.00</h3>
+          </div>
+        </div>
+        <div class="subTotalWrapper">
+          <div>
+            <p><strong>Subtotal</strong>:</p>
+            <p id="noOfItemsInCart">(4 Items in your cart)</p>
+          </div>
+          <div>
+            <p id="popupProductSubtoal">$200.00</p>
+          </div>
+        </div>
+        <div class="popupButtonDiv">
+          <button id="closePopupButton" type="button">CONTINUE SHOPPING</button>
+          <button id="viewCartBtn" type="button">VIEW CART</button>
+        </div>
+      </div>
+      <div class="backdrop" id="backdrop"></div>
     </div>
   </body>
   <script src="./Scripts/wishlist.js"></script>
