@@ -372,3 +372,6 @@ function openProductPage(element) {
 }
 
 renderSkinTypeFilters();
+$(function () {
+  $("#footer").load("footer.html");
+});
