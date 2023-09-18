@@ -1,51 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Styles/sign.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/sign.css" />
     <title>Log In</title>
-</head>
-<body class="background">
+  </head>
+  <body class="background">
     <div class="header1">
-        <img class="header_image" src="https://s1.thcdn.com/enterprise/assets/skstr-global-113e023e-ecc9-45df-abad-eb92ce1956c9-logo-default.svg">
+      <img
+        class="header_image"
+        src="https://s1.thcdn.com/enterprise/assets/skstr-global-113e023e-ecc9-45df-abad-eb92ce1956c9-logo-default.svg"
+      />
     </div>
     <div class="container">
-        <div class="form_container1">
-            <h2>Existing Customers</h2>
-            <form id="loginForm">
-                <div class="form">
-                    <label class="label" for="email">*Email Address</label>
-                    <input class="input" type="email" id="email" name="email" required>
-                </div>
-                <div class="form">
-                    <label class="label" for="password">*Password</label>
-                    <input class="input" type="password" id="password" name="password" required>
-                </div>
-                <button class="button" type="submit">SIGN IN</button>
-            </form>
+      <div class="form_container1">
+        <h2>Existing Customers</h2>
+        <form id="loginForm">
+          <div class="form">
+            <label class="label" for="email">*Email Address</label>
+            <input
+              class="input"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form">
+            <label class="label" for="password">*Password</label>
+            <input
+              class="input"
+              type="password"
+              id="password"
+              name="password"
+              required
+            />
+          </div>
+          <button class="button" type="submit">SIGN IN</button>
+        </form>
 
-            <p style="margin-top: 30px; margin-bottom: 20px;">Or, Continue with</p>
+        <p style="margin-top: 30px; margin-bottom: 20px">Or, Continue with</p>
 
-            <div class="external_signup_container" style="margin-top: 20px;">
-                <div class="external_login_button" style="margin-right: 10px;">
-                    <img class="external_login_image" src="./Media/ic_fb.png">
-                    <p style="margin-left: 10px;">Facebook</p>
-                </div>
-                <div class="external_login_button" style="margin-left: 10px;">
-                    <img class="external_login_image" src="./Media/ic_google.png">
-                    <p style="margin-left: 10px;">Google</p>
-                </div>
-            </div>
-
+        <div class="external_signup_container" style="margin-top: 20px">
+          <div class="external_login_button" style="margin-right: 10px">
+            <img class="external_login_image" src="./Media/ic_fb.png" />
+            <p style="margin-left: 10px">Facebook</p>
+          </div>
+          <div class="external_login_button" style="margin-left: 10px">
+            <img class="external_login_image" src="./Media/ic_google.png" />
+            <p style="margin-left: 10px">Google</p>
+          </div>
         </div>
-        <div class="form_container2">
-            <h2>New Customers</h2>
-            <button class="button" type="submit">CONTINUE</button>
-        </div>
+      </div>
+      <div class="form_container2">
+        <h2>New Customers</h2>
+        <a href="register.html" target="_blank">
+          <button class="button" type="submit">CONTINUE</button>
+        </a>
+      </div>
     </div>
 
     <script src="./Scripts/login.js"></script>
-    
-</body>
+  </body>
 </html>
