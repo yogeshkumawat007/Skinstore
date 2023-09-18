@@ -3,8 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://s1.thcdn.com/checkout/resources/imgs/skstr/favicon.skstr.ico"
+    />
+    <link
+      rel="icon"
+      href="https://www.skinstore.com/favicon.ico?v=skstrus8.3759.3760"
+    />
     <link rel="stylesheet" href="./Styles/sign.css" />
-    <title>Log In</title>
+    <title>Login | SkinStore</title>
   </head>
   <body class="background">
     <div class="header1">
@@ -39,8 +53,11 @@
           </div>
           <button class="button" type="submit">SIGN IN</button>
         </form>
-
-        <p style="margin-top: 30px; margin-bottom: 20px">Or, Continue with</p>
+        <div id="alertWrapper">
+          <i class="fa-solid fa-circle-exclamation" style="color: #991515"></i>
+          <p id="alert">Alert</p>
+        </div>
+        <p id="continueWith">Or, Continue with</p>
 
         <div class="external_signup_container" style="margin-top: 20px">
           <div class="external_login_button" style="margin-right: 10px">
@@ -56,7 +73,7 @@
       <div class="form_container2">
         <h2>New Customers</h2>
         <a href="register.html" target="_blank">
-          <button class="button" type="submit">CONTINUE</button>
+          <button class="button" type="submit">REGISTER</button>
         </a>
       </div>
     </div>
