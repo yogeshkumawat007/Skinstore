@@ -70,7 +70,7 @@ function renderProductCards(data) {
 
     addToCartButton.addEventListener("click", function () {
       let index = wishlistData.indexOf(element);
-
+      element.quantity = 1;
       cartData.push(element);
       localStorage.setItem("cartData", JSON.stringify(cartData));
 
@@ -167,16 +167,15 @@ function renderPopupData(element) {
   proImage.src = element.image_urls[0];
 
   let popupProductImageDiv = document.querySelector("#popupProductImageDiv");
-  // Clear image
   popupProductImageDiv.innerHTML = "";
   popupProductImageDiv.append(proImage);
 
   popupProductName.innerHTML = element.name;
-  popupProductPrice.innerHTML = `$${element.price}`;
+  popupProductPrice.innerHTML = `$${element.price} x ${element.quantity}`;
   noOfItemsInCart.innerHTML = `(${cartData.length} Items in your cart)`;
 
   let subtotal = cartData.reduce(
-    (total, item) => total + Number(item.price),
+    (total, item) => total + Number(item.price) * item.quantity,
     0
   );
   popupProductSubtotal.innerHTML = `$ ${subtotal.toFixed(2)}`;
@@ -184,3 +183,6 @@ function renderPopupData(element) {
 
 updateData();
 renderProductCards(wishlistData);
+$(function () {
+  $("#footer").load("footer.html");
+});
