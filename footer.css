@@ -84,7 +84,7 @@
   padding: 10px 0px;
 }
 
-p:hover {
+.foot p:hover {
   background-color: #f2f2f2;
 }
 #NASmiddle-bottom > div:nth-child(2) {
