@@ -364,3 +364,6 @@ showCouponIcon.addEventListener("click", function () {
 updateSummery();
 renderProductCards(randomData);
 renderProducts(cartData);
+$(function () {
+  $("#footer").load("footer.html");
+});
