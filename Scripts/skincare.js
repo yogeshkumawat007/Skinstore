@@ -41,9 +41,6 @@ function renderProductCards(data) {
     var proName = document.createElement("h3");
     proName.innerHTML = name;
 
-    proName.addEventListener("click", function () {
-      openProductPage(element);
-    });
     var textBox = document.createElement("p");
     textBox.setAttribute("id", "textBox");
     textBox.innerHTML = "New Arrival";
@@ -74,7 +71,6 @@ function renderProductCards(data) {
 
     image.src = image_url;
     imageDiv.append(image);
-
     wishlistDiv.append(wishlistIcon);
     imageAndWishListDiv.append(imageDiv, wishlistDiv);
     var addToCartButton = document.createElement("button");
@@ -84,9 +80,6 @@ function renderProductCards(data) {
 
     cardDiv.append(imageAndWishListDiv, productDetailsDiv, addToCartButton);
 
-    image.addEventListener("click", function () {
-      openProductPage(element);
-    });
     image.addEventListener("mouseover", function () {
       if (element.image_urls.length > 1) {
         image.style.transition = "all 0.5s ease";
@@ -118,16 +111,26 @@ function renderProductCards(data) {
     });
 
     let clickedCart = false;
+
     addToCartButton.addEventListener("click", function () {
-      if (!clickedCart) {
-        clickedCart = true;
-        element.quantity = 1;
-        cartData.push(element);
+      const productInCart = cartData.find(
+        (cartItem) => cartItem.id === element.id
+      );
+
+      if (productInCart) {
+        productInCart.quantity += 1;
         localStorage.setItem("cartData", JSON.stringify(cartData));
         openPopup();
-        renderPopupData(element);
+        renderPopupData(productInCart);
       } else {
-        alert("Product is already in the cart");
+        if (!clickedCart) {
+          clickedCart = true;
+          element.quantity = 1;
+          cartData.push(element);
+          localStorage.setItem("cartData", JSON.stringify(cartData));
+          openPopup();
+          renderPopupData(element);
+        }
       }
     });
 
@@ -223,11 +226,11 @@ function renderPopupData(element) {
   popupProductImageDiv.append(proImage);
 
   popupProductName.innerHTML = element.name;
-  popupProductPrice.innerHTML = `$${element.price}`;
+  popupProductPrice.innerHTML = `$${element.price} x ${element.quantity}`;
   noOfItemsInCart.innerHTML = `(${cartData.length} Items in your cart)`;
 
   let subtotal = cartData.reduce(
-    (total, item) => total + Number(item.price),
+    (total, item) => total + Number(item.price) * item.quantity,
     0
   );
   popupProductSubtotal.innerHTML = `$ ${subtotal.toFixed(2)}`;
@@ -325,6 +328,7 @@ function renderSkinTypeFilters() {
   let parent = document.querySelector("#skinTypeCheckboxDiv");
 
   for (let key in sortedSkinTypeCounts) {
+    // Create new elements
     let label = document.createElement("label");
     label.className = "form-control";
 
@@ -337,27 +341,33 @@ function renderSkinTypeFilters() {
       `${key} (${sortedSkinTypeCounts[key]})`
     );
 
+    // Append the elements
     label.append(input);
     label.append(textNode);
 
     parent.append(label);
 
+    // Add event listener to the checkbox
     input.addEventListener("click", function () {
       if (this.checked) {
+        // Add the skin type to the list of checked skin types
         checkedSkinTypes.push(key);
       } else {
+        // Remove the skin type from the list of checked skin types
         let index = checkedSkinTypes.indexOf(key);
         if (index > -1) {
           checkedSkinTypes.splice(index, 1);
         }
       }
 
+      // Filter the data and call renderProductCards
       let filteredData;
       if (checkedSkinTypes.length > 0) {
         filteredData = skinCareProductsData.filter((product) =>
           checkedSkinTypes.includes(product.skin_type)
         );
       } else {
+        // If no checkboxes are checked, use the original data
         filteredData = skinCareProductsData;
       }
       renderProductCards(filteredData);
@@ -365,13 +375,4 @@ function renderSkinTypeFilters() {
   }
 }
 
-function openProductPage(element) {
-  var productString = JSON.stringify(element);
-  var encodedProduct = encodeURIComponent(productString);
-  window.location.href = "singleProduct.html?product=" + encodedProduct;
-}
-
 renderSkinTypeFilters();
-$(function () {
-  $("#footer").load("footer.html");
-});
