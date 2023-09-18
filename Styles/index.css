@@ -16,7 +16,6 @@
   margin: 0 auto;
   margin-bottom: 10px;
   position: relative;
-
 }
 
 nav {
@@ -127,7 +126,7 @@ h4 {
   height: 84px;
 }
 
-#search_bar>input {
+#search_bar > input {
   width: 380px;
   height: 40px;
   padding: 0px 10px;
@@ -144,7 +143,7 @@ h4 {
   gap: 0px;
 }
 
-#search_bar>button {
+#search_bar > button {
   height: 42px;
   width: 45px;
   border: 1px solid grey;
@@ -152,11 +151,11 @@ h4 {
   border-color: lightgrey;
 }
 
-#search_bar>button:hover {
+#search_bar > button:hover {
   border: none;
 }
 
-#acc_Cart>a button {
+#acc_Cart > a button {
   padding: 10px;
   font-size: 17px;
   width: 125px;
@@ -169,11 +168,11 @@ h4 {
   /* margin-right: 20px; */
 }
 
-#acc_Cart>a button:hover {
+#acc_Cart > a button:hover {
   background-color: rgb(229, 229, 229);
 }
 
-#acc_Cart>button {
+#acc_Cart > button {
   padding: 10px;
   font-size: 17px;
   width: 125px;
@@ -186,7 +185,7 @@ h4 {
   /* margin-right: 20px; */
 }
 
-#acc_Cart>button:hover {
+#acc_Cart > button:hover {
   background-color: rgb(229, 229, 229);
 }
 
@@ -195,12 +194,12 @@ h4 {
   margin: 0 150px 10px 150px;
 }
 
-#menu>p {
+#menu > p {
   padding: 10px;
   font-family: "Lato", sans-serif;
 }
 
-#menu>p:hover {
+#menu > p:hover {
   /* padding: 1px; */
   cursor: pointer;
   background-color: black;
@@ -217,14 +216,12 @@ body {
   overflow-y: scroll;
 }
 
-
 #someOtherOffer {
   display: flex;
   padding: 18px 0px;
   background-color: rgb(242, 242, 242);
   justify-content: center;
   margin-top: -30px;
-
 }
 
 #someOtherOffer a {
@@ -249,7 +246,6 @@ body {
   margin: 20px 0px 20px 0px;
   align-items: center;
 }
-
 
 .slider-container {
   position: relative;
@@ -316,16 +312,15 @@ h1 {
   width: 75%;
 }
 
-#Imageline_1>img:hover {
+#Imageline_1 > img:hover {
   opacity: 50%;
 }
 
-#Imageline_1>img {
+#Imageline_1 > img {
   height: 200px;
   width: 100%;
   z-index: 1;
 }
-
 
 .bottom-left {
   position: absolute;
@@ -333,21 +328,19 @@ h1 {
   left: 50px;
 }
 
-.bottom-left>h1 {
+.bottom-left > h1 {
   font-size: 50px;
 }
 
-.bottom-left>button {
+.bottom-left > button {
   font-size: 25px;
   color: white;
   background-color: #2e3337;
   margin-left: 80px;
 }
 
-
 button {
   border: none;
-
 }
 
 .btn {
@@ -363,8 +356,6 @@ button {
   width: 450px;
   margin-left: 450px;
   margin-bottom: 50px;
-
-
 }
 
 .product_head {
@@ -372,7 +363,7 @@ button {
   margin-bottom: 0%;
 }
 
-.product_head>h1 {
+.product_head > h1 {
   font-size: 20px;
   margin-left: -520px;
   font-size: 30px;
@@ -384,7 +375,7 @@ button {
   display: block;
 }
 
-.product_head>h1 {
+.product_head > h1 {
   font-family: "Lato-Regular", Helvetica, Arial, sans-serif;
   font-size: 30px;
   line-height: 1.2;
@@ -395,17 +386,14 @@ button {
   display: block;
 }
 
-
-
-
-.btn>button {
+.btn > button {
   font-size: 20px;
   width: 140px;
   background-color: #f2f2f2;
   color: #000000;
 }
 
-.btn>button:hover {
+.btn > button:hover {
   background-color: #f2f2f2;
   cursor: pointer;
 }
@@ -424,12 +412,10 @@ button {
   width: 100%;
 }
 
-
-
-.bodyFirstDetails>div:hover,
-.companyLogo>div:hover,
-.trendingOffer>div:hover,
-.overTheBlogDetails>div:hover {
+.bodyFirstDetails > div:hover,
+.companyLogo > div:hover,
+.trendingOffer > div:hover,
+.overTheBlogDetails > div:hover {
   cursor: pointer;
   opacity: 81%;
 }
@@ -437,7 +423,6 @@ button {
 .bodyFirstDetails img {
   width: 100%;
 }
-
 
 .productDetails {
   width: 85%;
@@ -502,8 +487,8 @@ button {
   margin: 5px 0px;
 }
 
-.trendingOffer>div *,
-.overTheBlogDetails>div * {
+.trendingOffer > div *,
+.overTheBlogDetails > div * {
   /* border: 1px solid black; */
   text-align: center;
 }
@@ -558,24 +543,23 @@ button {
   height: 7vh;
 }
 
-.randombar>img {
+.randombar > img {
   width: 99%;
   margin-bottom: 50px;
 }
 
-
-p {
+/* p {
   height: 25px;
   /* width: 250px; */
-  padding: 5px;
-  /* margin: 5px; */
-  /* align-items: center; */
-  /* text-align: left; */
-}
+/* padding: 5px; */
+/* margin: 5px; */
+/* align-items: center; */
+/* text-align: left; */
+/* } */
 
-p:hover {
+/* p:hover {
   background-color: lightgray;
-}
+} */
 
 button {
   width: 78px;
@@ -591,7 +575,7 @@ button:hover {
   color: black;
 }
 
-.social>img {
+.social > img {
   margin: 5px 10px 0px 10px;
   height: 40px;
   width: 40px;
@@ -602,8 +586,6 @@ button:hover {
   text-align: center;
   /* padding: 15px; */
 }
-
-
 
 @media only screen and (max-width: 900px) {
   #someOtherOffer {
@@ -627,7 +609,7 @@ button:hover {
     padding-left: 25px;
     height: 30px;
   }
-  #shop :hover{
+  #shop :hover {
     background-color: #f0f0f0;
   }
 
@@ -635,23 +617,21 @@ button:hover {
     position: absolute;
     bottom: 470px;
     left: 30px;
-
   }
 
-  .bottom-left>h1 {
+  .bottom-left > h1 {
     font-size: 10px;
   }
 
-  .bottom-left>p {
+  .bottom-left > p {
     font-size: 10px;
     margin-bottom: 150px;
   }
 
-  .bottom-left>button {
+  .bottom-left > button {
     font-size: 10px;
     margin-top: 90px;
     background-color: aquamarine;
-
   }
 
   #buttonOnIMG1 {
@@ -659,7 +639,7 @@ button:hover {
     background-color: aquamarine;
   }
 
-  .shopby>h1 {
+  .shopby > h1 {
     font-size: 20px;
     margin-left: -520px;
   }
@@ -670,7 +650,7 @@ button:hover {
     width: 39%;
   }
 
-  #Imageline_1>img {
+  #Imageline_1 > img {
     height: 120px;
     width: 90%;
     z-index: 1;
@@ -723,16 +703,16 @@ button:hover {
     width: 25%;
   }
 
-  .trendingOffer>div {
+  .trendingOffer > div {
     margin-bottom: -30px;
   }
 
-  .trendingOffer>div h3 {
+  .trendingOffer > div h3 {
     font-size: 18px;
     margin-left: -500px;
   }
 
-  .trendingOffer>div p {
+  .trendingOffer > div p {
     font-size: 14px;
     margin-left: -16px;
     width: 290px;
@@ -773,7 +753,7 @@ button:hover {
     width: 59px;
   }
 
-  .randombar>img {
+  .randombar > img {
     width: 39%;
   }
 }
@@ -802,8 +782,7 @@ button:hover {
     height: 30px;
   }
 
-
-  .shopby>h1 {
+  .shopby > h1 {
     font-size: 23px;
     margin-left: -100px;
     margin-top: 30px;
@@ -815,7 +794,7 @@ button:hover {
     width: 55%;
   }
 
-  #Imageline_1>img {
+  #Imageline_1 > img {
     height: 160px;
     width: 100%;
     z-index: 1;
@@ -828,16 +807,16 @@ button:hover {
     left: 30px;
   }
 
-  .bottom-left>h1 {
+  .bottom-left > h1 {
     font-size: 14px;
   }
 
-  .bottom-left>p {
+  .bottom-left > p {
     font-size: 12px;
     margin-bottom: -20px;
   }
 
-  .bottom-left>button {
+  .bottom-left > button {
     font-size: 14px;
   }
 
@@ -857,12 +836,12 @@ button:hover {
     margin-left: 20px;
   }
 
-  .trendingOffer>div h3 {
+  .trendingOffer > div h3 {
     font-size: 20px;
     margin-left: -100px;
   }
 
-  .trendingOffer>div p {
+  .trendingOffer > div p {
     font-size: 14px;
     margin-left: -16px;
     width: 250px;
@@ -887,8 +866,7 @@ button:hover {
     margin-left: 23px;
   }
 
-  .randombar>img {
+  .randombar > img {
     width: 69%;
   }
-
 }
