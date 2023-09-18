@@ -52,6 +52,9 @@
   margin-bottom: 0;
   margin-left: 0;
 }
+.socialMediaIconsTitle {
+  padding-right: 19em;
+}
 
 #NASsocial-media {
   display: flex;
@@ -61,7 +64,7 @@
 }
 
 #NASsocial-media > img {
-  width: 50px;
+  width: 40px;
   background-color: transparent;
   border-radius: 50%;
   margin-right: 10px;
