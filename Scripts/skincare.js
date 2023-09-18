@@ -377,3 +377,7 @@ function renderSkinTypeFilters() {
 }
 
 renderSkinTypeFilters();
+
+$(function () {
+  $("#footer").load("footer.html");
+});
