@@ -113,6 +113,7 @@ function renderProductCards(data) {
     let clickedCart = false;
 
     addToCartButton.addEventListener("click", function () {
+      cartData = JSON.parse(localStorage.getItem("cartData")) || [];
       const productInCart = cartData.find(
         (cartItem) => cartItem.id === element.id
       );
