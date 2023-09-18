@@ -49,7 +49,7 @@ function renderProducts(data) {
     itemPrice.textContent = `$${element.price}`;
     itemPriceWrapper.appendChild(itemPrice);
 
-    let quantity = 1;
+    let quantity = element.quantity;
     let productSubtotal = element.price * quantity;
     let quantitySelector = document.createElement("div");
     quantitySelector.id = "quantitySelector";
@@ -67,9 +67,8 @@ function renderProducts(data) {
         quantitySpan.textContent = quantity;
         subtotalPrice.textContent = `$${productSubtotal.toFixed(2)}`;
 
-        // recalculate the discount
         if (hasDiscountBeenApplied) {
-          discount = allProductSubtotal * 0.3; // apply a 30% discount
+          discount = allProductSubtotal * 0.3;
         }
 
         updateSummery();
@@ -92,9 +91,8 @@ function renderProducts(data) {
       quantitySpan.textContent = quantity;
       subtotalPrice.textContent = `$${productSubtotal.toFixed(2)}`;
 
-      // recalculate the discount
       if (hasDiscountBeenApplied) {
-        discount = allProductSubtotal * 0.3; // apply a 30% discount
+        discount = allProductSubtotal * 0.3;
       }
 
       updateSummery();
@@ -265,6 +263,7 @@ function removeProduct(event) {
 
   if (index !== -1) {
     cartData.splice(index, 1);
+    localStorage.setItem("cartData", JSON.stringify(cartData));
   }
 
   localStorage.setItem("cartData", JSON.stringify(cartData));
