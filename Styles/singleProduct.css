@@ -9,16 +9,13 @@
   width: 90%;
   margin: auto;
   gap: 0% 7%;
-  /* border: 1px solid red; */
+  margin-top: 15%;
 }
 
 .singleImgDiv {
-  /* border: 1px solid red; */
   width: 10%;
   margin: auto;
-  /* display:; */
   display: block;
-  /* position: fixed; */
 }
 .singleImgDiv img {
   width: 100%;
