@@ -123,6 +123,7 @@
     margin-bottom: 4%;
     display: flex;
     gap: 10% 1%;
+    /* border: 1px solid blue; */
   }
 
   .left4 > div > div:nth-child(2){
@@ -174,7 +175,7 @@
 
 
 .checkoutRightYk{
-    width: 30%;
+    width: 35%;
     margin-top: 1%;
     padding: 2%;
 }
@@ -200,6 +201,8 @@
 
 #checkoutRightAddDiv > div{
     display: flex;
+    align-items: center;
+    /* gap: 0 1%; */
 }
 
 #mainDivAppend{
@@ -207,6 +210,8 @@
     /* border: 1px solid blue; */
     border: none;
     margin-bottom: -8%;
+    /* justify-items: center; */
+    
 }
 
 #mainDivAppend >div{
@@ -217,13 +222,13 @@
 #divFrist{
     /* width: 100%; */
     /* border: 1px solid aqua; */
-    width: 50%;
+    width: 30%;
 }
 
 #divSecond{
     /* width: 100%; */
     /* border: 1px solid black; */
-    width: 50%;
+    width: 60%;
     display: block;
 }
 #checkoutRightAddDiv img{
