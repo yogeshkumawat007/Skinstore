@@ -360,6 +360,20 @@ showCouponIcon.addEventListener("click", function () {
   couponAlerts.style.display = "none";
 });
 
+function openPaymentPage() {
+  var newArray = [...cartData];
+  var newArrayString = JSON.stringify(newArray);
+  var encodedArray = encodeURIComponent(newArrayString);
+  window.location.href = "payment.html?data=" + encodedArray;
+}
+
+document
+  .getElementById("topCheckoutButton")
+  .addEventListener("click", openPaymentPage);
+document
+  .getElementById("bottomCheckoutButton")
+  .addEventListener("click", openPaymentPage);
+
 updateSummery();
 renderProductCards(randomData);
 renderProducts(cartData);
