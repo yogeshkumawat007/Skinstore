@@ -1,79 +1,7 @@
-let singleProArr = [
-  {
-    id: "555",
-    image_urls: [
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12588508-9214904684566827.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12588508-1294904684596665.jpg",
-    ],
-    name: "111SKIN Sub-Zero De-Puffing Energy Facial Mask Box",
-    brand: "111SKIN",
-    skin_type: "Acne Prone",
-    product_type: "skinCare",
-    price: "135.00",
-    description:
-      "111SKIN Sub-Zero De-Puffing Energy Mask provides a cooling and energizing experience for the skin.",
-    reviews: {
-      average_rating: 4.5,
-      total_reviews: 60,
-    },
-  },
+var urlParams = new URLSearchParams(window.location.search);
+var singleProArr = JSON.parse(decodeURIComponent(urlParams.get("data"))) || [];
+console.log(singleProArr);
 
-  {
-    id: "777",
-    image_urls: [
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/14514328-3975064449442396.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/14514328-1095064448920540.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/14514328-1305064449176521.jpg",
-    ],
-    name: "Elemis Limited Edition Pro-Collagen Marine Cream SPF 30 100ml (Worth $239)",
-    brand: "Elemis",
-    skin_type: "Acne Prone",
-    product_type: "skinCare",
-    price: "220.00",
-    description:
-      "Elemis Pro-Collagen Marine Cream is a luxurious anti-aging cream with SPF 30 for firmer, smoother skin.",
-    reviews: {
-      average_rating: 4.9,
-      total_reviews: 39,
-    },
-  },
-  {
-    id: "111",
-    image_urls: [
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11814869-2065062272653937.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11814869-3714864714301856.jpg",
-    ],
-    name: "Colorescience Sunforgettable Total Protection Face Shield SPF50 (PA++++) 55ml",
-    brand: "Colorescience",
-    skin_type: "Combination",
-    product_type: "skinCare",
-    price: "45.00",
-    description:
-      "Colorescience Sunforgettable Face Shield offers total protection with SPF50 against harmful UV rays.",
-    reviews: {
-      average_rating: 4.2,
-      total_reviews: 56,
-    },
-  },
-  {
-    id: "555",
-    image_urls: [
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11382032-1305023392875862.jpg",
-      "https://static.thcdn.com/images/large/webp//productimg/1600/1600/11382032-9424901840301822.jpg",
-    ],
-    name: "The Ordinary Azelaic Acid Suspension 10% 30ml",
-    brand: "The Ordinary",
-    skin_type: "Mature",
-    product_type: "skinCare",
-    price: "11.10",
-    description:
-      "The Ordinary Azelaic Acid Suspension 10% is a multifunctional skincare product that targets various skin concerns.",
-    reviews: {
-      average_rating: 4.1,
-      total_reviews: 24,
-    },
-  },
-];
 // console.log(singleProArr);
 
 let countItem = 0;
@@ -168,7 +96,6 @@ function oneDayDeliveryFun() {
     "1px solid #333333";
   document.getElementById("twoDayDelivery").style.border = "1px solid #333333";
 }
-
 
 // adding logic for checkbox
 

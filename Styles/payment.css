@@ -1,240 +1,238 @@
-*{
-    margin: 0;
-    padding: 0;
-    /* background-color: #f2f2f2; */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
 }
 
-.checkoutMainYk{
-    width: 75%;
-    margin: auto;
-    display: flex;
-    gap: 0 2%;
-    
-}
-/* .left1,.left2{
-    background-color: white;
-} */
-
-.checkoutLeftYk{
-    width: 70%;
+.checkoutMainYk {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  gap: 0 2%;
 }
 
-
-.left1, .left2,.left3,.left4{
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 3px;
-    border-top: 6px solid black;
-    border-radius: 5px;
-    margin-bottom: 6%;
-    margin-top: 2%;
-    padding: 5%;
-    /* background-color: red; */
-    /* background-color: ; */
+.checkoutLeftYk {
+  width: 70%;
 }
 
-.left1 > p, .left2 > p, .left3 > p{
-    font-weight: bold;
-    font-size: 23px;
-    margin-bottom: 5%;
-}
-.checkoutLeftYk label{
-    display: block;
-    color: #333333;
-    /* font-weight: 500; */
-    font-size: 18px;
-}
-
-.checkoutLeftYk input,select,label{
-    width: 100%;
-    box-sizing: border-box;
-    background-color: white;
-    
+.left1,
+.left2,
+.left3,
+.left4 {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 3px;
+  border-top: 6px solid black;
+  border-radius: 5px;
+  margin-bottom: 6%;
+  margin-top: 2%;
+  padding: 5%;
+  /* background-color: red; */
+  /* background-color: ; */
 }
 
-.checkoutLeftYk input, select{
-    padding: 1.5%;
-    border-radius: 5px;
-    margin: 1% 0 4% 0;
-    /* cursor: pointer; */
-    border: 1px solid #333333;
-
+.left1 > p,
+.left2 > p,
+.left3 > p {
+  font-weight: bold;
+  font-size: 23px;
+  margin-bottom: 5%;
 }
-.left1 > form > p{
-    /* color: red; */
-    margin-top: -3%;
-    text-decoration: underline;
-    cursor: pointer;
+.checkoutLeftYk label {
+  display: block;
+  color: #333333;
+  /* font-weight: 500; */
+  font-size: 18px;
+}
+
+.checkoutLeftYk input,
+select,
+label {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.checkoutLeftYk input,
+select {
+  padding: 1.5%;
+  border-radius: 5px;
+  margin: 1% 0 4% 0;
+  /* cursor: pointer; */
+  border: 1px solid #333333;
+}
+.left1 > form > p {
+  /* color: red; */
+  margin-top: -3%;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /* left2 */
 
 .left2 > div {
-    /* color: green; */
-    font-weight:500;
-    line-height: 24px;
-    border: 1px solid #4c4c4c;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(51, 51, 51) 0px 0px 0px 1px;
-    border-radius: 5px;
-    padding: 1%;
-    margin-bottom: 4%;
-    line-height: 30px;
-    cursor: pointer;
+  /* color: green; */
+  font-weight: 500;
+  line-height: 24px;
+  border: 1px solid #4c4c4c;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(51, 51, 51) 0px 0px 0px 1px;
+  border-radius: 5px;
+  padding: 1%;
+  margin-bottom: 4%;
+  line-height: 30px;
+  cursor: pointer;
 }
 
-.left2 > div > p:nth-child(3){
-    color: green;
-    font-weight: bold;
+.left2 > div > p:nth-child(3) {
+  color: green;
+  font-weight: bold;
 }
 
 /* left3 */
-.left3Imgs{
-    display: flex;
-    /* margin-left: 50px; */
-    gap: 0 20px;
-    margin-bottom: 5%;
+.left3Imgs {
+  display: flex;
+  /* margin-left: 50px; */
+  gap: 0 20px;
+  margin-bottom: 5%;
 }
 
-.left3 > div > p , .left4 > p{
-    color:  #4c4c4c;
-    margin-bottom: 3%;
-    font-weight: 700;
+.left3 > div > p,
+.left4 > p {
+  color: #4c4c4c;
+  margin-bottom: 3%;
+  font-weight: 700;
 }
 
-#expiryDateDiv{
-    /* background-color: red; */
-    display: flex;
-    gap: 0% 5%;
-
+#expiryDateDiv {
+  /* background-color: red; */
+  display: flex;
+  gap: 0% 5%;
 }
-
 
 #checkboxAndtext {
-    display: flex;
-    /* border: 1px solid red; */
-    gap: 0 1%;
-  }
-
-  #checkbox {
-    margin-right: 10px;
-  }
-
-  /*------------------ left4 ------------------*/
-  .left4 > div{
-    border-bottom: 1px solid #4c4c4c;
-    margin-bottom: 4%;
-    display: flex;
-    gap: 10% 1%;
-    /* border: 1px solid blue; */
-  }
-
-  .left4 > div > div:nth-child(2){
-    /* background-color: azure; */
-    width: 20%;
-  }
-
-  .left4 > div > div:nth-child(2) >  img{
-    width: 90%;
-    /* width: auto; */
-  }
-
-  /* left5 */
-  .left5{
-    margin-bottom: 3%;
-    font-size: 20px;
-    padding:2%;
-    /* background-color: antiquewhite; */
+  display: flex;
+  /* border: 1px solid red; */
+  gap: 0 1%;
 }
-#submitOrder{
-    display: flex;
-    justify-content: space-between;
-    padding: 1%;
-    background-color:#333333;
-    color: white;
-    padding: 2%;
-  }
 
-#submitOrder:hover{
-    background-color: rgb(125, 221, 221);
-    color: black;
-    cursor: pointer;
+#checkbox {
+  margin-right: 10px;
+}
+
+/*------------------ left4 ------------------*/
+.left4 > div {
+  border-bottom: 1px solid #4c4c4c;
+  margin-bottom: 4%;
+  display: flex;
+  gap: 10% 1%;
+  /* border: 1px solid blue; */
+}
+
+.left4 > div > div:nth-child(2) {
+  /* background-color: azure; */
+  width: 20%;
+}
+
+.left4 > div > div:nth-child(2) > img {
+  width: 90%;
+  /* width: auto; */
+}
+
+/* left5 */
+.left5 {
+  margin-bottom: 3%;
+  font-size: 20px;
+  padding: 2%;
+  /* background-color: antiquewhite; */
+}
+#submitOrder {
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+  background-color: #333333;
+  color: white;
+  padding: 2%;
+}
+
+#submitOrder:hover {
+  background-color: rgb(125, 221, 221);
+  color: black;
+  cursor: pointer;
 }
 
 /* left6 */
-.left6{
-    width: 82%;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 10%;
+.left6 {
+  width: 82%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10%;
 }
 
-.left6 span{
-    text-decoration: underline;
-    font-weight: 600;
-    cursor: pointer;
+.left6 span {
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
 }
 /* ---------- checkoutRightYk  ----------- */
 
-
-.checkoutRightYk{
-    width: 35%;
-    margin-top: 1%;
-    padding: 2%;
+.checkoutRightYk {
+  width: 35%;
+  margin-top: 1%;
+  padding: 2%;
 }
 
 .checkoutRightYk div {
-    display: flex;
-    justify-content: space-between;
-    margin: 1% 0;
-    margin-bottom: 10%;
-    border-bottom: 1px solid #333333;
+  display: flex;
+  justify-content: space-between;
+  margin: 1% 0;
+  margin-bottom: 10%;
+  border-bottom: 1px solid #333333;
 }
 
-.checkoutRightYk > div:nth-child(3){
-    font-size: 23px;
+.checkoutRightYk > div:nth-child(3) {
+  font-size: 23px;
 }
 
 /* adding product using dom */
 
-#checkoutRightAddDiv{
-    /* border: 1px solid red; */
-    display: block;
+#checkoutRightAddDiv {
+  /* border: 1px solid red; */
+  display: block;
 }
 
-#checkoutRightAddDiv > div{
-    display: flex;
-    align-items: center;
-    /* gap: 0 1%; */
+#checkoutRightAddDiv > div {
+  display: flex;
+  align-items: center;
+  /* gap: 0 1%; */
 }
 
-#mainDivAppend{
-    /* width: 100%; */
-    /* border: 1px solid blue; */
-    border: none;
-    margin-bottom: -8%;
-    /* justify-items: center; */
-    
+#mainDivAppend {
+  /* width: 100%; */
+  /* border: 1px solid blue; */
+  border: none;
+  margin-bottom: -8%;
+  /* justify-items: center; */
 }
 
-#mainDivAppend >div{
-    border: none;
-    gap: 0 10px;
+#mainDivAppend > div {
+  border: none;
+  gap: 0 10px;
 }
 
-#divFrist{
-    /* width: 100%; */
-    /* border: 1px solid aqua; */
-    width: 30%;
+#divFrist {
+  /* width: 100%; */
+  /* border: 1px solid aqua; */
+  width: 30%;
 }
 
-#divSecond{
-    /* width: 100%; */
-    /* border: 1px solid black; */
-    width: 60%;
-    display: block;
+#divSecond {
+  /* width: 100%; */
+  /* border: 1px solid black; */
+  width: 60%;
+  display: block;
 }
-#checkoutRightAddDiv img{
-    width: 100%;
+#checkoutRightAddDiv img {
+  width: 100%;
 }
 
-#standardDelivery{
-    font-size: 16px;
+#standardDelivery {
+  font-size: 16px;
 }
