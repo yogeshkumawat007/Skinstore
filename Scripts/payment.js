@@ -124,7 +124,7 @@ document.getElementById("totalToPay").innerHTML = `$ ${totalPrice}`;
 
 // adding Delivery charge function
 
-let clickDiv = 1;
+let clickDiv;
 
 document
   .getElementById("standardDelivery")
@@ -139,67 +139,37 @@ document
 
 function standardDeliveryFun() {
   clickDiv = 1;
-  console.log("standardDeliveryFun",clickDiv);
+  console.log("standardDeliveryFun", clickDiv);
   document.getElementById("totalToPay").innerHTML = `$ ${totalPrice}`;
   document.getElementById("standardDeliverySpan").innerHTML = "Free";
-  
 
-  if (clickDiv === 1){
-    
-      document.getElementById("standardDelivery").style.borderWidth = "3px";
-      document.getElementById("standardDelivery").style.borderColor = "green";
-  }
-  
-  else{
-    document.getElementById("standardDelivery").style.border = "none";
-    // document.getElementById("standardDelivery").style.borderColor = "green";
-    
-  }
+  document.getElementById("standardDelivery").style.border = "3px solid green";
+  document.getElementById("oneDayDelivery").style.border =
+    "1px solid #333333";
+  document.getElementById("twoDayDelivery").style.border = "1px solid #333333";
 }
 
 function twoDayDeliveryFun() {
-  clickDiv = 2;
-  console.log("twoDayDeliveryFun",clickDiv);
-  document.getElementById("totalToPay").innerHTML = `$ ${totalPrice+10}`;
+  console.log("twoDayDeliveryFun", clickDiv);
+  document.getElementById("totalToPay").innerHTML = `$ ${totalPrice + 10}`;
   document.getElementById("standardDeliverySpan").innerHTML = "Two Days";
 
-
-  if (clickDiv === 2){
-    
-    document.getElementById("twoDayDelivery").style.borderWidth = "3px";
-    document.getElementById("twoDayDelivery").style.borderColor = "green";
-  }
-  
-  else{
-    document.getElementById("twoDayDelivery").style.borderWidth = "1px";
-    document.getElementById("twoDayDelivery").style.borderColor = "black";
-    
-  }
-
-  
+  document.getElementById("twoDayDelivery").style.border = "3px solid green";
+  document.getElementById("standardDelivery").style.border =
+    "1px solid #333333";
+  document.getElementById("oneDayDelivery").style.border = "1px solid #333333";
 }
 
 function oneDayDeliveryFun() {
-  clickDiv = 3;
-  console.log("oneDayDeliveryFun",clickDiv);
-  document.getElementById("totalToPay").innerHTML = `$ ${totalPrice+20}`;
+  // clickDiv = 3;
+  console.log("oneDayDeliveryFun", clickDiv);
+  document.getElementById("totalToPay").innerHTML = `$ ${totalPrice + 20}`;
   document.getElementById("standardDeliverySpan").innerHTML = "One Day";
-  
-  // document.getElementById("oneDayDelivery").style.border = "none";
-  if (clickDiv === 3){
-    
-    document.getElementById("oneDayDelivery").style.borderWidth = "3px";
-  document.getElementById("oneDayDelivery").style.borderColor = "green";
-  }
 
-  
-  else{
-    document.getElementById("oneDayDelivery").style.border = "none";
-    // document.getElementById("oneDayDelivery").style.borderColor = "green";
-    document.getElementById("twoDayDelivery").style.border = "none";
-    
-  }
-  
+  document.getElementById("oneDayDelivery").style.border = "3px solid green";
+  document.getElementById("standardDelivery").style.border =
+    "1px solid #333333";
+  document.getElementById("twoDayDelivery").style.border = "1px solid #333333";
 }
 
-console.log("clickedddd:div:",clickDiv)
+console.log("clickedddd:div:", clickDiv);
