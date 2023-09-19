@@ -169,41 +169,8 @@ function oneDayDeliveryFun() {
   document.getElementById("twoDayDelivery").style.border = "1px solid #333333";
 }
 
-// adding checkbox logic
 
-// let isPayPal = false;
-// let isGPay = false;
-// let isKlarna = false;
-// let isAlipay = false;
-
-// document.getElementById("payPal").addEventListener("click", paypalCheckedFun);
-// document.getElementById("gPay").addEventListener("click", gpayCheckedFun);
-// document.getElementById("klarna").addEventListener("click", klarnaCheckedFun);
-// document.getElementById("alipay").addEventListener("click", alipayCheckedFun);
-
-// function paypalCheckedFun() {
-//   console.log("paypalClicked");
-//   isGPay = true;
-//   // isGPay = false;
-//   // isKlarna = false;
-//   // isAlipay = false;
-
-//   if ( isGPay ){
-//     document.getElementById("gPay").style = "checked"
-//   }
-// }
-
-// function gpayCheckedFun() {
-//   console.log("gpayClicked");
-// }
-
-// function klarnaCheckedFun() {
-//   console.log("klarnaClicked");
-// }
-
-// function alipayCheckedFun() {
-//   console.log("alipayClicked");
-// }
+// adding logic for checkbox
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 

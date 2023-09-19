@@ -123,7 +123,7 @@
     margin-bottom: 4%;
     display: flex;
     gap: 10% 1%;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
   }
 
   .left4 > div > div:nth-child(2){
@@ -238,8 +238,3 @@
 #standardDelivery{
     font-size: 16px;
 }
-
-/* adding css for fixing */
-/* #difPaymentMethod{
-    border: 11px solid red;
-} */
