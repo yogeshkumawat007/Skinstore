@@ -315,6 +315,10 @@ span {
     margin-top: 2em;
     margin-bottom: 1em;
   }
+  .singleMainDiv {
+    width: 60%;
+    margin: auto;
+  }
 }
 
 @media (max-width: 600px) {
@@ -350,5 +354,32 @@ span {
   }
   .cartPageHeader > button {
     height: fit-content;
+  }
+
+  .singlePro {
+    flex-direction: column;
+  }
+  .singleImgDiv {
+    width: 80%;
+    display: flex;
+    gap: 1em;
+    margin: auto;
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  .singleImgDiv img {
+    width: 30%;
+  }
+  .singleMainDiv {
+    width: 100%;
+  }
+  .singleDescriptionDiv {
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+  .singleMainDiv {
+    width: 65%;
+    margin: auto;
   }
 }
