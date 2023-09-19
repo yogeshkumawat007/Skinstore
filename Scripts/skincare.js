@@ -140,6 +140,14 @@ function renderProductCards(data) {
 
     var parentDiv = document.querySelector("#productCatelog");
     parentDiv.append(cardDiv);
+
+    proName.addEventListener("click", function () {
+      openProductPage(element);
+    });
+
+    image.addEventListener("click", function () {
+      openProductPage(element);
+    });
   });
 }
 
@@ -374,6 +382,12 @@ function renderSkinTypeFilters() {
       renderProductCards(filteredData);
     });
   }
+}
+
+function openProductPage(element) {
+  var productString = JSON.stringify(element);
+  var encodedProduct = encodeURIComponent(productString);
+  window.location.href = "singleProduct.html?product=" + encodedProduct;
 }
 
 renderSkinTypeFilters();
