@@ -64,10 +64,10 @@ font-family: 'Quicksand', sans-serif;
     font-size: 26px;
     font-weight: 600;
 }
-#sppRating{
-/* color: red; */
+/* #sppRating{
+color: red;
 margin-top: 4%;
-}
+} */
 
 #sppRating + p{
     margin: 4% 0;
@@ -79,16 +79,13 @@ margin-top: 4%;
 
 #sppPrice{
     border: none;
+    padding: 0;
 }
 
-/* disabled{
-    background-color: red;
-} */
 
 .sppSize{
     /* border: 1px solid black; */
     margin-bottom: 4%;
-    /* line-height: 20px; */
     padding: 4% 0;
     
 }
@@ -111,7 +108,8 @@ margin-top: 4%;
     /* background-color: red; */
     display: flex;
     /* align-items: right; */
-    justify-content: center;
+    /* justify-content: center; */
+    margin-top: 3%;
 }
 
 #sppAddToCard{
@@ -195,4 +193,20 @@ margin-top: 4%;
     padding: 10px 5px;
     border: 1px solid red;
     /* margin: 100% 0; */
+}
+
+/* last time adding css */
+#ratingImgDiv{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    gap: 0 1%;
+    
+}
+
+#ratingImgDiv img{
+    /* border: 1px solid red; */
+    width: 30%;
 }

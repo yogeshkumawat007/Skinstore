@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Single Product Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="./singleProduct.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -36,14 +37,20 @@
       <div class="singleDescriptionDiv">
         <div class="sdleft1">
           <p id="sppDes">Lorem ipsum dolor sit amet.</p>
-          <p id="sppRating">5star</p>
+          <!-- <p id="sppRating">5star</p> -->
+          <div id="ratingImgDiv">
+            <img src="./Media/stars.png" alt="" />
+            <p id="sppRating">5star</p>
+            
+          </div>
+
           <p>$ <span id="sppPrice"></span></p>
         </div>
 
         <div class="sppSize">
           <p>Size:</p>
           <div>
-            <button id="smSizebtn" >30ml</button>
+            <button id="smSizebtn">30ml</button>
             <button id="bgSizeBtn">75ml</button>
           </div>
         </div>
@@ -179,28 +186,28 @@
 
   document.getElementById(
     "sppRating"
-  ).innerHTML = `Rating ${singleProArr[0].reviews.average_rating}`;
+  ).innerHTML = ` ${singleProArr[0].reviews.average_rating}`;
 
   document.getElementById("sppPrice").innerHTML = singleProArr[0].price;
 
   // adding event on size change
-  document.getElementById("smSizebtn").addEventListener("click",smSizebtnfun);
-  document.getElementById("bgSizeBtn").addEventListener("click",bgSizebtnfun);
+  document.getElementById("smSizebtn").addEventListener("click", smSizebtnfun);
+  document.getElementById("bgSizeBtn").addEventListener("click", bgSizebtnfun);
 
-  function smSizebtnfun(){
-    console.log("smsize")
-    let price = +(document.getElementById("sppPrice").innerHTML);
+  function smSizebtnfun() {
+    console.log("smsize");
+    let price = +document.getElementById("sppPrice").innerHTML;
     // console.log(price)
-    document.getElementById("sppPrice").innerHTML = `${(Math.floor(price/2.5)).toFixed(2)}`
-    // let newProductPrice = 
-
+    document.getElementById("sppPrice").innerHTML = `${Math.floor(
+      price / 2.5
+    ).toFixed(2)}`;
+    // let newProductPrice =
   }
-  
-  function bgSizebtnfun(){
-    console.log("bgsizebtn")
+
+  function bgSizebtnfun() {
+    console.log("bgsizebtn");
     document.getElementById("sppPrice").innerHTML = singleProArr[0].price;
     // console.log(typeof price,price)
-    
   }
 
   // adding event to Inc and Dec btn
@@ -213,14 +220,11 @@
   let quantity = 1;
   sppQuantitySpan.innerText = `${quantity}`;
 
-
   function sppDecFun() {
-    if ( quantity > 1 ){
-
+    if (quantity > 1) {
       quantity--;
       sppQuantitySpan.innerText = `${quantity}`;
     }
-
   }
 
   function sppIncFun() {
@@ -239,13 +243,12 @@
 
     let cartObjYk = {
       img: singleProArr[0].image_urls[0],
-      price : document.getElementById("sppPrice").innerHTML,
+      price: document.getElementById("sppPrice").innerHTML,
       quantity: document.getElementById("sppQuantitySpan").innerHTML,
-      name:  singleProArr[0].name
-    }
+      name: singleProArr[0].name,
+    };
 
-    console.log("cartObjYk:",cartObjYk)
-    
+    console.log("cartObjYk:", cartObjYk);
 
     sppDataArr.push(singleProArr[0]);
 
