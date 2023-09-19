@@ -40,8 +40,8 @@
         <div class="sppSize">
           <p>Size:</p>
           <div>
-            <button>30ml</button>
-            <button>75ml</button>
+            <button id="smSizebtn" >30ml</button>
+            <button id="bgSizeBtn">75ml</button>
           </div>
         </div>
 
@@ -49,7 +49,7 @@
           <p>Quantity:</p>
           <div>
             <button id="sppDecBtn">-</button>
-            <span id="sppQuantitySpan">1</span>
+            <span id="sppQuantitySpan"></span>
             <button id="sppIncBtn">+</button>
           </div>
 
@@ -69,9 +69,11 @@
     <div class="otherCustomer">
       <h1>Other customers bought:</h1>
       <div class="otherCustomerMainDiv">
-
         <div>
-          <img src="https://static.thcdn.com/images/small/webp//productimg/original/12526882-6914866384402807.jpg" alt="">
+          <img
+            src="https://static.thcdn.com/images/small/webp//productimg/original/12526882-6914866384402807.jpg"
+            alt=""
+          />
           <p>VIRTUE Recovery Shampoo 240ml</p>
           <p>Up to 25% off with code: BEST</p>
           <p>$42.00</p>
@@ -79,7 +81,10 @@
         </div>
 
         <div>
-          <img src="https://static.thcdn.com/images/small/webp//productimg/original/11416763-8864901837096244.jpg" alt="">
+          <img
+            src="https://static.thcdn.com/images/small/webp//productimg/original/11416763-8864901837096244.jpg"
+            alt=""
+          />
           <p>VIRTUE Recovery Shampoo 240ml</p>
           <p>Up to 25% off with code: BEST</p>
           <p>$42.00</p>
@@ -87,7 +92,10 @@
         </div>
 
         <div>
-          <img src="https://static.thcdn.com/images/small/webp//productimg/original/12692104-1005028908815431.jpg" alt="">
+          <img
+            src="https://static.thcdn.com/images/small/webp//productimg/original/12692104-1005028908815431.jpg"
+            alt=""
+          />
           <p>VIRTUE Recovery Shampoo 240ml</p>
           <p>Up to 25% off with code: BEST</p>
           <p>$42.00</p>
@@ -95,14 +103,15 @@
         </div>
 
         <div>
-          <img src="https://static.thcdn.com/images/small/webp//productimg/original/12220277-1004905486686769.jpg" alt="">
+          <img
+            src="https://static.thcdn.com/images/small/webp//productimg/original/12220277-1004905486686769.jpg"
+            alt=""
+          />
           <p>VIRTUE Recovery Shampoo 240ml</p>
           <p>Up to 25% off with code: BEST</p>
           <p>$42.00</p>
           <button>QUICK BUY</button>
         </div>
-
-
       </div>
     </div>
   </body>
@@ -171,6 +180,26 @@
 
   document.getElementById("sppPrice").innerHTML = singleProArr[0].price;
 
+  // adding event on size change
+  document.getElementById("smSizebtn").addEventListener("click",smSizebtnfun);
+  document.getElementById("bgSizeBtn").addEventListener("click",bgSizebtnfun);
+
+  function smSizebtnfun(){
+    console.log("smsize")
+    let price = +(document.getElementById("sppPrice").innerHTML);
+    // console.log(price)
+    document.getElementById("sppPrice").innerHTML = `${Math.floor (price/2.5)}`
+    // let newProductPrice = 
+
+  }
+  
+  function bgSizebtnfun(){
+    console.log("bgsizebtn")
+    document.getElementById("sppPrice").innerHTML = singleProArr[0].price;
+    // console.log(typeof price,price)
+    
+  }
+
   // adding event to Inc and Dec btn
   document.querySelector("#sppIncBtn").addEventListener("click", sppIncFun);
 
@@ -179,6 +208,23 @@
   let sppQuantitySpan = document.getElementById("sppQuantitySpan");
 
   let quantity = 1;
+  sppQuantitySpan.innerText = `${quantity}`;
+
+  // button disabled
+  // if (quantity < 2) {
+  //   let disBtn = document.querySelector("#sppDecBtn");
+  //   disBtn.setAttribute("disabled", "");
+
+  //   console.log("qqqq:", quantity);
+  // }
+
+
+  // else if (quantity > 1) {
+  //   let disBtn = document.querySelector("#sppDecBtn");
+  //   disBtn.setAttribute("enable", "");
+
+  //   console.log("qqqq:", quantity);
+  // }
 
   function sppDecFun() {
     quantity--;
@@ -198,6 +244,17 @@
 
   function funAddToCartYk() {
     // console.log(singleProArr[0])
+
+    let cartObjYk = {
+      img: singleProArr[0].image_urls[0],
+      price : document.getElementById("sppPrice").innerHTML,
+      quantity: document.getElementById("sppQuantitySpan").innerHTML,
+      name:  singleProArr[0].name
+    }
+
+    console.log("cartObjYk:",cartObjYk)
+    
+
     sppDataArr.push(singleProArr[0]);
 
     localStorage.setItem("sppDataYk", JSON.stringify(sppDataArr));
