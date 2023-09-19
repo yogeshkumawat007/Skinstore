@@ -115,7 +115,7 @@ window.onload = function () {
     cartData.push(productObject);
     localStorage.setItem("cartData", JSON.stringify(cartData));
     addToCartBtn.innerHTML = "ADDED TO CART";
-    addToCartBtn.disabled = true;
+    window.location.href = "cart.html";
   }
 };
 
