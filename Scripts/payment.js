@@ -124,7 +124,6 @@ document.getElementById("totalToPay").innerHTML = `$ ${totalPrice}`;
 
 // adding Delivery charge function
 
-
 document
   .getElementById("standardDelivery")
   .addEventListener("click", standardDeliveryFun);
@@ -143,8 +142,7 @@ function standardDeliveryFun() {
   document.getElementById("standardDeliverySpan").innerHTML = "Free";
 
   document.getElementById("standardDelivery").style.border = "3px solid green";
-  document.getElementById("oneDayDelivery").style.border =
-    "1px solid #333333";
+  document.getElementById("oneDayDelivery").style.border = "1px solid #333333";
   document.getElementById("twoDayDelivery").style.border = "1px solid #333333";
 }
 
@@ -170,3 +168,55 @@ function oneDayDeliveryFun() {
     "1px solid #333333";
   document.getElementById("twoDayDelivery").style.border = "1px solid #333333";
 }
+
+// adding checkbox logic
+
+// let isPayPal = false;
+// let isGPay = false;
+// let isKlarna = false;
+// let isAlipay = false;
+
+// document.getElementById("payPal").addEventListener("click", paypalCheckedFun);
+// document.getElementById("gPay").addEventListener("click", gpayCheckedFun);
+// document.getElementById("klarna").addEventListener("click", klarnaCheckedFun);
+// document.getElementById("alipay").addEventListener("click", alipayCheckedFun);
+
+// function paypalCheckedFun() {
+//   console.log("paypalClicked");
+//   isGPay = true;
+//   // isGPay = false;
+//   // isKlarna = false;
+//   // isAlipay = false;
+
+//   if ( isGPay ){
+//     document.getElementById("gPay").style = "checked"
+//   }
+// }
+
+// function gpayCheckedFun() {
+//   console.log("gpayClicked");
+// }
+
+// function klarnaCheckedFun() {
+//   console.log("klarnaClicked");
+// }
+
+// function alipayCheckedFun() {
+//   console.log("alipayClicked");
+// }
+
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+// Add an event listener to the checkboxes
+checkboxes.forEach((checkbox, index) => {
+  checkbox.addEventListener("change", () => {
+    if (index !== 0) {
+      // Uncheck all other checkboxes except the first one (checkboxes[0])
+      checkboxes.forEach((otherCheckbox, otherIndex) => {
+        if (otherIndex !== index) {
+          otherCheckbox.checked = false;
+        }
+      });
+    }
+  });
+});
