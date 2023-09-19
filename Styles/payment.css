@@ -5,7 +5,7 @@
 }
 
 .checkoutMainYk{
-    width: 72%;
+    width: 75%;
     margin: auto;
     display: flex;
     gap: 0 2%;
@@ -16,7 +16,7 @@
 } */
 
 .checkoutLeftYk{
-    width: 75%;
+    width: 70%;
 }
 
 
@@ -55,6 +55,7 @@
     border-radius: 5px;
     margin: 1% 0 4% 0;
     /* cursor: pointer; */
+    border: 1px solid #333333;
 
 }
 .left1 > form > p{
