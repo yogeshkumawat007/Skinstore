@@ -173,7 +173,7 @@
 
 
 .checkoutRightYk{
-    width: 25%;
+    width: 30%;
     margin-top: 1%;
     padding: 2%;
 }
@@ -188,4 +188,47 @@
 
 .checkoutRightYk > div:nth-child(3){
     font-size: 23px;
+}
+
+/* adding product using dom */
+
+#checkoutRightAddDiv{
+    /* border: 1px solid red; */
+    display: block;
+}
+
+#checkoutRightAddDiv > div{
+    display: flex;
+}
+
+#mainDivAppend{
+    /* width: 100%; */
+    /* border: 1px solid blue; */
+    border: none;
+    margin-bottom: -8%;
+}
+
+#mainDivAppend >div{
+    border: none;
+    gap: 0 10px;
+}
+
+#divFrist{
+    /* width: 100%; */
+    /* border: 1px solid aqua; */
+    width: 50%;
+}
+
+#divSecond{
+    /* width: 100%; */
+    /* border: 1px solid black; */
+    width: 50%;
+    display: block;
+}
+#checkoutRightAddDiv img{
+    width: 100%;
+}
+
+#standardDelivery{
+    font-size: 16px;
 }

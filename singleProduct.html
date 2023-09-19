@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Single Product Page</title>
     <link rel="stylesheet" href="./singleProduct.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
@@ -188,7 +191,7 @@
     console.log("smsize")
     let price = +(document.getElementById("sppPrice").innerHTML);
     // console.log(price)
-    document.getElementById("sppPrice").innerHTML = `${Math.floor (price/2.5)}`
+    document.getElementById("sppPrice").innerHTML = `${(Math.floor(price/2.5)).toFixed(2)}`
     // let newProductPrice = 
 
   }
@@ -210,25 +213,14 @@
   let quantity = 1;
   sppQuantitySpan.innerText = `${quantity}`;
 
-  // button disabled
-  // if (quantity < 2) {
-  //   let disBtn = document.querySelector("#sppDecBtn");
-  //   disBtn.setAttribute("disabled", "");
-
-  //   console.log("qqqq:", quantity);
-  // }
-
-
-  // else if (quantity > 1) {
-  //   let disBtn = document.querySelector("#sppDecBtn");
-  //   disBtn.setAttribute("enable", "");
-
-  //   console.log("qqqq:", quantity);
-  // }
 
   function sppDecFun() {
-    quantity--;
-    sppQuantitySpan.innerText = `${quantity}`;
+    if ( quantity > 1 ){
+
+      quantity--;
+      sppQuantitySpan.innerText = `${quantity}`;
+    }
+
   }
 
   function sppIncFun() {
