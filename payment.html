@@ -4,18 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkout</title>
+    <title>Checkout | SkinStore</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="icon"
+      href="https://s1.thcdn.com/checkout/resources/imgs/skstr/favicon.skstr.ico"
     />
-    <link rel="stylesheet" href="/payment.css" />
+    <link rel="stylesheet" href="./Styles/payment.css" />
   </head>
 
   <style>
@@ -36,7 +40,7 @@
 
           <form action="">
             <label for="">*Country/Region</label>
-            <select name="" id="country">
+            <select name="" id="country" required>
               <option value="usa">USA</option>
               <option value="india">India</option>
               <option value="china">China</option>
@@ -46,13 +50,13 @@
             </select>
 
             <label for="name">*Full Name</label>
-            <input type="text" name="name" id="name" />
+            <input type="text" name="name" id="name" required />
 
             <label for="address">Address</label>
-            <input type="text" name="address" id="address" />
+            <input type="text" name="address" id="address" required />
 
             <label for="mobile">Contact Number</label>
-            <input type="number" name="mobile" id="mobile" />
+            <input type="number" name="mobile" id="mobile" required />
             <p>Why do we need your number</p>
           </form>
         </div>
@@ -61,20 +65,20 @@
         <div class="left2">
           <p>2.Select Delivery Option</p>
 
-          <div>
+          <div id="standardDelivery">
             <p>Standard Delivery</p>
             <p>Delivered within 2-5 working days</p>
             <p>FREE</p>
           </div>
 
-          <div>
+          <div id="twoDayDelivery">
             <p>Express - 2 Day</p>
             <p>Delivered within 2 working days</p>
             <p>$10.00</p>
             <p>Applies to orders placed prior to 9pm local time.</p>
           </div>
 
-          <div>
+          <div id="oneDayDelivery">
             <p>Overnight - Next Day</p>
             <p>Usually delivered within 1 working day.</p>
             <p>$20.00</p>
@@ -176,7 +180,7 @@
         <div class="left4">
           <p>Use a different payment method</p>
 
-          <div>
+          <div id="difPaymentMethod">
             <div>
               <input type="checkbox" name="" id="payPal" />
             </div>
@@ -190,7 +194,7 @@
 
           <div>
             <div>
-              <input type="checkbox" name="" id="payPal" />
+              <input type="checkbox" name="" id="gPay" />
             </div>
             <div>
               <img
@@ -202,7 +206,7 @@
 
           <div>
             <div>
-              <input type="checkbox" name="" id="payPal" />
+              <input type="checkbox" name="" id="klarna" />
             </div>
             <div>
               <img
@@ -214,7 +218,7 @@
 
           <div>
             <div>
-              <input type="checkbox" name="" id="payPal" />
+              <input type="checkbox" name="" id="alipay" />
             </div>
             <div>
               <img
@@ -229,7 +233,7 @@
           <div id="submitOrder">
             <div><span class="material-symbols-outlined"> lock </span></div>
             <div></div>
-            <div>SUBMIT MY ORDER</div>
+            <div id="submitOrderYk">SUBMIT MY ORDER</div>
             <div></div>
             <div></div>
           </div>
@@ -237,19 +241,29 @@
 
         <!-- privacy policy -->
         <div class="left6">
-          <p>By placing this order, you are confirming that you agree to our <span>Terms and Conditions</span> and <span>Privacy Policy</span>.</p>
+          <p>
+            By placing this order, you are confirming that you agree to our
+            <span>Terms and Conditions</span> and <span>Privacy Policy</span>.
+          </p>
         </div>
       </div>
 
       <!-- checkout right div -->
       <div class="checkoutRightYk">
         <div>
-          div 1 for img and description
+          <p>Order Summary</p>
+          <p><span id="countItem">0</span></p>
         </div>
 
-        <div>
+        <!-- <p>Order Number :</p> -->
+
+        <div id="checkoutRightAddDiv">
+          <!-- all products appear here.... -->
+        </div>
+
+        <div id="standardDelivery">
           <p>Standard Delivery</p>
-          <span>Free</span>
+          <span id="standardDeliverySpan">Free</span>
         </div>
 
         <div>
@@ -260,3 +274,4 @@
     </div>
   </body>
 </html>
+<script src="./Scripts/payment.js"></script>

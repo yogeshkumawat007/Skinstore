@@ -18,6 +18,7 @@ body {
 .productListPageN {
   display: flex;
   flex-direction: column;
+  margin-top: 12%;
 }
 
 #mainContentN {

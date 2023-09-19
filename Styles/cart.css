@@ -19,8 +19,9 @@ body {
   margin: 32px auto;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 8px;
+  /* padding-top: 8px; */
   box-sizing: border-box;
+  padding-top: 12%;
 }
 .cartPageHeader {
   display: flex;

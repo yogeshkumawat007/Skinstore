@@ -113,6 +113,7 @@ function renderProductCards(data) {
     let clickedCart = false;
 
     addToCartButton.addEventListener("click", function () {
+      cartData = JSON.parse(localStorage.getItem("cartData")) || [];
       const productInCart = cartData.find(
         (cartItem) => cartItem.id === element.id
       );
@@ -139,6 +140,14 @@ function renderProductCards(data) {
 
     var parentDiv = document.querySelector("#productCatelog");
     parentDiv.append(cardDiv);
+
+    proName.addEventListener("click", function () {
+      openProductPage(element);
+    });
+
+    image.addEventListener("click", function () {
+      openProductPage(element);
+    });
   });
 }
 
@@ -375,4 +384,14 @@ function renderSkinTypeFilters() {
   }
 }
 
+function openProductPage(element) {
+  var productString = JSON.stringify(element);
+  var encodedProduct = encodeURIComponent(productString);
+  window.location.href = "singleProduct.html?product=" + encodedProduct;
+}
+
 renderSkinTypeFilters();
+
+$(function () {
+  $("#footer").load("footer.html");
+});

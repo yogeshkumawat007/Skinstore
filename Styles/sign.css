@@ -1,123 +1,225 @@
-.header1 {
-    background-color: white;
+* {
+  font-family: "Lato", sans-serif;
 }
-.header_image{
-    margin-left: 200px;
-    height: 60px;
-    width: 220px;
+
+.header1 {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: start;
+  padding: 5px 0;
+}
+.header_image {
+  padding-left: 25px;
+  width: 17%;
 }
 .background {
-    background-color: #F5F5F5;
-    font-family: Open Sans, sans-serif;
+  background-color: #f5f5f5;
+  font-family: Open Sans, sans-serif;
 }
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 4% auto 0px;
+  gap: 2rem;
 }
-/* @media (max-width: 200px) { */
+
 .container2 {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 3.5% auto 0px;
 }
-/* } */
 .form_container1 {
-    width: 350px;
-    background-color:white;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 10px;
-    padding-bottom: 30px;
-    margin: 20px;
+  width: 26%;
+  background-color: white;
+  padding: 10px 35px 35px 35px;
+  height: fit-content;
+}
+.form_container1 h2 {
+  color: rgb(51, 51, 51);
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 24px;
+  padding: 2px;
 }
 .form_container2 {
-    width: 350px;
-    height: 110px;
-    background-color: white;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 10px;
-    padding-bottom: 30px;
-    margin: 20px;
+  width: 26%;
+  background-color: white;
+  padding: 10px 35px 35px 35px;
+  height: fit-content;
+}
+.form_container2 h2 {
+  color: rgb(51, 51, 51);
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 24px;
+  padding: 2px;
 }
 .form_container3 {
-    width: 650px;
-    background-color: white;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 10px;
-    padding-bottom: 30px;
-    margin: 20px;
+  width: 45%;
+  background-color: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  margin: 20px;
+}
+
+.form_container3 h2 {
+  color: rgb(51, 51, 51);
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 24px;
+  padding: 2px;
+}
+.form_container3 h3 {
+  color: rgb(51, 51, 51);
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 24px;
+  padding: 2px;
 }
 .form {
-    display: flex; 
-    flex-direction: column; 
-    align-items: left;
-    margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-bottom: 35px;
 }
 .button {
-    width: 350px;
-    background-color: black;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  outline: none;
+  background-color: rgb(46, 51, 55);
+  color: #fff;
+  border: 1px solid rgb(46, 51, 55);
+  padding: calc(10px) calc(38px);
+  width: 100%;
 }
-
 .button2 {
-    width: 600px;
-    background-color: black;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  outline: none;
+  background-color: rgb(46, 51, 55);
+  color: #fff;
+  border: 1px solid rgb(46, 51, 55);
+  padding: calc(10px) calc(38px);
+  width: 100%;
 }
 .label {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: rgb(51, 51, 51);
+  font-size: 14px;
 }
 .input {
-    height: 30px;
+  height: 40px;
 }
 .external_signup_container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgb(145, 145, 145);
 }
 .external_login_button {
-    border: 1px solid black;
-    height: 50px;
-    width: 290px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border: 1px solid black;
+  height: 50px;
+  width: 290px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .external_login_image {
-    width: 30px;
-    height: 30px;
-}
-.divider {
-    border: 0.5px solid black;
-    margin-top: 50px;
-}
-@media screen and (max-width: 800px) {
-    .form_container3, .button2, .form {
-      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-    }
+  width: 30px;
+  height: 30px;
 }
 
-@media screen and (max-width: 800px) {
-    .container {
-        flex-direction: column;
-    }
+#continueWith {
+  font-size: 14px;
+  font-weight: 300;
+  padding: 5px 0;
+}
+.alertWrapper {
+  margin-top: 10px;
+}
+#alert,
+#alertSignupPage {
+  color: #e33124;
+  padding: 7px 0;
+  padding-left: 1rem;
+  background-color: #fae8e6;
+  border-radius: 5px;
+  margin: 0;
+  display: none;
+  font-weight: 400;
+}
+
+#referralDiv {
+  background-color: #f2f2f2;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+#passwordField > p,
+#cellPhoneField > p,
+#referralDiv > p {
+  padding-left: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 0;
+}
+div.form-group p:last-of-type {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .form_container1 {
+    width: 30%;
+  }
+  .form_container2 {
+    width: 30%;
+  }
+}
+
+@media (max-width: 750px) {
+  .form_container3 {
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .form_container1 {
+    width: 100%;
+  }
+  .form_container2 {
+    width: 100%;
+  }
+  .header1 {
+    height: fit-content;
+  }
+  .header1 img {
+    width: 30%;
+  }
+  .form_container3 {
+    width: 90%;
+  }
 }
