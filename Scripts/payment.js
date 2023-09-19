@@ -124,7 +124,6 @@ document.getElementById("totalToPay").innerHTML = `$ ${totalPrice}`;
 
 // adding Delivery charge function
 
-let clickDiv;
 
 document
   .getElementById("standardDelivery")
@@ -171,5 +170,3 @@ function oneDayDeliveryFun() {
     "1px solid #333333";
   document.getElementById("twoDayDelivery").style.border = "1px solid #333333";
 }
-
-console.log("clickedddd:div:", clickDiv);
