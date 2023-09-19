@@ -5,21 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Single Product Page</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Quicksand:wght@400;700&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="./Styles/singleProduct.css" />
+    <link rel="stylesheet" type="text/css" href="footer.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="singlePro">
@@ -41,7 +39,6 @@
           <div id="ratingImgDiv">
             <img src="./Media/stars.png" alt="" />
             <p id="sppRating">5star</p>
-            
           </div>
 
           <p>$ <span id="sppPrice"></span></p>
@@ -78,52 +75,11 @@
     <!-- other customer bougth -->
     <div class="otherCustomer">
       <h1>Other customers bought:</h1>
-      <div class="otherCustomerMainDiv">
-        <div>
-          <img
-            src="https://static.thcdn.com/images/small/webp//productimg/original/12526882-6914866384402807.jpg"
-            alt=""
-          />
-          <p>VIRTUE Recovery Shampoo 240ml</p>
-          <p>Up to 25% off with code: BEST</p>
-          <p>$42.00</p>
-          <button>QUICK BUY</button>
-        </div>
-
-        <div>
-          <img
-            src="https://static.thcdn.com/images/small/webp//productimg/original/11416763-8864901837096244.jpg"
-            alt=""
-          />
-          <p>VIRTUE Recovery Shampoo 240ml</p>
-          <p>Up to 25% off with code: BEST</p>
-          <p>$42.00</p>
-          <button>QUICK BUY</button>
-        </div>
-
-        <div>
-          <img
-            src="https://static.thcdn.com/images/small/webp//productimg/original/12692104-1005028908815431.jpg"
-            alt=""
-          />
-          <p>VIRTUE Recovery Shampoo 240ml</p>
-          <p>Up to 25% off with code: BEST</p>
-          <p>$42.00</p>
-          <button>QUICK BUY</button>
-        </div>
-
-        <div>
-          <img
-            src="https://static.thcdn.com/images/small/webp//productimg/original/12220277-1004905486686769.jpg"
-            alt=""
-          />
-          <p>VIRTUE Recovery Shampoo 240ml</p>
-          <p>Up to 25% off with code: BEST</p>
-          <p>$42.00</p>
-          <button>QUICK BUY</button>
-        </div>
+      <div id="upsellProductShowcase" class="upsellProductShowcase">
+        <!-- Random products -->
       </div>
     </div>
+    <div id="footer"></div>
   </body>
 </html>
 <script src="./Scripts/singleProduct.js"></script>

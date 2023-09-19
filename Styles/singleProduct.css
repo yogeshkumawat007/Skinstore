@@ -1,212 +1,385 @@
-*{
-    padding: 0;
-    margin: 0%;
-    font-family: 'Gothic A1', sans-serif;
-font-family: 'Lato', sans-serif;
-font-family: 'Quicksand', sans-serif;
+* {
+  padding: 0;
+  margin: 0%;
+  font-family: "Lato", sans-serif;
 }
 
-.singlePro{
-    display: flex;
-    width: 90%;
-    margin: auto;
-    gap: 0% 7%;
-    /* border: 1px solid red; */
+.singlePro {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  gap: 0% 7%;
+  /* border: 1px solid red; */
 }
 
-.singleImgDiv{
-    /* border: 1px solid red; */
-    width: 10%;
-    margin: auto;
-    /* display:; */
-    display: block;
-    /* position: fixed; */
-    
-
+.singleImgDiv {
+  /* border: 1px solid red; */
+  width: 10%;
+  margin: auto;
+  /* display:; */
+  display: block;
+  /* position: fixed; */
 }
-.singleImgDiv img{
-    width: 100%;
-    height: 100%;
-    border: 1px solid #838383;
-    cursor: pointer;
+.singleImgDiv img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #838383;
+  cursor: pointer;
 }
 
 /* single Main div where we are going to add img */
-.singleMainDiv{
-    width: 45%;
-    border: 1px solid #979595;
-    /* padding: -10%; */
-
+.singleMainDiv {
+  width: 45%;
+  border: 1px solid #979595;
+  /* padding: -10%; */
 }
 
-.singleMainDiv img{
-    width: 100%;
-    height: 100%;
-    
+.singleMainDiv img {
+  width: 100%;
+  height: 100%;
 }
 /* singleDescriptionDiv */
-.singleDescriptionDiv{
-    width: 35%;
-    /* border: 1px solid blue; */
-    padding: 1%;
+.singleDescriptionDiv {
+  width: 35%;
+  /* border: 1px solid blue; */
+  padding: 1%;
 }
 
-.sdleft1{
-    /* background-color: rebeccapurple; */
-    /* width: 100%; */
-    line-height: 26px;
-    color: #242222;
-    font-size: 20px;
-    
+.sdleft1 {
+  /* background-color: rebeccapurple; */
+  /* width: 100%; */
+  line-height: 26px;
+  color: #242222;
+  font-size: 20px;
 }
 
-#sppDes{
-    font-size: 26px;
-    font-weight: 600;
+#sppDes {
+  font-size: 26px;
+  font-weight: 600;
 }
 /* #sppRating{
 color: red;
 margin-top: 4%;
 } */
 
-#sppRating + p{
-    margin: 4% 0;
-    font-size: 26px;
-    border-top: 1px solid #333333;
-    border-bottom: 1px solid #333333;
-    padding: 5% 0;
+#sppRating + p {
+  margin: 4% 0;
+  font-size: 26px;
+  border-top: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  padding: 5% 0;
 }
 
-#sppPrice{
-    border: none;
-    padding: 0;
+#sppPrice {
+  border: none;
+  padding: 0;
 }
 
-
-.sppSize{
-    /* border: 1px solid black; */
-    margin-bottom: 4%;
-    padding: 4% 0;
-    
+.sppSize {
+  /* border: 1px solid black; */
+  margin-bottom: 4%;
+  padding: 4% 0;
 }
 
-.sppSize button,.sppQuantity button,span{
-    background-color: transparent;
-    border: 1px solid #333333;
-    padding: 10px 15px;
-    margin-top: 2%;
-    margin-right: 2%;
-    cursor: pointer;
+.sppSize button,
+.sppQuantity button,
+span {
+  background-color: transparent;
+  border: 1px solid #333333;
+  padding: 10px 15px;
+  margin-top: 2%;
+  margin-right: 2%;
+  cursor: pointer;
 }
 
-.sppQuantity span{
-    border: none;
-    margin: 0 -2%;
+.sppQuantity span {
+  border: none;
+  margin: 0 -2%;
 }
 
-.sppQuantity > div:nth-child(3){
-    /* background-color: red; */
-    display: flex;
-    /* align-items: right; */
-    /* justify-content: center; */
-    margin-top: 3%;
+.sppQuantity > div:nth-child(3) {
+  /* background-color: red; */
+  display: flex;
+  /* align-items: right; */
+  /* justify-content: center; */
+  margin-top: 3%;
 }
 
-#sppAddToCard{
-    background-color: #333333;
-    border: 1px solid #333333;
-    color: white;
-    padding: 10px 20px;
+#sppAddToCard {
+  background-color: #333333;
+  border: 1px solid #333333;
+  color: white;
+  padding: 10px 20px;
 }
 
-#sppAddToCard:hover{
-    background-color: rgb(158, 228, 228);
-    border-color: rgb(158, 228, 228);
-    color: black;
-    border: 1px solid rgb(158, 228, 228);
+#sppAddToCard:hover {
+  background-color: rgb(158, 228, 228);
+  border-color: rgb(158, 228, 228);
+  color: black;
+  border: 1px solid rgb(158, 228, 228);
 }
 
-#sppAddWishlist{
-    display: flex;
-    align-items: center;
-    /* border: 1px solid red; */
+#sppAddWishlist {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
 }
 
 /* otherCustomer */
 
-.otherCustomer{
-    /* border: 1px solid blue; */
-    width: 95%;
-    margin: auto;
-    margin-top: 4%;
-    /* text-align: center; */
+.otherCustomer {
+  /* border: 1px solid blue; */
+  width: 95%;
+  margin: auto;
+  margin-top: 4%;
+  /* text-align: center; */
 }
-.otherCustomer > h1{
-    text-align: center;
-    margin-bottom: 4%;
-
-}
-
-.otherCustomer > div{
-    display: flex;
-    gap: 0 3%;
-    margin-top: 2%;
-    margin-bottom: 20%;
-}
-
-.otherCustomerMainDiv > div{
-    /* border: 1px solid black; */
-    line-height: 40px;
-}
-
-.otherCustomerMainDiv img{
-    width: 100%;
-}
-
-.otherCustomer button{
-    width: 100%;
-    padding: 15px 0 ;
-    font-size: 18px;
-    background-color: #333333;
-    color: white;
-    border-color: 0px solid #333333;
-    cursor: pointer;
-    border: none;
-}
-
-.otherCustomer button:hover{
-    background-color: rgb(158, 228, 228);
-    border-color: rgb(158, 228, 228);
-    color: black;
-    border: none;
-}
-
-.otherCustomerMainDiv > div > p:nth-child(2){
-    /* color: red; */
-    font-size: 20px;
-}
-
-.otherCustomerMainDiv > div > p:nth-child(3){
-    /* color: blue; */
-    /* font-size: 20px; */
-    display: inline;
-    padding: 10px 5px;
-    border: 1px solid red;
-    /* margin: 100% 0; */
+.otherCustomer > h1 {
+  text-align: center;
+  margin-bottom: 4%;
 }
 
 /* last time adding css */
-#ratingImgDiv{
-    /* border: 1px solid red; */
-    display: flex;
-    align-items: center;
-    margin-top: 4%;
-    margin-bottom: 4%;
-    gap: 0 1%;
-    
+#ratingImgDiv {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  gap: 0 1%;
 }
 
-#ratingImgDiv img{
-    /* border: 1px solid red; */
+#ratingImgDiv img {
+  /* border: 1px solid red; */
+  width: 30%;
+}
+
+/* product card css */
+.upsellProductShowcase {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3em;
+  padding: 15px;
+}
+
+#imageDiv img {
+  width: 100%;
+}
+
+.productCardDiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#imageAndWishListDiv {
+  width: 100%;
+  display: flex;
+  gap: 3px;
+}
+
+#imageDiv {
+  height: max-content;
+  background-color: white;
+  padding: 5px;
+}
+
+#wishlistDiv {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#textBox {
+  min-width: 100px;
+  width: fit-content;
+  height: 30px;
+  border: 0.3px solid #ba3d49;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 300;
+}
+#ratingContainer {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  gap: 2px;
+}
+#noOfRatings {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #707070;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  display: initial;
+}
+#ratingStars {
+  width: 30%;
+}
+
+#productDetailsDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5% 1% 5% 1%;
+  flex-grow: 1;
+}
+#productDetailsDiv h3 {
+  font-size: 16px;
+  color: #2e3337;
+  font-weight: 400;
+  margin: 8px;
+}
+
+#priceElement {
+  font-size: 16px;
+  line-height: 1.2;
+  color: #2e3337;
+  font-weight: 700;
+  margin: 8px;
+  margin-top: 15px;
+}
+
+#addToCartButton {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #2e3337;
+  font-weight: 300;
+  line-height: 18px;
+  background-color: #333;
+  border-style: none;
+  padding: 12px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+
+#addToCartButton:hover {
+  background-color: #28bdb7;
+  color: black;
+}
+
+.fa-regular {
+  font-size: 20px;
+}
+
+@media (max-width: 900px) {
+  .upsellProductShowcase {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2%;
+    padding: 15px;
+  }
+  .itemsAndGiftsDiv {
+    flex-direction: column;
+  }
+  .cartItemShowCaseWrapper {
+    width: 100%;
+  }
+  .cartSummery {
+    margin-top: 3em;
+    width: 100%;
+  }
+  #upsellProductShowcase {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .singlePro {
+    flex-direction: column;
+  }
+  .singleImgDiv {
+    width: 80%;
+    display: flex;
+    gap: 1em;
+    margin: auto;
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  .singleImgDiv img {
     width: 30%;
+  }
+  .singleMainDiv {
+    width: 100%;
+  }
+  .singleDescriptionDiv {
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+  .singleMainDiv {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .upsellProductShowcase {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    padding: 15px;
+  }
+  .cartItemHeader {
+    display: none;
+  }
+  #itemPriceWrapper {
+    display: none;
+  }
+  .cartProductSingleCard {
+    justify-content: space-between;
+  }
+  #product-title {
+    width: 100%;
+  }
+
+  .productImageAndTitle {
+    width: 100%;
+    margin: 0;
+  }
+  #subtotalWrapper {
+    flex-direction: column;
+    gap: 1em;
+  }
+  #quantitySelector {
+    flex-direction: column;
+  }
+  .cartPageHeader > button {
+    height: fit-content;
+  }
+
+  .singlePro {
+    flex-direction: column;
+  }
+  .singleImgDiv {
+    width: 80%;
+    display: flex;
+    gap: 1em;
+    margin: auto;
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  .singleImgDiv img {
+    width: 30%;
+  }
+  .singleMainDiv {
+    width: 100%;
+  }
+  .singleDescriptionDiv {
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+  .singleMainDiv {
+    width: 65%;
+    margin: auto;
+  }
 }
