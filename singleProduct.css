@@ -65,7 +65,7 @@ font-family: 'Quicksand', sans-serif;
     font-weight: 600;
 }
 #sppRating{
-color: red;
+/* color: red; */
 margin-top: 4%;
 }
 
@@ -77,6 +77,14 @@ margin-top: 4%;
     padding: 5% 0;
 }
 
+#sppPrice{
+    border: none;
+}
+
+/* disabled{
+    background-color: red;
+} */
+
 .sppSize{
     /* border: 1px solid black; */
     margin-bottom: 4%;
@@ -87,7 +95,7 @@ margin-top: 4%;
 
 .sppSize button,.sppQuantity button,span{
     background-color: transparent;
-    /* border: 1px solid #6a6868; */
+    border: 1px solid #333333;
     padding: 10px 15px;
     margin-top: 2%;
     margin-right: 2%;
@@ -104,6 +112,20 @@ margin-top: 4%;
     display: flex;
     /* align-items: right; */
     justify-content: center;
+}
+
+#sppAddToCard{
+    background-color: #333333;
+    border: 1px solid #333333;
+    color: white;
+    padding: 10px 20px;
+}
+
+#sppAddToCard:hover{
+    background-color: rgb(158, 228, 228);
+    border-color: rgb(158, 228, 228);
+    color: black;
+    border: 1px solid rgb(158, 228, 228);
 }
 
 #sppAddWishlist{
