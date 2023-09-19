@@ -114,3 +114,13 @@ checkboxes.forEach((checkbox, index) => {
     }
   });
 });
+
+
+// submitOrder function
+
+document.getElementById("submitOrderYk").addEventListener("click",submitOrderYkFun);
+
+function submitOrderYkFun(){
+  // console.log("submitOrderYkFun")
+  window.location.href = "success.html"
+}

@@ -14,13 +14,11 @@ Welcome to the SkinStore Clone project! This project is a clone of the SkinStore
 
 - JavaScript (LocalStorage, DOM)
 
-- Bootstrap
-
 
 
 ## Deployment link
 
-https://expedia-travels-clone.netlify.app/
+https://high-fruit.netlify.app/
 ## Authors
 
 - [@Narayan](https://github.com/noobnarayan)
@@ -32,4 +30,6 @@ https://expedia-travels-clone.netlify.app/
 - [@Anjali](https://www.github.com/techsiren)
 
 - [@Zaheen](https://www.github.com/#)
+
+![Alt text](./Media/stars.png)
 

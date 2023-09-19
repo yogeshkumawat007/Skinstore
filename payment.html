@@ -23,6 +23,7 @@
       font-family: "Gothic A1", sans-serif;
       font-family: "Lato", sans-serif;
       font-family: "Quicksand", sans-serif;
+      
     }
   </style>
 
@@ -36,7 +37,7 @@
 
           <form action="">
             <label for="">*Country/Region</label>
-            <select name="" id="country">
+            <select name="" id="country" required>
               <option value="usa">USA</option>
               <option value="india">India</option>
               <option value="china">China</option>
@@ -46,13 +47,13 @@
             </select>
 
             <label for="name">*Full Name</label>
-            <input type="text" name="name" id="name" />
+            <input type="text" name="name" id="name" required />
 
             <label for="address">Address</label>
-            <input type="text" name="address" id="address" />
+            <input type="text" name="address" id="address" required />
 
             <label for="mobile">Contact Number</label>
-            <input type="number" name="mobile" id="mobile" />
+            <input type="number" name="mobile" id="mobile" required />
             <p>Why do we need your number</p>
           </form>
         </div>
@@ -229,7 +230,7 @@
           <div id="submitOrder">
             <div><span class="material-symbols-outlined"> lock </span></div>
             <div></div>
-            <div>SUBMIT MY ORDER</div>
+            <div id="submitOrderYk" >SUBMIT MY ORDER</div>
             <div></div>
             <div></div>
           </div>
