@@ -16,7 +16,3 @@ function loadNavContent() {
 
 // Call the function to load and display the nav.html content
 loadNavContent();
-
-
-
-

@@ -7,7 +7,7 @@
 .class1 {
   height: 80%;
   width: 100%;
-  margin-top: 10%;
+  margin-top: 15%;
 }
 
 /* navbar only */
@@ -214,10 +214,10 @@ body {
 
 #someOtherOffer {
   display: flex;
-  padding:0px 0px;
+  padding: 18px 0px;
   background-color: rgb(242, 242, 242);
   justify-content: center;
-  margin-top: 50px;
+  margin-top: -30px;
 }
 
 #someOtherOffer a {
@@ -230,7 +230,7 @@ body {
 
 #someOtherOffer div {
   display: inline-block;
-  margin: 25px 25px;
+  margin: 0px 25px;
 }
 
 #shop {
@@ -301,7 +301,7 @@ h1 {
 
 #Imageline_1 {
   display: flex;
-  padding-left: 12%;
+  padding-left: 13%;
   justify-content: center;
   /* justify-content: space-around; */
   width: 75%;
@@ -541,7 +541,18 @@ button {
   margin-bottom: 50px;
 }
 
+/* p {
+  height: 25px;
+  /* width: 250px; */
+/* padding: 5px; */
+/* margin: 5px; */
+/* align-items: center; */
+/* text-align: left; */
+/* } */
 
+/* p:hover {
+  background-color: lightgray;
+} */
 
 button {
   width: 78px;
@@ -568,39 +579,52 @@ button:hover {
   text-align: center;
   /* padding: 15px; */
 }
-#shop :hover {
-  background-color: #f0f0f0;
-}
 
 @media only screen and (max-width: 900px) {
   #someOtherOffer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    margin-bottom: 30px;
+    margin-left: -10px;
+    gap: 20px;
     cursor: pointer;
-    display: none;
   }
 
   #someOtherOffer a {
-    font-size: 15px;
-  }
-  .Navigation{
-    display: none;
+    font-size: 12px;
   }
 
   #shop {
-    font-size: 25px;
+    font-size: 10px;
     color: white;
     text-align: left;
-    width: 890px;
+    width: 1000px;
     padding-left: 25px;
     height: 30px;
-    display: none;
+  }
+  #shop :hover {
+    background-color: #f0f0f0;
   }
 
-  .slider img{
-    margin-right: 0px;
+  .bottom-left {
+    position: absolute;
+    bottom: 470px;
+    left: 30px;
+  }
+
+  .bottom-left > h1 {
+    font-size: 10px;
+  }
+
+  .bottom-left > p {
+    font-size: 10px;
+    margin-bottom: 150px;
+  }
+
+  .bottom-left > button {
+    font-size: 10px;
+    margin-top: 90px;
+    background-color: aquamarine;
   }
 
   #buttonOnIMG1 {
@@ -610,48 +634,40 @@ button:hover {
 
   .shopby > h1 {
     font-size: 20px;
-    text-align: center;
-    /* margin-left: -520px; */
+    margin-left: -520px;
   }
 
   #Imageline_1 {
     display: grid;
-    flex-direction: row;
-    grid-template-columns: repeat(3, 1fr);
-    width: 60%;
-    gap: 20px;
-    padding-left: 20%; 
-    margin-right: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    width: 39%;
   }
 
   #Imageline_1 > img {
     height: 120px;
     width: 90%;
-    
+    z-index: 1;
+    margin-left: -100px;
   }
 
   .bodyFirstDetails {
     display: grid;
-    grid-template-rows: repeat(1, 1fr);
-    width: 100%;
-    margin-left: 100px;
-    margin-top: 0px;
-   
+    grid-template-columns: repeat(2, 1fr);
+    width: 38%;
+    /* margin: -30px; */
+    margin-top: 20px;
   }
 
   .bodyFirstDetails img {
     height: 90px;
     width: 90px;
-    margin-left: 60px;
-   
-
+    margin-left: 61px;
   }
 
   .productDetails {
     font-size: 8px;
     margin-left: 30px;
     text-align: center;
-    width: 100%;
   }
 
   .bodyFirstDetails .shopNow {
@@ -673,16 +689,11 @@ button:hover {
 
   .trendingOffer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-left: 12%;
-  }
-  .trendingOffer>h3{
-    margin: left 100px;;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .trendingOffer img {
-    width: 200px;
+    width: 25%;
   }
 
   .trendingOffer > div {
@@ -690,18 +701,25 @@ button:hover {
   }
 
   .trendingOffer > div h3 {
-    font-size: 20px;
-    margin-left: -200px;
-    margin-top: 20px;
+    font-size: 18px;
+    margin-left: -500px;
   }
 
   .trendingOffer > div p {
-    font-size: 20px;
+    font-size: 14px;
     margin-left: -16px;
-    width: 300px;
+    width: 290px;
   }
 
- 
+  /* #shopNow {
+      height: 20px;
+      width: 70px;
+      font-size: 10px;
+      margin-left: 90px;
+      margin-top: -14px;
+      margin-bottom: 50px;
+    } */
+
   .bodyFirstTitle {
     margin-left: 35px;
     width: 237px;
@@ -710,9 +728,8 @@ button:hover {
 
   .belowicon {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     width: 300px;
-    padding-left: 300px;
   }
 
   .belowicon img {
@@ -730,17 +747,11 @@ button:hover {
   }
 
   .randombar > img {
-    width: 100%;
-    margin-left: 40px;
-    margin-top: 30px;
+    width: 39%;
   }
-  .trendgap{
-    margin-left: -100px;
-  }
-  
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 300px) {
   #someOtherOffer {
     display: flex;
     flex-direction: column;
@@ -748,7 +759,6 @@ button:hover {
     margin-left: -10px;
     gap: 20px;
     cursor: pointer;
-  
   }
 
   #someOtherOffer a {
@@ -766,23 +776,22 @@ button:hover {
   }
 
   .shopby > h1 {
-    font-size: 40px;
-    align-content: center;
+    font-size: 23px;
+    margin-left: -100px;
     margin-top: 30px;
-    margin-left: 7%;
   }
 
   #Imageline_1 {
     display: grid;
-    grid-column: auto;
-    grid-template-columns: repeat(2, 1fr);
-    width: 162%;
+    grid-template-columns: repeat(1, 1fr);
+    width: 55%;
   }
 
   #Imageline_1 > img {
     height: 160px;
     width: 100%;
     z-index: 1;
+    margin-left: -15px;
   }
 
   .bottom-left {
@@ -852,9 +861,5 @@ button:hover {
 
   .randombar > img {
     width: 69%;
-  }
-  .product_head > h1{
-    margin-left: 44%;
-
   }
 }
